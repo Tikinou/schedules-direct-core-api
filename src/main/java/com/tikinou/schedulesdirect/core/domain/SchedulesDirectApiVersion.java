@@ -29,4 +29,17 @@ public enum SchedulesDirectApiVersion {
     public String getValue() {
         return value;
     }
+
+    public static SchedulesDirectApiVersion fromVersionString(String version){
+        if(version == null)
+            return null;
+        switch (version){
+            case "20130709":
+                return VERSION_20130709;
+            case "20131021":
+                return VERSION_20131021;
+            default:
+                return null;
+        }
+    }
 }

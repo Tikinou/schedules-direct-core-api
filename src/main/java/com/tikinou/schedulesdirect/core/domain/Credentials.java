@@ -74,4 +74,14 @@ public class Credentials {
             return true;
         return randhashDateTime.isBefore(DateTime.now().minusHours(hours));
     }
+
+    @Override
+    public String toString() {
+        return "Credentials{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", randhash='" + randhash + '\'' +
+                ", randhashDateTime=" + randhashDateTime +
+                '}';
+    }
 }
