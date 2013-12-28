@@ -14,18 +14,19 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.domain;
+package com.tikinou.schedulesdirect.core.exceptions;
+
 
 /**
  * @author Sebastien Astie
  */
-public class VersionNotSupportedException extends Exception {
+public class ValidationException extends SchedulesDirectException {
     /**
      * Constructs a new exception with {@code null} as its detail message.
      * The cause is not initialized, and may subsequently be initialized by a
      * call to {@link #initCause}.
      */
-    public VersionNotSupportedException() {
+    public ValidationException() {
     }
 
     /**
@@ -36,7 +37,7 @@ public class VersionNotSupportedException extends Exception {
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public VersionNotSupportedException(String message) {
+    public ValidationException(String message) {
         super(message);
     }
 
@@ -53,7 +54,7 @@ public class VersionNotSupportedException extends Exception {
      *                permitted, and indicates that the cause is nonexistent or
      *                unknown.)
      */
-    public VersionNotSupportedException(String message, Throwable cause) {
+    public ValidationException(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -69,7 +70,7 @@ public class VersionNotSupportedException extends Exception {
      *              permitted, and indicates that the cause is nonexistent or
      *              unknown.)
      */
-    public VersionNotSupportedException(Throwable cause) {
+    public ValidationException(Throwable cause) {
         super(cause);
     }
 }

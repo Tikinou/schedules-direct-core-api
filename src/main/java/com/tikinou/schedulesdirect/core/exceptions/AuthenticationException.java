@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.domain;
+package com.tikinou.schedulesdirect.core.exceptions;
+
+import com.tikinou.schedulesdirect.core.domain.ResponseCode;
 
 /**
  * @author Sebastien Astie
  */
-public class AuthenticationException extends Exception {
+public class AuthenticationException extends SchedulesDirectException {
     private ResponseCode code;
 
     public AuthenticationException(String msg){

@@ -14,19 +14,18 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.domain;
-
+package com.tikinou.schedulesdirect.core.exceptions;
 
 /**
  * @author Sebastien Astie
  */
-public class ValidationException extends Exception {
+public class SchedulesDirectException extends Exception{
     /**
      * Constructs a new exception with {@code null} as its detail message.
      * The cause is not initialized, and may subsequently be initialized by a
      * call to {@link #initCause}.
      */
-    public ValidationException() {
+    public SchedulesDirectException() {
     }
 
     /**
@@ -37,7 +36,7 @@ public class ValidationException extends Exception {
      * @param message the detail message. The detail message is saved for
      *                later retrieval by the {@link #getMessage()} method.
      */
-    public ValidationException(String message) {
+    public SchedulesDirectException(String message) {
         super(message);
     }
 
@@ -54,7 +53,7 @@ public class ValidationException extends Exception {
      *                permitted, and indicates that the cause is nonexistent or
      *                unknown.)
      */
-    public ValidationException(String message, Throwable cause) {
+    public SchedulesDirectException(String message, Throwable cause) {
         super(message, cause);
     }
 
@@ -70,7 +69,7 @@ public class ValidationException extends Exception {
      *              permitted, and indicates that the cause is nonexistent or
      *              unknown.)
      */
-    public ValidationException(Throwable cause) {
+    public SchedulesDirectException(Throwable cause) {
         super(cause);
     }
 }
