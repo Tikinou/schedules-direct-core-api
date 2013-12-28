@@ -57,4 +57,51 @@ public enum ResponseCode {
     public String getDescription() {
         return description;
     }
+
+    public static ResponseCode fromCode(int code){
+        switch(code){
+            case 0:
+                return OK;
+            case 1001:
+                return INVALID_JSON;
+            case 1002:
+                return API_VERSION_MISSING;
+            case 1003:
+                return INVALID_API_VERSION;
+            case 1004:
+                return HASH_MISSING;
+            case 2000:
+                return UNSUPPORTED_COMMAND;
+            case 2001:
+                return REQUIRED_ACTION_MISSING;
+            case 2002:
+                return REQUIRED_OBJECT_MISSING;
+            case 2003:
+                return REQUIRED_PARAMETER_INVALID;
+            case 2100:
+                return DUPLICATE_HEADEND;
+            case 2101:
+                return INVALID_HEADEND;
+            case 2102:
+                return INVALID_HEADEND_DELETE;
+            case 3000:
+                return SERVICE_OFFLINE;
+            case 4001:
+                return ACCOUNT_EXPIRED;
+            case 4002:
+                return INVALID_HASH;
+            case 4003:
+                return INVALID_USER;
+            case 4004:
+                return ACCOUNT_LOCKOUT;
+            case 4100:
+                return MAX_HEADEND_CHANGES_REACHED;
+            case 4101:
+                return MAX_HEADENDS;
+            case 4102:
+                return NO_HEADENDS;
+            default:
+                return HCF;
+        }
+    }
 }
