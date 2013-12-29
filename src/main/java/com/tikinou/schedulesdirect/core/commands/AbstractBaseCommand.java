@@ -22,6 +22,7 @@ import com.tikinou.schedulesdirect.core.SchedulesDirectClient;
 import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
+import com.tikinou.schedulesdirect.core.exceptions.ValidationException;
 
 /**
  * @author Sebastien Astie
@@ -38,6 +39,8 @@ public abstract class AbstractBaseCommand<P,R extends CommandResult> implements 
         this.objectType = objectType;
         this.version = version;
     }
+
+    protected abstract void validateParameters(P parameters) throws ValidationException;
 
     @Override
     public void setParameters(P parameters) {
@@ -72,10 +75,5 @@ public abstract class AbstractBaseCommand<P,R extends CommandResult> implements 
     @Override
     public SchedulesDirectApiVersion getVersion() {
         return version;
-    }
-
-    @Override
-    public void execute(SchedulesDirectClient client) {
-
     }
 }
