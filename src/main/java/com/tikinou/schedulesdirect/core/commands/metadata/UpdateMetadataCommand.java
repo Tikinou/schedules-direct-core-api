@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.metadata;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 import com.tikinou.schedulesdirect.core.CommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public interface UpdateMetadataCommand extends AuthenticationRequiredBasedCommand<UpdateMetadataParameters, CommandResult> {
+public interface UpdateMetadataCommand extends AuthenticationRequiredBaseCommand<UpdateMetadataParameters, CommandResult> {
 }

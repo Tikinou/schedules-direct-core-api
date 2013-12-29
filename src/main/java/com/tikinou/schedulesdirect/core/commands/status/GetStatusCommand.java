@@ -16,10 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.commands.status;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetStatusCommand extends AuthenticationRequiredBasedCommand<Void, GetStatusResult> {
+public interface GetStatusCommand extends AuthenticationRequiredBaseCommand<Void, GetStatusResult> {
 }

@@ -16,22 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
-import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
-import com.tikinou.schedulesdirect.core.domain.Headend;
-
-import java.util.List;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 
 /**
  * @author Sebastien Astie
  */
-public class GetHeadendResult extends BaseCommandResult {
-    private List<Headend> data;
-
-    public List<Headend> getData() {
-        return data;
-    }
-
-    public void setData(List<Headend> data) {
-        this.data = data;
-    }
+public interface GetHeadendsCommand extends AuthenticationRequiredBaseCommand<GetHeadendsParameters, GetHeadendsResult> {
 }

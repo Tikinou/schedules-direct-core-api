@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.schedules;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetSchedulesCommand extends AuthenticationRequiredBasedCommand<GetSchedulesCommandParameters, FileUrlBasedCommandResult> {
+public interface GetSchedulesCommand extends AuthenticationRequiredBaseCommand<GetSchedulesCommandParameters, FileUrlBasedCommandResult> {
 }

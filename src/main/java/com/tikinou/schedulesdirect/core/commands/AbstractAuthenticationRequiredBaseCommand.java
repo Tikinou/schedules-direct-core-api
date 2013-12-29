@@ -14,12 +14,24 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.headend;
+package com.tikinou.schedulesdirect.core.commands;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
+import com.tikinou.schedulesdirect.core.CommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetHeadendCommand extends AuthenticationRequiredBasedCommand<GetHeadendsParameters, GetHeadendResult> {
+public abstract class AbstractAuthenticationRequiredBaseCommand<P, R extends CommandResult> extends AbstractBaseCommand<P,R> implements AuthenticationRequiredBaseCommand<P,R> {
+    private String randHash;
+
+    @Override
+    public String getRandHash() {
+        return randHash;
+    }
+
+    @Override
+    public void setRandHash(String randHash) {
+        this.randHash = randHash;
+    }
 }

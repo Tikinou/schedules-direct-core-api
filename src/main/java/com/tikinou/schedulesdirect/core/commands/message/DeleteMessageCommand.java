@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.message;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
+import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 import com.tikinou.schedulesdirect.core.CommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public interface DeleteMessageCommand extends AuthenticationRequiredBasedCommand<DeleteMessageCommandParameters, CommandResult> {
+public interface DeleteMessageCommand extends AuthenticationRequiredBaseCommand<DeleteMessageCommandParameters, CommandResult> {
 }
