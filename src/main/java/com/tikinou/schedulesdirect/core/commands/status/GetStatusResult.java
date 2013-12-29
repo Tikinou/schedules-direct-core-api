@@ -1,0 +1,76 @@
+/*
+ * Copyright (c) 2013 TIKINOU LLC
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+package com.tikinou.schedulesdirect.core.commands.status;
+
+import com.tikinou.schedulesdirect.core.commands.CommandResultBase;
+import com.tikinou.schedulesdirect.core.domain.status.Account;
+import com.tikinou.schedulesdirect.core.domain.status.Headend;
+import com.tikinou.schedulesdirect.core.domain.status.SystemStatus;
+import org.joda.time.DateTime;
+
+import java.util.List;
+
+/**
+ * @author Sebastien Astie
+ */
+public class GetStatusResult extends CommandResultBase {
+    private Account account;
+    private List<Headend> headends;
+    private DateTime lastDataUpdate;
+    private List<String> notifications;
+    private List<SystemStatus> systemStatus;
+
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
+    public List<Headend> getHeadends() {
+        return headends;
+    }
+
+    public void setHeadends(List<Headend> headends) {
+        this.headends = headends;
+    }
+
+    public DateTime getLastDataUpdate() {
+        return lastDataUpdate;
+    }
+
+    public void setLastDataUpdate(DateTime lastDataUpdate) {
+        this.lastDataUpdate = lastDataUpdate;
+    }
+
+    public List<String> getNotifications() {
+        return notifications;
+    }
+
+    public void setNotifications(List<String> notifications) {
+        this.notifications = notifications;
+    }
+
+    public List<SystemStatus> getSystemStatus() {
+        return systemStatus;
+    }
+
+    public void setSystemStatus(List<SystemStatus> systemStatus) {
+        this.systemStatus = systemStatus;
+    }
+}
