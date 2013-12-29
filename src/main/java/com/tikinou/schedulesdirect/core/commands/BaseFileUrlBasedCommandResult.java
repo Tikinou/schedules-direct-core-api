@@ -14,24 +14,34 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.headend;
+package com.tikinou.schedulesdirect.core.commands;
 
-import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
-import com.tikinou.schedulesdirect.core.domain.Headend;
-
-import java.util.List;
+import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public class GetHeadendResult extends BaseCommandResult {
-    private List<Headend> data;
+public class BaseFileUrlBasedCommandResult extends BaseCommandResult implements FileUrlBasedCommandResult {
+    private String fileName;
+    private String url;
 
-    public List<Headend> getData() {
-        return data;
+    @Override
+    public String getUrl() {
+        return url;
     }
 
-    public void setData(List<Headend> data) {
-        this.data = data;
+    @Override
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    @Override
+    public String getFileName() {
+        return fileName;
+    }
+
+    @Override
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 }

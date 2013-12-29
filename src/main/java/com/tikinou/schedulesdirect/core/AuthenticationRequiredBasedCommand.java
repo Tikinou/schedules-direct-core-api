@@ -19,7 +19,8 @@ package com.tikinou.schedulesdirect.core;
 /**
  * @author Sebastien Astie.
  */
-public interface AuthenticationRequiredBasedCommand<P,R extends CommandResult> extends Command<P,R>{
+public interface AuthenticationRequiredBasedCommand<P, R extends CommandResult> extends Command<P, R> {
     public String getRandHash();
+
     public void setRandHash(String randHash);
 }

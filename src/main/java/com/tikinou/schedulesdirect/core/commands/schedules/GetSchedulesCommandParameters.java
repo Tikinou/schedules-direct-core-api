@@ -14,24 +14,21 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.headend;
-
-import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
-import com.tikinou.schedulesdirect.core.domain.Headend;
+package com.tikinou.schedulesdirect.core.commands.schedules;
 
 import java.util.List;
 
 /**
  * @author Sebastien Astie
  */
-public class GetHeadendResult extends BaseCommandResult {
-    private List<Headend> data;
+public class GetSchedulesCommandParameters {
+    private List<String> scheduleIds;
 
-    public List<Headend> getData() {
-        return data;
+    public List<String> getScheduleIds() {
+        return scheduleIds;
     }
 
-    public void setData(List<Headend> data) {
-        this.data = data;
+    public void setScheduleIds(List<String> scheduleIds) {
+        this.scheduleIds = scheduleIds;
     }
 }

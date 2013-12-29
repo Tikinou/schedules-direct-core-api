@@ -58,8 +58,8 @@ public enum ResponseCode {
         return description;
     }
 
-    public static ResponseCode fromCode(int code){
-        switch(code){
+    public static ResponseCode fromCode(int code) {
+        switch (code) {
             case 0:
                 return OK;
             case 1001:

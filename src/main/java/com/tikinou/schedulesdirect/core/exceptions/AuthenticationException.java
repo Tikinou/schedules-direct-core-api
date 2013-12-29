@@ -24,7 +24,7 @@ import com.tikinou.schedulesdirect.core.domain.ResponseCode;
 public class AuthenticationException extends SchedulesDirectException {
     private ResponseCode code;
 
-    public AuthenticationException(String msg){
+    public AuthenticationException(String msg) {
         this(msg, null);
     }
 

@@ -23,14 +23,22 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 /**
  * @author Sebastien Astie
  */
-public interface Command<P,R extends CommandResult> {
+public interface Command<P, R extends CommandResult> {
     public void setup(ActionType type, ObjectTypes objectType, SchedulesDirectApiVersion apiVersion);
+
     public void setParameters(P parameters);
+
     public P getParameters();
+
     public void setResults(R results);
+
     public R getResult();
+
     public ActionType getActionType();
+
     public ObjectTypes getObjectType();
+
     public SchedulesDirectApiVersion getVersion();
+
     public void execute(SchedulesDirectClient client);
 }

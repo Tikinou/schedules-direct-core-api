@@ -21,5 +21,5 @@ import com.tikinou.schedulesdirect.core.AuthenticationRequiredBasedCommand;
 /**
  * @author Sebastien Astie
  */
-public interface GetHeadendCommand  extends AuthenticationRequiredBasedCommand<GetHeadendsParameters, GetHeadendResult> {
+public interface GetHeadendCommand extends AuthenticationRequiredBasedCommand<GetHeadendsParameters, GetHeadendResult> {
 }

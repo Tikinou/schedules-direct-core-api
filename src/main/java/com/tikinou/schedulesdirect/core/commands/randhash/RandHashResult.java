@@ -16,13 +16,13 @@
 
 package com.tikinou.schedulesdirect.core.commands.randhash;
 
-import com.tikinou.schedulesdirect.core.commands.CommandResultBase;
+import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.Credentials;
 
 /**
  * @author Sebastien Astie
  */
-public class RandHashResult extends CommandResultBase {
+public class RandHashResult extends BaseCommandResult {
     private Credentials credentials;
 
     public Credentials getCredentials() {

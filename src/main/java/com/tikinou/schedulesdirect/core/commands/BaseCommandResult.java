@@ -23,7 +23,7 @@ import org.joda.time.DateTime;
 /**
  * @author Sebastien Astie
  */
-public class CommandResultBase implements CommandResult {
+public class BaseCommandResult implements CommandResult {
     private ResponseCode code;
     private String message;
     private String response;

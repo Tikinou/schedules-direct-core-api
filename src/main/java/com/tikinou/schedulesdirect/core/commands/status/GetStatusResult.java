@@ -16,7 +16,7 @@
 
 package com.tikinou.schedulesdirect.core.commands.status;
 
-import com.tikinou.schedulesdirect.core.commands.CommandResultBase;
+import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.status.Account;
 import com.tikinou.schedulesdirect.core.domain.status.Headend;
 import com.tikinou.schedulesdirect.core.domain.status.SystemStatus;
@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * @author Sebastien Astie
  */
-public class GetStatusResult extends CommandResultBase {
+public class GetStatusResult extends BaseCommandResult {
     private Account account;
     private List<Headend> headends;
     private DateTime lastDataUpdate;

@@ -23,17 +23,20 @@ public enum SchedulesDirectApiVersion {
     VERSION_20130709("20130709"),
     VERSION_20131021("20131021");
 
-    private SchedulesDirectApiVersion(String v) { value = v; }
+    private SchedulesDirectApiVersion(String v) {
+        value = v;
+    }
+
     private final String value;
 
     public String getValue() {
         return value;
     }
 
-    public static SchedulesDirectApiVersion fromVersionString(String version){
-        if(version == null)
+    public static SchedulesDirectApiVersion fromVersionString(String version) {
+        if (version == null)
             return null;
-        switch (version){
+        switch (version) {
             case "20130709":
                 return VERSION_20130709;
             case "20131021":

@@ -14,24 +14,19 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.headend;
-
-import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
-import com.tikinou.schedulesdirect.core.domain.Headend;
-
-import java.util.List;
+package com.tikinou.schedulesdirect.core.commands.message;
 
 /**
  * @author Sebastien Astie
  */
-public class GetHeadendResult extends BaseCommandResult {
-    private List<Headend> data;
+public class DeleteMessageCommandParameters {
+    private String messageId;
 
-    public List<Headend> getData() {
-        return data;
+    public String getMessageId() {
+        return messageId;
     }
 
-    public void setData(List<Headend> data) {
-        this.data = data;
+    public void setMessageId(String messageId) {
+        this.messageId = messageId;
     }
 }

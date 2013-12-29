@@ -16,12 +16,12 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
-import com.tikinou.schedulesdirect.core.commands.CommandResultBase;
+import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public class AddDeleteHeadendResult extends CommandResultBase {
+public class AddDeleteHeadendResult extends BaseCommandResult {
     private Integer changesRemaining;
 
     public Integer getChangesRemaining() {

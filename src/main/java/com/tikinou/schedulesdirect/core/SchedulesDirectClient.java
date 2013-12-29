@@ -28,12 +28,17 @@ import com.tikinou.schedulesdirect.core.exceptions.VersionNotSupportedException;
  */
 public interface SchedulesDirectClient {
     public void setup(SchedulesDirectApiVersion apiVersion) throws VersionNotSupportedException;
+
     public void dispose();
+
     public String getDefaultBaseUrl();
+
     public String getDefaultEndpoint();
+
     public Credentials getCredentials();
 
     public void connect(Credentials credentials, boolean forceConnect) throws AuthenticationException;
+
     public void execute(Command command);
 
     public Command createCommand(ActionType actionType, ObjectTypes objectType);
