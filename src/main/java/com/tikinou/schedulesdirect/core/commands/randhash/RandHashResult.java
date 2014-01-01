@@ -16,20 +16,24 @@
 
 package com.tikinou.schedulesdirect.core.commands.randhash;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.Credentials;
 
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class RandHashResult extends BaseCommandResult {
-    private Credentials credentials;
+    private String randhash;
 
-    public Credentials getCredentials() {
-        return credentials;
+    public String getRandhash() {
+        return randhash;
     }
 
-    public void setCredentials(Credentials credentials) {
-        this.credentials = credentials;
+    public void setRandhash(String randhash) {
+        this.randhash = randhash;
     }
 }

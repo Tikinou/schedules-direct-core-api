@@ -16,6 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.commands;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tikinou.schedulesdirect.core.CommandResult;
 import com.tikinou.schedulesdirect.core.domain.ResponseCode;
 import org.joda.time.DateTime;
@@ -23,6 +25,8 @@ import org.joda.time.DateTime;
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class BaseCommandResult implements CommandResult {
     private ResponseCode code;
     private String message;

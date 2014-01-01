@@ -58,7 +58,9 @@ public enum ResponseCode {
         return description;
     }
 
-    public static ResponseCode fromCode(int code) {
+    public static ResponseCode fromCode(Integer code) {
+        if(code == null)
+            return null;
         switch (code) {
             case 0:
                 return OK;

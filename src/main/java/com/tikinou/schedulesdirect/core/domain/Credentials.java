@@ -16,16 +16,34 @@
 
 package com.tikinou.schedulesdirect.core.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Credentials {
     private String username;
     private String password;
     private String randhash;
     private DateTime randhashDateTime;
+
+    public Credentials(){
+    }
+
+    public Credentials(String username, String password){
+        this(username, password, null, null);
+    }
+
+    public Credentials(String username, String password, String randhash, DateTime randhashDateTime){
+        this.username = username;
+        this.password = password;
+        this.randhash = randhash;
+        this.randhashDateTime = randhashDateTime;
+    }
 
     public String getUsername() {
         return username;

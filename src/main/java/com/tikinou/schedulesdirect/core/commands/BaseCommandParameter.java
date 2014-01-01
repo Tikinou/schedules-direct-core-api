@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,14 +14,11 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.randhash;
+package com.tikinou.schedulesdirect.core.commands;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.tikinou.schedulesdirect.core.commands.BaseCommandParameter;
 import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.Credentials;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
@@ -30,21 +27,38 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class RandHashParameters extends BaseCommandParameter{
+public class BaseCommandParameter {
+    private String object;
+    private String action;
+    private String api;
 
-    public RandHashParameters(String username, String password, SchedulesDirectApiVersion version){
-        super(ObjectTypes.RANDHASH, ActionType.GET, version);
-        credentials = new Credentials(username, password);
+    protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
+        object = objectType.name().toLowerCase();
+        action = actionType.name().toLowerCase();
+        api = version.getValue();
     }
 
-    @JsonProperty("request")
-    private Credentials credentials;
-
-    public Credentials getCredentials() {
-        return credentials;
+    public String getObject() {
+        return object;
     }
 
-    public void setCredentials(Credentials credentials) {
-        this.credentials = credentials;
+    public void setObject(String object) {
+        this.object = object;
+    }
+
+    public String getAction() {
+        return action;
+    }
+
+    public void setAction(String action) {
+        this.action = action;
+    }
+
+    public String getApi() {
+        return api;
+    }
+
+    public void setApi(String api) {
+        this.api = api;
     }
 }
