@@ -16,9 +16,14 @@
 
 package com.tikinou.schedulesdirect.core.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Headend {
     private String name;
     private String location;
