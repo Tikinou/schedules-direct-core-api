@@ -33,9 +33,9 @@ public interface SchedulesDirectClient {
 
     public void dispose();
 
-    public String getDefaultBaseUrl();
+    public String getBaseUrl();
 
-    public String getDefaultEndpoint();
+    public String getEndpoint();
 
     public Credentials getCredentials();
 

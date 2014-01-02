@@ -37,10 +37,12 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
     private Credentials credentials;
     private String baseUrl;
     private String endPoint;
+    private boolean useBetaService;
 
     @Override
     public void setup(SchedulesDirectApiVersion apiVersion, boolean useBetaService) throws VersionNotSupportedException {
         this.apiVersion = apiVersion;
+        this.useBetaService = useBetaService;
         if(useBetaService)
             baseUrl = DEFAUlT_BETA_BASE_URL;
         else
@@ -56,12 +58,18 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
     }
 
     @Override
-    public String getDefaultBaseUrl() {
+    public String getBaseUrl() {
+        if(baseUrl != null)
+            return baseUrl;
+        if(useBetaService)
+            return DEFAUlT_BETA_BASE_URL;
         return DEFAUlT_BASE_URL;
     }
 
     @Override
-    public String getDefaultEndpoint() {
+    public String getEndpoint() {
+        if(endPoint != null)
+            return endPoint;
         return DEFAULT_ENDPOINT;
     }
 
