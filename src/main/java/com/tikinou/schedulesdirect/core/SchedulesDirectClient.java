@@ -37,6 +37,8 @@ public interface SchedulesDirectClient {
 
     public String getEndpoint();
 
+    public String getUrl();
+
     public Credentials getCredentials();
 
     public void connect(Credentials credentials, boolean forceConnect) throws AuthenticationException;

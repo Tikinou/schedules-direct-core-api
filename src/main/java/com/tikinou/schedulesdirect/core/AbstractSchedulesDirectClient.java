@@ -74,6 +74,14 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
     }
 
     @Override
+    public String getUrl(){
+        StringBuilder builder = new StringBuilder(getBaseUrl());
+        builder.append(getEndpoint());
+        return builder.toString();
+    }
+
+
+    @Override
     public Credentials getCredentials() {
         return credentials;
     }
@@ -96,7 +104,7 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
         if(endPoint != null)
             this.endPoint = endPoint;
         if(baseUrl != null)
-            this.baseUrl = baseUrl;
+            this.baseUrl = baseUrl.endsWith("/") ? baseUrl : baseUrl + "/";
 
         if(LOG.isDebugEnabled()){
             LOG.debug("Connecting with credentials:" + credentials.toString() + " forceConnect: " + forceConnect + ", baseUrl: '" + baseUrl + "', endPoint: " + endPoint);
