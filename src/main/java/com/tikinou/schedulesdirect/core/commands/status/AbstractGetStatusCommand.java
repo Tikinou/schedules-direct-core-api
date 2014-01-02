@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,13 +14,30 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core;
+package com.tikinou.schedulesdirect.core.commands.status;
 
 /**
  * @author Sebastien Astie.
  */
-public interface AuthenticationRequiredBaseCommand<P, R extends CommandResult> extends Command<P, R> {
-    public String getRandHash();
+public abstract class AbstractGetStatusCommand implements GetStatusCommand {
+    private GetStatusResult results;
 
-    public void setRandHash(String randHash);
+    @Override
+    public void setParameters(Void parameters) {
+    }
+
+    @Override
+    public Void getParameters() {
+        return null;
+    }
+
+    @Override
+    public void setResults(GetStatusResult results) {
+        this.results = results;
+    }
+
+    @Override
+    public GetStatusResult getResult() {
+        return results;
+    }
 }

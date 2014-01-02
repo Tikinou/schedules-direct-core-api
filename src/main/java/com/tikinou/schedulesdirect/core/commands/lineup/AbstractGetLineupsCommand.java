@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,11 +16,32 @@
 
 package com.tikinou.schedulesdirect.core.commands.lineup;
 
-import com.tikinou.schedulesdirect.core.Command;
 import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
 
 /**
- * @author Sebastien Astie
+ * @author Sebastien Astie.
  */
-public interface GetLineupsCommand extends Command<GetLineupsCommandParameters, FileUrlBasedCommandResult> {
+public abstract class AbstractGetLineupsCommand implements GetLineupsCommand {
+    private GetLineupsCommandParameters parameters;
+    private FileUrlBasedCommandResult results;
+
+    @Override
+    public void setParameters(GetLineupsCommandParameters parameters) {
+        this.parameters = parameters;
+    }
+
+    @Override
+    public GetLineupsCommandParameters getParameters() {
+        return parameters;
+    }
+
+    @Override
+    public void setResults(FileUrlBasedCommandResult results) {
+        this.results = results;
+    }
+
+    @Override
+    public FileUrlBasedCommandResult getResult() {
+        return results;
+    }
 }

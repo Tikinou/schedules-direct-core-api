@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,24 +14,34 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands;
+package com.tikinou.schedulesdirect.core.commands.metadata;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
 import com.tikinou.schedulesdirect.core.CommandResult;
 
 /**
- * @author Sebastien Astie
+ * @author Sebastien Astie.
  */
-public abstract class AbstractAuthenticationRequiredBaseCommand<P, R extends CommandResult> extends AbstractBaseCommand<P,R> implements AuthenticationRequiredBaseCommand<P,R> {
-    private String randHash;
+public abstract class AbstractUpdateMetadataCommand implements UpdateMetadataCommand {
+    private UpdateMetadataParameters parameters;
+    private CommandResult results;
 
     @Override
-    public String getRandHash() {
-        return randHash;
+    public void setParameters(UpdateMetadataParameters parameters) {
+        this.parameters = parameters;
     }
 
     @Override
-    public void setRandHash(String randHash) {
-        this.randHash = randHash;
+    public UpdateMetadataParameters getParameters() {
+        return parameters;
+    }
+
+    @Override
+    public void setResults(CommandResult results) {
+        this.results = results;
+    }
+
+    @Override
+    public CommandResult getResult() {
+        return results;
     }
 }

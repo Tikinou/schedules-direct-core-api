@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.message;
+package com.tikinou.schedulesdirect.core.commands.headend;
+
 
 import com.tikinou.schedulesdirect.core.Command;
-import com.tikinou.schedulesdirect.core.CommandResult;
 
 /**
  * @author Sebastien Astie
  */
-public interface DeleteMessageCommand extends Command<DeleteMessageCommandParameters, CommandResult> {
+public interface AddHeadendCommand extends Command<AddDeleteHeadendParameters, AddDeleteHeadendResult> {
 }

@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -16,10 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
+
+import com.tikinou.schedulesdirect.core.Command;
 
 /**
  * @author Sebastien Astie
  */
-public interface AddDeleteHeadendCommand extends AuthenticationRequiredBaseCommand<AddDeleteHeadendParameters, AddDeleteHeadendResult> {
+public interface DeleteHeadendCommand extends Command<AddDeleteHeadendParameters, AddDeleteHeadendResult> {
 }

@@ -16,10 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
-import com.tikinou.schedulesdirect.core.AuthenticationRequiredBaseCommand;
+import com.tikinou.schedulesdirect.core.Command;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetHeadendsCommand extends AuthenticationRequiredBaseCommand<GetHeadendsParameters, GetHeadendsResult> {
+public interface GetHeadendsCommand extends Command<GetHeadendsParameters, GetHeadendsResult> {
 }
