@@ -17,11 +17,12 @@
 package com.tikinou.schedulesdirect.core.commands.metadata;
 
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractUpdateMetadataCommand implements UpdateMetadataCommand {
+public abstract class AbstractUpdateMetadataCommand extends AbstractBaseCommand implements UpdateMetadataCommand {
     private UpdateMetadataParameters parameters;
     private CommandResult results;
 

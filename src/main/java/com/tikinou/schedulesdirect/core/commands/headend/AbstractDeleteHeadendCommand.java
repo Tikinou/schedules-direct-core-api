@@ -16,10 +16,12 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
+
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractDeleteHeadendCommand implements DeleteHeadendCommand {
+public abstract class AbstractDeleteHeadendCommand extends AbstractBaseCommand implements DeleteHeadendCommand {
     private AddDeleteHeadendParameters parameters;
     private AddDeleteHeadendResult results;
 

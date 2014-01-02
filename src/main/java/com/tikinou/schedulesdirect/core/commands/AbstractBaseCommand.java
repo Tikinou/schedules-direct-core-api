@@ -14,32 +14,22 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.status;
+package com.tikinou.schedulesdirect.core.commands;
 
-import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
+import com.tikinou.schedulesdirect.core.domain.CommandStatus;
 
 /**
- * @author Sebastien Astie.
+ * @author Sebastien Astie
  */
-public abstract class AbstractGetStatusCommand extends AbstractBaseCommand implements GetStatusCommand {
-    private GetStatusResult results;
+public abstract class AbstractBaseCommand {
 
-    @Override
-    public void setParameters(Void parameters) {
+    private CommandStatus commandStatus;
+
+    public CommandStatus getStatus() {
+        return commandStatus;
     }
 
-    @Override
-    public Void getParameters() {
-        return null;
-    }
-
-    @Override
-    public void setResults(GetStatusResult results) {
-        this.results = results;
-    }
-
-    @Override
-    public GetStatusResult getResult() {
-        return results;
+    public void setStatus(CommandStatus status) {
+        this.commandStatus = status;
     }
 }

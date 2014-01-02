@@ -17,11 +17,12 @@
 package com.tikinou.schedulesdirect.core.commands.schedules;
 
 import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractGetSchedulesCommand implements GetSchedulesCommand {
+public abstract class AbstractGetSchedulesCommand extends AbstractBaseCommand implements GetSchedulesCommand {
     private GetSchedulesCommandParameters parameters;
     private FileUrlBasedCommandResult results;
 

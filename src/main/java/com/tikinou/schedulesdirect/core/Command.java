@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core;
 
 import com.tikinou.schedulesdirect.core.domain.ActionType;
+import com.tikinou.schedulesdirect.core.domain.CommandStatus;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
@@ -33,4 +34,8 @@ public interface Command<P, R extends CommandResult> {
     public R getResult();
 
     public void execute(SchedulesDirectClient client);
+
+    public CommandStatus getStatus();
+
+    public void setStatus(CommandStatus status);
 }

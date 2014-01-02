@@ -47,5 +47,5 @@ public interface SchedulesDirectClient {
 
     public void execute(Command command);
 
-    public Command createCommand(ActionType actionType, ObjectTypes objectType);
+    public <T extends Command> T createCommand(Class<T> commandClass);
 }

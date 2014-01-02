@@ -16,10 +16,12 @@
 
 package com.tikinou.schedulesdirect.core.commands.randhash;
 
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
+
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractRandhashCommand implements RandHashCommand {
+public abstract class AbstractRandhashCommand extends AbstractBaseCommand implements RandHashCommand {
     private RandHashParameters parameters;
     private RandHashResult results;
 

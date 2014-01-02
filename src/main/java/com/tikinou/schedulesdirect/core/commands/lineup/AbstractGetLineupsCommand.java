@@ -17,11 +17,12 @@
 package com.tikinou.schedulesdirect.core.commands.lineup;
 
 import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractGetLineupsCommand implements GetLineupsCommand {
+public abstract class AbstractGetLineupsCommand extends AbstractBaseCommand implements GetLineupsCommand {
     private GetLineupsCommandParameters parameters;
     private FileUrlBasedCommandResult results;
 

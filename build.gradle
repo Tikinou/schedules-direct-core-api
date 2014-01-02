@@ -59,6 +59,7 @@ repositories {
 dependencies {
     compile group:'joda-time', name:'joda-time', version:'2.3'
     compile group:'com.fasterxml.jackson.datatype', name:'jackson-datatype-joda', version:'2.3.1'
+    compile group:'org.slf4j', name:'slf4j-api', version:'1.7.5'
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {

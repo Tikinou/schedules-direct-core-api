@@ -17,11 +17,12 @@
 package com.tikinou.schedulesdirect.core.commands.message;
 
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
  * @author Sebastien Astie.
  */
-public abstract class AbstractDeleteMessageCommand implements DeleteMessageCommand {
+public abstract class AbstractDeleteMessageCommand extends AbstractBaseCommand implements DeleteMessageCommand {
     private DeleteMessageCommandParameters parameters;
     private CommandResult results;
 
