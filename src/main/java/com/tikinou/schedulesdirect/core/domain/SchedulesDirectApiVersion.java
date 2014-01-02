@@ -20,26 +20,37 @@ package com.tikinou.schedulesdirect.core.domain;
  * @author Sebastien Astie
  */
 public enum SchedulesDirectApiVersion {
-    VERSION_20130709("20130709"),
-    VERSION_20131021("20131021");
+    VERSION_20130709(20130709),
+    VERSION_20131021(20131021);
 
-    private SchedulesDirectApiVersion(String v) {
+    private SchedulesDirectApiVersion(Integer v) {
         value = v;
     }
 
-    private final String value;
+    private final Integer value;
 
-    public String getValue() {
+    public Integer getValue() {
         return value;
     }
 
     public static SchedulesDirectApiVersion fromVersionString(String version) {
         if (version == null)
             return null;
+        try{
+            return fromVersionInteger(Integer.parseInt(version));
+        } catch (Exception e){
+            return null;
+        }
+    }
+
+    public static SchedulesDirectApiVersion fromVersionInteger(Integer version) {
+        if (version == null)
+            return null;
+
         switch (version) {
-            case "20130709":
+            case 20130709:
                 return VERSION_20130709;
-            case "20131021":
+            case 20131021:
                 return VERSION_20131021;
             default:
                 return null;

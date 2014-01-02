@@ -30,7 +30,7 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 public class BaseCommandParameter {
     private String object;
     private String action;
-    private String api;
+    private Integer api;
 
     protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
         object = objectType.name().toLowerCase();
@@ -54,11 +54,11 @@ public class BaseCommandParameter {
         this.action = action;
     }
 
-    public String getApi() {
+    public Integer getApi() {
         return api;
     }
 
-    public void setApi(String api) {
+    public void setApi(Integer api) {
         this.api = api;
     }
 }
