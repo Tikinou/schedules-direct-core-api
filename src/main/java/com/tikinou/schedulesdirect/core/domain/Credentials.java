@@ -16,8 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.joda.time.DateTime;
 
 /**
@@ -30,6 +32,8 @@ public class Credentials {
     private String password;
     private String randhash;
     private DateTime randhashDateTime;
+    @JsonIgnore
+    private String clearPassword;
 
     public Credentials(){
     }
@@ -40,9 +44,11 @@ public class Credentials {
 
     public Credentials(String username, String password, String randhash, DateTime randhashDateTime){
         this.username = username;
-        this.password = password;
+        this.clearPassword = password;
         this.randhash = randhash;
         this.randhashDateTime = randhashDateTime;
+        if(clearPassword != null)
+            password = DigestUtils.sha1Hex(clearPassword);
     }
 
     public String getUsername() {
@@ -77,14 +83,24 @@ public class Credentials {
         this.randhashDateTime = randhashDateTime;
     }
 
+    public String getClearPassword() {
+        return clearPassword;
+    }
+
+    public void setClearPassword(String clearPassword) {
+        this.clearPassword = clearPassword;
+        if(clearPassword != null)
+            password = DigestUtils.sha1Hex(clearPassword);
+    }
+
     public boolean sameUserNamePassword(Credentials credentials) {
         if (credentials == null)
             return false;
         if (username == null)
             return false;
-        if (password == null)
+        if (clearPassword == null)
             return false;
-        return username.equals(credentials.username) && password.equals(credentials.password);
+        return username.equals(credentials.username) && clearPassword.equals(credentials.clearPassword);
     }
 
     public boolean isOlderThan(int hours) {
@@ -97,7 +113,7 @@ public class Credentials {
     public String toString() {
         return "Credentials{" +
                 "username='" + username + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + clearPassword + '\'' +
                 ", randhash='" + randhash + '\'' +
                 ", randhashDateTime=" + randhashDateTime +
                 '}';
