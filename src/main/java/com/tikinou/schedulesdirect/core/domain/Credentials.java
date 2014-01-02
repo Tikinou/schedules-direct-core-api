@@ -48,7 +48,7 @@ public class Credentials {
         this.randhash = randhash;
         this.randhashDateTime = randhashDateTime;
         if(clearPassword != null)
-            password = DigestUtils.sha1Hex(clearPassword);
+            this.password = DigestUtils.sha1Hex(clearPassword);
     }
 
     public String getUsername() {
