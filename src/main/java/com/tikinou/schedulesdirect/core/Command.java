@@ -32,11 +32,5 @@ public interface Command<P, R extends CommandResult> {
 
     public R getResult();
 
-    public ActionType getActionType();
-
-    public ObjectTypes getObjectType();
-
-    public SchedulesDirectApiVersion getVersion();
-
     public void execute(SchedulesDirectClient client);
 }
