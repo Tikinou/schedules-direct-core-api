@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.lineup;
+package com.tikinou.schedulesdirect.core.commands.status;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -31,23 +31,12 @@ import java.util.List;
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParameter {
-    @JsonProperty("request")
-    private List<String> lineupIds;
-
-    public GetLineupsCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.LINEUPS, ActionType.GET, version);
+public class GetStatusCommandParameters extends AuthenticatedBaseCommandParameter {
+    public GetStatusCommandParameters(SchedulesDirectApiVersion version){
+        super(ObjectTypes.STATUS, ActionType.GET, version);
     }
 
-    public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        super(randhash, ObjectTypes.LINEUPS, ActionType.GET, version);
-    }
-
-    public List<String> getLineupIds() {
-        return lineupIds;
-    }
-
-    public void setLineupIds(List<String> lineupIds) {
-        this.lineupIds = lineupIds;
+    public GetStatusCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        super(randhash, ObjectTypes.STATUS, ActionType.GET, version);
     }
 }

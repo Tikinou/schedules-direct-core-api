@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,40 +14,37 @@
  * limitations under the License.
  */
 
-package com.tikinou.schedulesdirect.core.commands.lineup;
+package com.tikinou.schedulesdirect.core.commands;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
 import com.tikinou.schedulesdirect.core.domain.ActionType;
+import com.tikinou.schedulesdirect.core.domain.Credentials;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
-
-import java.util.List;
 
 /**
  * @author Sebastien Astie
  */
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParameter {
-    @JsonProperty("request")
-    private List<String> lineupIds;
+public class AuthenticatedBaseCommandParameter extends BaseCommandParameter {
+    private String randhash;
 
-    public GetLineupsCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.LINEUPS, ActionType.GET, version);
+    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
+        this(null, objectType,actionType,version);
     }
 
-    public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        super(randhash, ObjectTypes.LINEUPS, ActionType.GET, version);
+    protected AuthenticatedBaseCommandParameter(String randhash, ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
+        super(objectType, actionType, version);
+        this.randhash = randhash;
     }
 
-    public List<String> getLineupIds() {
-        return lineupIds;
+    public String getRandhash() {
+        return randhash;
     }
 
-    public void setLineupIds(List<String> lineupIds) {
-        this.lineupIds = lineupIds;
+    public void setRandhash(String randhash) {
+        this.randhash = randhash;
     }
 }

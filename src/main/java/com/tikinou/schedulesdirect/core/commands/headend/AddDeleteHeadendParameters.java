@@ -16,11 +16,26 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
+import com.tikinou.schedulesdirect.core.domain.ActionType;
+import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
+import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
+
 /**
  * @author Sebastien Astie
  */
-public class AddDeleteHeadendParameters {
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class AddDeleteHeadendParameters extends AuthenticatedBaseCommandParameter {
+    @JsonProperty("request")
     private String headendId;
+
+    public AddDeleteHeadendParameters(boolean delete, SchedulesDirectApiVersion version){
+        super(ObjectTypes.HEADENDS, delete? ActionType.DELETE : ActionType.ADD, version);
+    }
 
     public String getHeadendId() {
         return headendId;

@@ -16,37 +16,93 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
+import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.Country;
+import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
+import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
 /**
  * @author Sebastien Astie
  */
-public class GetHeadendsParameters {
-    private Country country;
-    private String postalCode;
-    private Boolean subscribed;
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
+
+    private Request request;
+
+    public GetHeadendsParameters(SchedulesDirectApiVersion version){
+        super(ObjectTypes.HEADENDS, ActionType.GET, version);
+        request = new Request();
+    }
+
+    public Request getRequest() {
+        return request;
+    }
+
+    public void setRequest(Request request) {
+        this.request = request;
+    }
 
     public Boolean getSubscribed() {
-        return subscribed;
+        return request.getSubscribed();
     }
 
     public void setSubscribed(Boolean subscribed) {
-        this.subscribed = subscribed;
+        request.setSubscribed(subscribed);
     }
 
     public Country getCountry() {
-        return country;
+        return request.getCountry();
     }
 
     public void setCountry(Country country) {
-        this.country = country;
+        request.setCountry(country);
     }
 
     public String getPostalCode() {
-        return postalCode;
+        return request.getPostalCode();
     }
 
     public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
+        request.setPostalCode(postalCode);
+    }
+
+    @JsonIgnoreProperties(ignoreUnknown = true)
+    @JsonInclude(JsonInclude.Include.NON_EMPTY)
+    public static class Request {
+        private Country country;
+        @JsonProperty("postalcode")
+        private String postalCode;
+        @JsonIgnore
+        private Boolean subscribed;
+
+        public Boolean getSubscribed() {
+            return subscribed;
+        }
+
+        public void setSubscribed(Boolean subscribed) {
+            this.subscribed = subscribed;
+        }
+
+        public Country getCountry() {
+            return country;
+        }
+
+        public void setCountry(Country country) {
+            this.country = country;
+        }
+
+        public String getPostalCode() {
+            return postalCode;
+        }
+
+        public void setPostalCode(String postalCode) {
+            this.postalCode = postalCode;
+        }
     }
 }

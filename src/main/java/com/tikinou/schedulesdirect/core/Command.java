@@ -20,6 +20,7 @@ import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.CommandStatus;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
+import com.tikinou.schedulesdirect.core.exceptions.ValidationException;
 
 /**
  * @author Sebastien Astie
@@ -38,4 +39,6 @@ public interface Command<P, R extends CommandResult> {
     public CommandStatus getStatus();
 
     public void setStatus(CommandStatus status);
+
+    public void validateParameters() throws ValidationException;
 }

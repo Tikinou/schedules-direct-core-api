@@ -16,13 +16,32 @@
 
 package com.tikinou.schedulesdirect.core.commands.program;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
+import com.tikinou.schedulesdirect.core.domain.ActionType;
+import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
+import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
+
 import java.util.List;
 
 /**
  * @author Sebastien Astie
  */
-public class GetProgramsCommandParameters {
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
+public class GetProgramsCommandParameters extends AuthenticatedBaseCommandParameter{
+    @JsonProperty("request")
     private List<String> programIds;
+
+    public GetProgramsCommandParameters(SchedulesDirectApiVersion version){
+        super(ObjectTypes.PROGRAMS, ActionType.GET, version);
+    }
+
+    public GetProgramsCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        super(randhash, ObjectTypes.PROGRAMS, ActionType.GET, version);
+    }
 
     public List<String> getProgramIds() {
         return programIds;

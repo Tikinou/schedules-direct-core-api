@@ -17,20 +17,23 @@
 package com.tikinou.schedulesdirect.core.commands.status;
 
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
+import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
 
 /**
  * @author Sebastien Astie.
  */
 public abstract class AbstractGetStatusCommand extends AbstractBaseCommand implements GetStatusCommand {
     private GetStatusResult results;
+    private GetStatusCommandParameters parameters;
 
     @Override
-    public void setParameters(Void parameters) {
+    public void setParameters(GetStatusCommandParameters parameters) {
+        this.parameters = parameters;
     }
 
     @Override
-    public Void getParameters() {
-        return null;
+    public GetStatusCommandParameters getParameters() {
+        return parameters;
     }
 
     @Override

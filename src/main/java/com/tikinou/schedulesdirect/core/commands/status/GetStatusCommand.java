@@ -21,5 +21,5 @@ import com.tikinou.schedulesdirect.core.Command;
 /**
  * @author Sebastien Astie
  */
-public interface GetStatusCommand extends Command<Void, GetStatusResult> {
+public interface GetStatusCommand extends Command<GetStatusCommandParameters, GetStatusResult> {
 }
