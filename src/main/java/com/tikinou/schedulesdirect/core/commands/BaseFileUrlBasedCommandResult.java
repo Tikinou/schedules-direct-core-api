@@ -16,13 +16,20 @@
 
 package com.tikinou.schedulesdirect.core.commands;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
 
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class BaseFileUrlBasedCommandResult extends BaseCommandResult implements FileUrlBasedCommandResult {
+    @JsonProperty("filename")
     private String fileName;
+    @JsonProperty("URL")
     private String url;
 
     @Override
