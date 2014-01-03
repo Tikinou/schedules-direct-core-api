@@ -37,6 +37,10 @@ public class AddDeleteHeadendParameters extends AuthenticatedBaseCommandParamete
         super(ObjectTypes.HEADENDS, delete? ActionType.DELETE : ActionType.ADD, version);
     }
 
+    public AddDeleteHeadendParameters(String randhash, boolean delete, SchedulesDirectApiVersion version){
+        super(randhash, ObjectTypes.HEADENDS, delete? ActionType.DELETE : ActionType.ADD, version);
+    }
+
     public String getHeadendId() {
         return headendId;
     }

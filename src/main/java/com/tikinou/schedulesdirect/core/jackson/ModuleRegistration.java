@@ -30,8 +30,8 @@ import com.tikinou.schedulesdirect.core.jackson.converters.ResponseCodeConverter
 public class ModuleRegistration {
     private final SimpleModule customModule;
     private ModuleRegistration(){
-        StdDelegatingDeserializer<ResponseCode> delegatingDeserializer = new StdDelegatingDeserializer<>(new ResponseCodeConverter());
-        customModule = new SimpleModule("com.tikinou.schedulesdirect.core.jackson.module", new Version(1, 0, 0, null, null, null)).addDeserializer(ResponseCode.class, delegatingDeserializer);
+        customModule = new SimpleModule("com.tikinou.schedulesdirect.core.jackson.module", new Version(1, 0, 0, null, null, null));
+        customModule.addDeserializer(ResponseCode.class, new StdDelegatingDeserializer<>(new ResponseCodeConverter()));
     }
 
     private static ModuleRegistration INSTANCE = new ModuleRegistration();

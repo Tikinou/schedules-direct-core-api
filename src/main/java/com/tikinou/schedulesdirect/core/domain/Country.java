@@ -16,6 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.domain;
 
+import com.fasterxml.jackson.annotation.JsonValue;
+
 /**
  * @author Sebastien Astie
  */
@@ -30,6 +32,7 @@ public enum Country {
         this.code = code;
     }
 
+    @JsonValue
     public String getCode() {
         return code;
     }

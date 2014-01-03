@@ -40,6 +40,11 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
         request = new Request();
     }
 
+    public GetHeadendsParameters(String randhash, SchedulesDirectApiVersion version){
+        super(randhash, ObjectTypes.HEADENDS, ActionType.GET, version);
+        request = new Request();
+    }
+
     public Request getRequest() {
         return request;
     }
@@ -48,26 +53,32 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
         this.request = request;
     }
 
+    @JsonIgnore
     public Boolean getSubscribed() {
         return request.getSubscribed();
     }
 
+    @JsonIgnore
     public void setSubscribed(Boolean subscribed) {
         request.setSubscribed(subscribed);
     }
 
+    @JsonIgnore
     public Country getCountry() {
         return request.getCountry();
     }
 
+    @JsonIgnore
     public void setCountry(Country country) {
         request.setCountry(country);
     }
 
+    @JsonIgnore
     public String getPostalCode() {
         return request.getPostalCode();
     }
 
+    @JsonIgnore
     public void setPostalCode(String postalCode) {
         request.setPostalCode(postalCode);
     }

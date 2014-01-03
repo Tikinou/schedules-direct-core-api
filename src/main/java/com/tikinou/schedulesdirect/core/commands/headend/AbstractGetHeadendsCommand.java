@@ -22,6 +22,7 @@ import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
  * @author Sebastien Astie.
  */
 public abstract class AbstractGetHeadendsCommand extends AbstractBaseCommand implements GetHeadendsCommand {
+    protected static final String SUBSCRIBED = "Subscribed";
     private GetHeadendsParameters parameters;
     private GetHeadendsResult results;
 

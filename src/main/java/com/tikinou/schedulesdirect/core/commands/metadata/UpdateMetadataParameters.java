@@ -37,6 +37,11 @@ public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
         request = new Request();
     }
 
+    public UpdateMetadataParameters(String randHash, SchedulesDirectApiVersion version){
+        super(randHash, ObjectTypes.METADATA, ActionType.UPDATE, version);
+        request = new Request();
+    }
+
     public Request getRequest() {
         return request;
     }
