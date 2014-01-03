@@ -16,6 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.domain.status;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
 import java.util.List;
@@ -23,6 +25,8 @@ import java.util.List;
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Account {
     private DateTime expires;
     private DateTime nextSuggestedConnectTime;

@@ -16,11 +16,15 @@
 
 package com.tikinou.schedulesdirect.core.domain.status;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Message {
     private String msgId;
     private DateTime date;

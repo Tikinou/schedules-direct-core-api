@@ -16,6 +16,9 @@
 
 package com.tikinou.schedulesdirect.core.commands.status;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.status.Account;
 import com.tikinou.schedulesdirect.core.domain.status.Headend;
@@ -27,8 +30,11 @@ import java.util.List;
 /**
  * @author Sebastien Astie
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetStatusResult extends BaseCommandResult {
     private Account account;
+    @JsonProperty("headend")
     private List<Headend> headends;
     private DateTime lastDataUpdate;
     private List<String> notifications;
