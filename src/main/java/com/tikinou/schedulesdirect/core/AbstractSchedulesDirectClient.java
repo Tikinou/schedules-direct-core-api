@@ -41,6 +41,8 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
 
     @Override
     public void setup(SchedulesDirectApiVersion apiVersion, boolean useBetaService) throws VersionNotSupportedException {
+        if(apiVersion == null)
+            throw new VersionNotSupportedException();
         this.apiVersion = apiVersion;
         this.useBetaService = useBetaService;
         if(useBetaService)
