@@ -34,7 +34,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParameter {
     @JsonProperty("request")
-    private List<String> lineupIds;
+    private List<String> headendIds;
 
     public GetLineupsCommandParameters(SchedulesDirectApiVersion version){
         super(ObjectTypes.LINEUPS, ActionType.GET, version);
@@ -44,12 +44,12 @@ public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParamet
         super(randhash, ObjectTypes.LINEUPS, ActionType.GET, version);
     }
 
-    public List<String> getLineupIds() {
-        return lineupIds;
+    public List<String> getHeadendIds() {
+        return headendIds;
     }
 
-    public void setLineupIds(List<String> lineupIds) {
-        this.lineupIds = lineupIds;
+    public void setHeadendIds(List<String> headendIds) {
+        this.headendIds = headendIds;
     }
 
     @Override
@@ -60,6 +60,6 @@ public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParamet
     @Override
     protected String toStringMembers() {
         return super.toStringMembers() +
-            ", lineupIds=" + (lineupIds != null ? Arrays.toString(lineupIds.toArray()) : lineupIds);
+            ", headendIds=" + (headendIds != null ? Arrays.toString(headendIds.toArray()) : headendIds);
     }
 }

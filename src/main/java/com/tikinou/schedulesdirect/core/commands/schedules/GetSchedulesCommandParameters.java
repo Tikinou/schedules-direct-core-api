@@ -34,7 +34,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetSchedulesCommandParameters extends AuthenticatedBaseCommandParameter {
     @JsonProperty("request")
-    private List<String> scheduleIds;
+    private List<String> stationIds;
 
     public GetSchedulesCommandParameters(SchedulesDirectApiVersion version){
         super(ObjectTypes.SCHEDULES, ActionType.GET, version);
@@ -44,12 +44,12 @@ public class GetSchedulesCommandParameters extends AuthenticatedBaseCommandParam
         super(randhash, ObjectTypes.SCHEDULES, ActionType.GET, version);
     }
 
-    public List<String> getScheduleIds() {
-        return scheduleIds;
+    public List<String> getStationIds() {
+        return stationIds;
     }
 
-    public void setScheduleIds(List<String> scheduleIds) {
-        this.scheduleIds = scheduleIds;
+    public void setStationIds(List<String> stationIds) {
+        this.stationIds = stationIds;
     }
 
     @Override
@@ -60,6 +60,6 @@ public class GetSchedulesCommandParameters extends AuthenticatedBaseCommandParam
     @Override
     protected String toStringMembers() {
         return super.toStringMembers() +
-            ", scheduleIds=" + (scheduleIds != null ? Arrays.toString(scheduleIds.toArray()) : scheduleIds);
+            ", stationIds=" + (stationIds != null ? Arrays.toString(stationIds.toArray()) : stationIds);
     }
 }
