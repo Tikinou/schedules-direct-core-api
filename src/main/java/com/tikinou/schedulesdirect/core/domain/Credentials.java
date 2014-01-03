@@ -113,9 +113,10 @@ public class Credentials {
     public String toString() {
         return "Credentials{" +
                 "username='" + username + '\'' +
-                ", password='" + clearPassword + '\'' +
+                ", password='" + password + '\'' +
                 ", randhash='" + randhash + '\'' +
                 ", randhashDateTime=" + randhashDateTime +
+                ", clearPassword='" + clearPassword + '\'' +
                 '}';
     }
 }

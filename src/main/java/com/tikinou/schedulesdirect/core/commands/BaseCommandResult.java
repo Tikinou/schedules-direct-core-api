@@ -85,4 +85,17 @@ public class BaseCommandResult implements CommandResult {
     public void setMessage(String message) {
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "BaseCommandResult{" + toStringMembers() + '}';
+    }
+
+    protected String toStringMembers() {
+        return "code=" + code +
+                ", message='" + message + '\'' +
+                ", response='" + response + '\'' +
+                ", serverId='" + serverId + '\'' +
+                ", datetime=" + datetime;
+    }
 }

@@ -47,4 +47,14 @@ public class AuthenticatedBaseCommandParameter extends BaseCommandParameter {
     public void setRandhash(String randhash) {
         this.randhash = randhash;
     }
+
+    @Override
+    public String toString() {
+        return "AuthenticatedBaseCommandParameter{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", randhash='" + randhash + '\'';
+    }
 }

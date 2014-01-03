@@ -44,4 +44,14 @@ public class AddDeleteHeadendParameters extends AuthenticatedBaseCommandParamete
     public void setHeadendId(String headendId) {
         this.headendId = headendId;
     }
+
+    @Override
+    public String toString() {
+        return "AddDeleteHeadendParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", headendId='" + headendId + '\'';
+    }
 }

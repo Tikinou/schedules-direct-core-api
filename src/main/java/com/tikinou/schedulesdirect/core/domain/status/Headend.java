@@ -46,4 +46,12 @@ public class Headend {
     public void setModified(DateTime modified) {
         this.modified = modified;
     }
+
+    @Override
+    public String toString() {
+        return "Headend{" +
+                "id='" + id + '\'' +
+                ", modified=" + modified +
+                '}';
+    }
 }

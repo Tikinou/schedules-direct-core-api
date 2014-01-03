@@ -31,4 +31,14 @@ public class AddDeleteHeadendResult extends BaseCommandResult {
     public void setChangesRemaining(Integer changesRemaining) {
         this.changesRemaining = changesRemaining;
     }
+
+    @Override
+    public String toString() {
+        return "AddDeleteHeadendResult{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", changesRemaining=" + changesRemaining;
+    }
 }

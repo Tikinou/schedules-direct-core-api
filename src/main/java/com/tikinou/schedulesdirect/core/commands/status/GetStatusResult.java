@@ -25,6 +25,7 @@ import com.tikinou.schedulesdirect.core.domain.status.Headend;
 import com.tikinou.schedulesdirect.core.domain.status.SystemStatus;
 import org.joda.time.DateTime;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -78,5 +79,20 @@ public class GetStatusResult extends BaseCommandResult {
 
     public void setSystemStatus(List<SystemStatus> systemStatus) {
         this.systemStatus = systemStatus;
+    }
+
+    @Override
+    public String toString() {
+        return "GetStatusResult{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers( ) +
+                ", account=" + account +
+                ", headends=" + (headends != null ? Arrays.toString(headends.toArray()) : headends) +
+                ", lastDataUpdate=" + lastDataUpdate +
+                ", notifications=" + (notifications != null ? Arrays.toString(notifications.toArray()) : notifications) +
+                ", systemStatus=" + (systemStatus != null ? Arrays.toString(systemStatus.toArray()) : systemStatus);
     }
 }

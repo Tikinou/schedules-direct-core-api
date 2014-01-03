@@ -51,4 +51,14 @@ public class RandHashParameters extends BaseCommandParameter{
     public void setCredentials(Credentials credentials) {
         this.credentials = credentials;
     }
+
+    @Override
+    public String toString() {
+        return "RandHashParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", credentials=" + credentials;
+    }
 }

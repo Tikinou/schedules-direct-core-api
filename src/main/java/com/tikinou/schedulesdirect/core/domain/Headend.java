@@ -52,4 +52,13 @@ public class Headend {
     public void setHeadend(String headend) {
         this.headend = headend;
     }
+
+    @Override
+    public String toString() {
+        return "Headend{" +
+                "name='" + name + '\'' +
+                ", location='" + location + '\'' +
+                ", headend='" + headend + '\'' +
+                '}';
+    }
 }

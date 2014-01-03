@@ -19,6 +19,7 @@ package com.tikinou.schedulesdirect.core.commands.headend;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.Headend;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -33,5 +34,16 @@ public class GetHeadendsResult extends BaseCommandResult {
 
     public void setData(List<Headend> data) {
         this.data = data;
+    }
+
+    @Override
+    public String toString() {
+        return "GetHeadendsResult{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", data=" +
+        (data != null ? Arrays.toString(data.toArray()) : data);
     }
 }

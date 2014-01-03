@@ -72,6 +72,16 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
         request.setPostalCode(postalCode);
     }
 
+    @Override
+    public String toString() {
+        return "GetHeadendsParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", request=" + request;
+    }
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     public static class Request {
@@ -103,6 +113,15 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
 
         public void setPostalCode(String postalCode) {
             this.postalCode = postalCode;
+        }
+
+        @Override
+        public String toString() {
+            return "Request{" +
+                    "country=" + country +
+                    ", postalCode='" + postalCode + '\'' +
+                    ", subscribed=" + subscribed +
+                    '}';
         }
     }
 }

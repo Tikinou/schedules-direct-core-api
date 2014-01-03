@@ -20,6 +20,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -63,5 +64,15 @@ public class Account {
 
     public void setMaxHeadends(Integer maxHeadends) {
         this.maxHeadends = maxHeadends;
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "expires=" + expires +
+                ", nextSuggestedConnectTime=" + nextSuggestedConnectTime +
+                ", messages=" + (messages != null ? Arrays.toString(messages.toArray()) : messages) +
+                ", maxHeadends=" + maxHeadends +
+                '}';
     }
 }

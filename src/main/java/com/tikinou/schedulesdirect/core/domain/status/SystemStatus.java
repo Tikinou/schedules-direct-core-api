@@ -53,4 +53,13 @@ public class SystemStatus {
     public void setDetails(String details) {
         this.details = details;
     }
+
+    @Override
+    public String toString() {
+        return "SystemStatus{" +
+                "date=" + date +
+                ", status='" + status + '\'' +
+                ", details='" + details + '\'' +
+                '}';
+    }
 }

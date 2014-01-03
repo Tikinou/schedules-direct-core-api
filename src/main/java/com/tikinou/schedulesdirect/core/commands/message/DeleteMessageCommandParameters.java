@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013 TIKINOU LLC
+ * Copyright (c) 2014 TIKINOU LLC
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -24,6 +24,7 @@ import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,5 +50,16 @@ public class DeleteMessageCommandParameters extends AuthenticatedBaseCommandPara
 
     public void setMessageIds(List<String> messageIds) {
         this.messageIds = messageIds;
+    }
+
+    @Override
+    public String toString() {
+        return "DeleteMessageCommandParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() +
+            ", messageIds=" + (messageIds != null ? Arrays.toString(messageIds.toArray()) : messageIds);
     }
 }

@@ -24,6 +24,7 @@ import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,5 +50,16 @@ public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParamet
 
     public void setLineupIds(List<String> lineupIds) {
         this.lineupIds = lineupIds;
+    }
+
+    @Override
+    public String toString() {
+        return "GetLineupsCommandParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() +
+            ", lineupIds=" + (lineupIds != null ? Arrays.toString(lineupIds.toArray()) : lineupIds);
     }
 }

@@ -93,6 +93,16 @@ public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
         request.setComment(comment);
     }
 
+    @Override
+    public String toString() {
+        return "UpdateMetadataParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", request=" + request;
+    }
+
     @JsonIgnoreProperties(ignoreUnknown = true)
     @JsonInclude(JsonInclude.Include.NON_EMPTY)
     private static class Request {
@@ -150,6 +160,18 @@ public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
 
         public void setComment(String comment) {
             this.comment = comment;
+        }
+
+        @Override
+        public String toString() {
+            return "Request{" +
+                    "programId='" + programId + '\'' +
+                    ", current='" + current + '\'' +
+                    ", suggested='" + suggested + '\'' +
+                    ", field='" + field + '\'' +
+                    ", source='" + source + '\'' +
+                    ", comment='" + comment + '\'' +
+                    '}';
         }
     }
 }

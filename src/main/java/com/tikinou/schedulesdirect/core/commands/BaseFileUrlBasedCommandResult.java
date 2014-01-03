@@ -44,4 +44,16 @@ public class BaseFileUrlBasedCommandResult extends BaseCommandResult implements 
     public void setFileName(String fileName) {
         this.fileName = fileName;
     }
+
+    @Override
+    public String toString() {
+        return "BaseFileUrlBasedCommandResult{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() +
+            ", fileName='" + fileName + '\'' +
+            ", url='" + url + '\'' ;
+    }
 }

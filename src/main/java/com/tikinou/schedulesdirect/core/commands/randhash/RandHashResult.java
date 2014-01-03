@@ -36,4 +36,14 @@ public class RandHashResult extends BaseCommandResult {
     public void setRandhash(String randhash) {
         this.randhash = randhash;
     }
+
+    @Override
+    public String toString() {
+        return "RandHashResult{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", randhash='" + randhash + '\'';
+    }
 }

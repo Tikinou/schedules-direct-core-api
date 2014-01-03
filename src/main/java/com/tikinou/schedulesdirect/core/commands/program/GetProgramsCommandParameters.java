@@ -24,6 +24,7 @@ import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -49,5 +50,15 @@ public class GetProgramsCommandParameters extends AuthenticatedBaseCommandParame
 
     public void setProgramIds(List<String> programIds) {
         this.programIds = programIds;
+    }
+
+    @Override
+    public String toString() {
+        return "GetProgramsCommandParameters{" + toStringMembers() + '}';
+    }
+
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", programIds=" + (programIds != null ? Arrays.toString(programIds.toArray()) : programIds);
     }
 }

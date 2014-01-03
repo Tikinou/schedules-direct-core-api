@@ -61,4 +61,17 @@ public class BaseCommandParameter {
     public void setApi(Integer api) {
         this.api = api;
     }
+
+    @Override
+    public String toString() {
+        return "BaseCommandParameter{" +
+                toStringMembers() +
+                '}';
+    }
+
+    protected String toStringMembers(){
+        return "object='" + object + '\'' +
+                ", action='" + action + '\'' +
+                ", api=" + api;
+    }
 }
