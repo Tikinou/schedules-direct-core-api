@@ -88,10 +88,14 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
         return credentials;
     }
 
+    @Override
+    public void connect(Credentials credentials) throws AuthenticationException {
+        connect(credentials, null, null, false);
+    }
 
     @Override
     public void connect(Credentials credentials, boolean forceConnect) throws AuthenticationException {
-        connect(credentials, null, forceConnect);
+        connect(credentials, null, null, forceConnect);
     }
 
     @Override
