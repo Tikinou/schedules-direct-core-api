@@ -44,7 +44,7 @@ public class DeleteMessageCommandParameters extends AuthenticatedBaseCommandPara
         super(randhash, ObjectTypes.MESSAGE, ActionType.DELETE, version);
     }
 
-    public List<String> getMessageId() {
+    public List<String> getMessageIds() {
         return messageIds;
     }
 
