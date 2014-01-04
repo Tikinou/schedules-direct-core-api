@@ -37,11 +37,16 @@ public class DeleteMessageCommandParameters extends AuthenticatedBaseCommandPara
     private List<String> messageIds;
 
     public DeleteMessageCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.MESSAGE, ActionType.DELETE, version);
+        this(null, version);
     }
 
     public DeleteMessageCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        this(randhash, version, null);
+    }
+
+    public DeleteMessageCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> messageIds){
         super(randhash, ObjectTypes.MESSAGE, ActionType.DELETE, version);
+        this.messageIds = messageIds;
     }
 
     public List<String> getMessageIds() {

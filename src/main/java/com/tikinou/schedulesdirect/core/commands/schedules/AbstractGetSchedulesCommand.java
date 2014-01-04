@@ -42,7 +42,7 @@ public abstract class AbstractGetSchedulesCommand extends AbstractBaseCommand im
     }
 
     @Override
-    public FileUrlBasedCommandResult getResult() {
+    public FileUrlBasedCommandResult getResults() {
         return results;
     }
 }

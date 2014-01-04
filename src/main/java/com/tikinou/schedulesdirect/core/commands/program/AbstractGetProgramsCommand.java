@@ -42,7 +42,7 @@ public abstract class AbstractGetProgramsCommand extends AbstractBaseCommand imp
     }
 
     @Override
-    public FileUrlBasedCommandResult getResult() {
+    public FileUrlBasedCommandResult getResults() {
         return results;
     }
 }

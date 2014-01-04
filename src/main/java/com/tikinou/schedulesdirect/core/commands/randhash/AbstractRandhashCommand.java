@@ -41,7 +41,7 @@ public abstract class AbstractRandhashCommand extends AbstractBaseCommand implem
     }
 
     @Override
-    public RandHashResult getResult() {
+    public RandHashResult getResults() {
         return results;
     }
 }

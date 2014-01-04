@@ -42,7 +42,7 @@ public abstract class AbstractGetHeadendsCommand extends AbstractBaseCommand imp
     }
 
     @Override
-    public GetHeadendsResult getResult() {
+    public GetHeadendsResult getResults() {
         return results;
     }
 }

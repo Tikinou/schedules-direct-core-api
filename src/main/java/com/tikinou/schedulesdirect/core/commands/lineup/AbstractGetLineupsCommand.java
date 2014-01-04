@@ -42,7 +42,7 @@ public abstract class AbstractGetLineupsCommand extends AbstractBaseCommand impl
     }
 
     @Override
-    public FileUrlBasedCommandResult getResult() {
+    public FileUrlBasedCommandResult getResults() {
         return results;
     }
 }

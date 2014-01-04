@@ -140,7 +140,7 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
         cmd.setParameters(new RandHashParameters(credentials, apiVersion));
         execute(cmd);
         if (cmd.getStatus() != CommandStatus.SUCCESS)
-            throw new AuthenticationException("Could not login to schedules direct", cmd.getResult().getCode());
+            throw new AuthenticationException("Could not login to schedules direct", cmd.getResults().getCode());
     }
 
     @Override

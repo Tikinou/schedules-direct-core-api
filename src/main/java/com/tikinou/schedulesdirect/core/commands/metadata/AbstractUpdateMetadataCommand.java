@@ -42,7 +42,7 @@ public abstract class AbstractUpdateMetadataCommand extends AbstractBaseCommand 
     }
 
     @Override
-    public CommandResult getResult() {
+    public CommandResult getResults() {
         return results;
     }
 }

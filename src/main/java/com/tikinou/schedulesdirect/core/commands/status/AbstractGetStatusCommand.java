@@ -42,7 +42,7 @@ public abstract class AbstractGetStatusCommand extends AbstractBaseCommand imple
     }
 
     @Override
-    public GetStatusResult getResult() {
+    public GetStatusResult getResults() {
         return results;
     }
 }

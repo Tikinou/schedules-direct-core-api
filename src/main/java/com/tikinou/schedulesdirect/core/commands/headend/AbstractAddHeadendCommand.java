@@ -41,7 +41,7 @@ public abstract class AbstractAddHeadendCommand extends AbstractBaseCommand impl
     }
 
     @Override
-    public AddDeleteHeadendResult getResult() {
+    public AddDeleteHeadendResult getResults() {
         return results;
     }
 }

@@ -37,11 +37,16 @@ public class GetProgramsCommandParameters extends AuthenticatedBaseCommandParame
     private List<String> programIds;
 
     public GetProgramsCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.PROGRAMS, ActionType.GET, version);
+        this(null, version);
     }
 
     public GetProgramsCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        this(randhash, version, null);
+    }
+
+    public GetProgramsCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> programIds){
         super(randhash, ObjectTypes.PROGRAMS, ActionType.GET, version);
+        this.programIds = programIds;
     }
 
     public List<String> getProgramIds() {

@@ -37,11 +37,16 @@ public class GetSchedulesCommandParameters extends AuthenticatedBaseCommandParam
     private List<String> stationIds;
 
     public GetSchedulesCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.SCHEDULES, ActionType.GET, version);
+        this(null, version);
     }
 
     public GetSchedulesCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        this(randhash, version, null);
+    }
+
+    public GetSchedulesCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> stationIds){
         super(randhash, ObjectTypes.SCHEDULES, ActionType.GET, version);
+        this.stationIds = stationIds;
     }
 
     public List<String> getStationIds() {

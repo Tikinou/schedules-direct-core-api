@@ -42,7 +42,7 @@ public abstract class AbstractDeleteMessageCommand extends AbstractBaseCommand i
     }
 
     @Override
-    public CommandResult getResult() {
+    public CommandResult getResults() {
         return results;
     }
 }

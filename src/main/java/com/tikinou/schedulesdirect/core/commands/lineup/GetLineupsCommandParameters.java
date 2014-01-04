@@ -37,11 +37,16 @@ public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParamet
     private List<String> headendIds;
 
     public GetLineupsCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.LINEUPS, ActionType.GET, version);
+        this(null, version);
     }
 
     public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version){
+        this(randhash, version, null);
+    }
+
+    public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> headendIds){
         super(randhash, ObjectTypes.LINEUPS, ActionType.GET, version);
+        this.headendIds = headendIds;
     }
 
     public List<String> getHeadendIds() {

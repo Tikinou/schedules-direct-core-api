@@ -32,7 +32,7 @@ public interface Command<P, R extends CommandResult> {
 
     public void setResults(R results);
 
-    public R getResult();
+    public R getResults();
 
     public void execute(SchedulesDirectClient client);
 
