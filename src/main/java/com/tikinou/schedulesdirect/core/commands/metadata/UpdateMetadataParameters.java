@@ -16,6 +16,7 @@
 
 package com.tikinou.schedulesdirect.core.commands.metadata;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -50,50 +51,62 @@ public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
         this.request = request;
     }
 
+    @JsonIgnore
     public String getProgramId() {
         return request.getProgramId();
     }
 
+    @JsonIgnore
     public void setProgramId(String programId) {
         request.setProgramId(programId);
     }
 
+    @JsonIgnore
     public String getCurrent() {
         return request.getCurrent();
     }
 
+    @JsonIgnore
     public void setCurrent(String current) {
         request.setCurrent(current);
     }
 
+    @JsonIgnore
     public String getSuggested() {
         return request.getSuggested();
     }
 
+    @JsonIgnore
     public void setSuggested(String suggested) {
         request.setSuggested(suggested);
     }
 
+    @JsonIgnore
     public String getField() {
         return request.getField();
     }
 
+    @JsonIgnore
     public void setField(String field) {
         request.setField(field);
     }
 
+    @JsonIgnore
     public String getSource() {
         return request.getSource();
     }
 
+    @JsonIgnore
     public void setSource(String source) {
         request.setSource(source);
     }
 
+    @JsonIgnore
     public String getComment() {
         return request.getComment();
     }
 
+    @JsonIgnore
     public void setComment(String comment) {
         request.setComment(comment);
     }
