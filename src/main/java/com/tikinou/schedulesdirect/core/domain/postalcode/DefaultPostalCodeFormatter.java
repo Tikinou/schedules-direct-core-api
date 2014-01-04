@@ -31,7 +31,7 @@ public class DefaultPostalCodeFormatter implements PostalCodeFormatter {
                 if (postalCode.length() < 4)
                     throw new ValidationException("postal code for Canada must be at least 4 characters long");
                 return code.append(postalCode.substring(0,3)).toString(); // grab the 4 left most
-            case UnitedState:
+            case UnitedStates:
                 if (postalCode.length() < 5)
                     throw new ValidationException("postal code for United States must be at least 5 characters long");
                 return code.append(postalCode.substring(0,5)).toString();
