@@ -24,7 +24,6 @@ import org.joda.time.DateTime;
 /**
  * @author Sebastien Astie.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class LogoSD {
     @JsonProperty("URL")

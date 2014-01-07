@@ -16,11 +16,13 @@
 
 package com.tikinou.schedulesdirect.core.domain.program;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.tikinou.schedulesdirect.core.domain.Rating;
 
 /**
  * @author Sebastien Astie.
  */
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MovieMetadata {
     private Integer year;
     private Integer runTime;

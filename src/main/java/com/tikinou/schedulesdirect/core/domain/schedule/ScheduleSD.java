@@ -25,7 +25,6 @@ import java.util.List;
 /**
  * @author Sebastien Astie.
  */
-@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ScheduleSD {
     @JsonProperty("stationID")

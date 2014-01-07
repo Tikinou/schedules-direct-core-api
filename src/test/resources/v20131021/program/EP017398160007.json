@@ -1,1 +1,114 @@
-{"programID":"EP017398160007","md5":"XbAQYyTFsTt5cK3QwfJEAA","descriptionLanguage":"English","colorCode":"Color","sourceType":"Network","showType":"Series","episodeTitle150":"Abstinence and Pudding","syndicatedEpisodeNumber":"106","originalAirDate":"2013-10-28","castAndCrew":[{"personID":12705,"role":"Actor","name":"Anna Faris"},{"personID":6033,"role":"Actor","name":"Allison Janney"},{"personID":12706,"role":"Actor","name":"Nate Corddry"},{"personID":8842,"role":"Actor","name":"Matt Jones"},{"personID":12707,"role":"Actor","name":"Sadie Calvano"},{"personID":12708,"role":"Actor","name":"Blake Garrett Rosenthal"},{"personID":12709,"role":"Actor","name":"Spencer Daniels"},{"personID":5251,"role":"Actor","name":"French Stewart"},{"personID":12716,"role":"Guest Star","name":"Justin Long"},{"personID":12717,"role":"Guest Star","name":"Reggie De Leon"},{"personID":12721,"role":"Guest Star","name":"Mimi Kennedy"},{"personID":3506,"role":"Executive Producer","name":"Chuck Lorre"},{"personID":7356,"role":"Executive Producer","name":"Eddie Gorodetsky"},{"personID":5824,"role":"Executive Producer","name":"Nick Bakay"},{"personID":5824,"role":"Writer","name":"Nick Bakay"},{"personID":12715,"role":"Writer","name":"Gemma Baker"},{"personID":3506,"role":"Writer","name":"Chuck Lorre"},{"personID":7356,"role":"Writer","name":"Eddie Gorodetsky"},{"personID":12720,"role":"Director","name":"Jeff Greenstein"}],"genres":["Sitcom"],"titles":{"title120":"Mom"},"descriptions":{"description255":"Christy wants to take things slow with Adam (Justin Long); Bonnie has a disagreement with her rival, Marjorie.","description100":"Christy wants to take things slow with Adam; Bonnie has a disagreement with her rival, Marjorie.","description60":"Christy wants to take things slow with Adam.","description40":"Christy takes things slow with Adam.","alternateDescription100":"Christy wants to take things slow with Adam; Bonnie has a disagreement with her rival, Marjorie.","seriesDescription":"A newly sober mom must deal with her own critical mother as she works to overcome past mistakes."},"metadata":[{"Tribune":{"season":"1","episode":"6","seriesid":"9978206"}}]}
+{"programID": "EP017398160007", "md5": "XbAQYyTFsTt5cK3QwfJEAA", "descriptionLanguage": "English", "colorCode": "Color", "sourceType": "Network", "showType": "Series", "episodeTitle150": "Abstinence and Pudding", "syndicatedEpisodeNumber": "106", "originalAirDate": "2013-10-28", "castAndCrew": [
+    {
+        "personID": 12705,
+        "role": "Actor",
+        "name": "Anna Faris"
+    },
+    {
+        "personID": 6033,
+        "role": "Actor",
+        "name": "Allison Janney"
+    },
+    {
+        "personID": 12706,
+        "role": "Actor",
+        "name": "Nate Corddry"
+    },
+    {
+        "personID": 8842,
+        "role": "Actor",
+        "name": "Matt Jones"
+    },
+    {
+        "personID": 12707,
+        "role": "Actor",
+        "name": "Sadie Calvano"
+    },
+    {
+        "personID": 12708,
+        "role": "Actor",
+        "name": "Blake Garrett Rosenthal"
+    },
+    {
+        "personID": 12709,
+        "role": "Actor",
+        "name": "Spencer Daniels"
+    },
+    {
+        "personID": 5251,
+        "role": "Actor",
+        "name": "French Stewart"
+    },
+    {
+        "personID": 12716,
+        "role": "Guest Star",
+        "name": "Justin Long"
+    },
+    {
+        "personID": 12717,
+        "role": "Guest Star",
+        "name": "Reggie De Leon"
+    },
+    {
+        "personID": 12721,
+        "role": "Guest Star",
+        "name": "Mimi Kennedy"
+    },
+    {
+        "personID": 3506,
+        "role": "Executive Producer",
+        "name": "Chuck Lorre"
+    },
+    {
+        "personID": 7356,
+        "role": "Executive Producer",
+        "name": "Eddie Gorodetsky"
+    },
+    {
+        "personID": 5824,
+        "role": "Executive Producer",
+        "name": "Nick Bakay"
+    },
+    {
+        "personID": 5824,
+        "role": "Writer",
+        "name": "Nick Bakay"
+    },
+    {
+        "personID": 12715,
+        "role": "Writer",
+        "name": "Gemma Baker"
+    },
+    {
+        "personID": 3506,
+        "role": "Writer",
+        "name": "Chuck Lorre"
+    },
+    {
+        "personID": 7356,
+        "role": "Writer",
+        "name": "Eddie Gorodetsky"
+    },
+    {
+        "personID": 12720,
+        "role": "Director",
+        "name": "Jeff Greenstein"
+    }
+], "genres": ["Sitcom"], "titles": {
+    "title120": "Mom"
+}, "descriptions": {
+    "description255": "Christy wants to take things slow with Adam (Justin Long); Bonnie has a disagreement with her rival, Marjorie.",
+    "description100": "Christy wants to take things slow with Adam; Bonnie has a disagreement with her rival, Marjorie.",
+    "description60": "Christy wants to take things slow with Adam.",
+    "description40": "Christy takes things slow with Adam.",
+    "alternateDescription100": "Christy wants to take things slow with Adam; Bonnie has a disagreement with her rival, Marjorie.",
+    "seriesDescription": "A newly sober mom must deal with her own critical mother as she works to overcome past mistakes."
+}, "metadata": [
+    {
+        "Tribune": {
+            "season": "1",
+            "episode": "6",
+            "seriesid": "9978206"
+        }
+    }
+]}

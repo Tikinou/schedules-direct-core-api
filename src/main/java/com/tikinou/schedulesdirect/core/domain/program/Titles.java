@@ -16,15 +16,19 @@
 
 package com.tikinou.schedulesdirect.core.domain.program;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * @author Sebastien Astie.
  */
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Titles {
     private String title120;
     private String title10;
     private String title20;
     private String title40;
     private String title70;
+    private String alternateTitle;
 
     public String getAlternateTitle() {
         return alternateTitle;
@@ -33,8 +37,6 @@ public class Titles {
     public void setAlternateTitle(String alternateTitle) {
         this.alternateTitle = alternateTitle;
     }
-
-    private String alternateTitle;
 
     public String getTitle120() {
         return title120;

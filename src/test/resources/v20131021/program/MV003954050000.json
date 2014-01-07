@@ -1,1 +1,75 @@
-{"programID":"MV003954050000","md5":"fAamj9c+clxn2wp1SR4tFA","descriptionLanguage":"English","colorCode":"Color","originalAirDate":"0000-00-00","originCountry":"United States","castAndCrew":[{"personID":16263,"role":"Actor","name":"Joaquin Phoenix"},{"personID":34680,"role":"Actor","name":"Philip Seymour Hoffman"},{"personID":5650,"role":"Actor","name":"Amy Adams"},{"personID":5055,"role":"Actor","name":"Laura Dern"},{"personID":7286,"role":"Actor","name":"Jesse Plemons"},{"personID":35041,"role":"Director","name":"Paul Thomas Anderson"},{"personID":35042,"role":"Producer","name":"Joanne Sellar"},{"personID":37933,"role":"Producer","name":"Daniel Lupi"},{"personID":35041,"role":"Producer","name":"Paul Thomas Anderson"},{"personID":42582,"role":"Producer","name":"Megan Ellison"},{"personID":46201,"role":"Executive Producer","name":"Adam Somner"},{"personID":45216,"role":"Executive Producer","name":"Ted Schipper"}],"genres":["Drama"],"advisories":["Adult Situations","Language","Nudity"],"titles":{"title120":"The Master"},"descriptions":{"description255":"Troubled and uncertain of his future, a World War II veteran falls under the spell of a religious movement and its charismatic leader.","description100":"A troubled war veteran becomes a disciple of a religious organization's charismatic leader.","alternateDescription255":"Troubled and uncertain of his future, a World War II veteran (Joaquin Phoenix) falls under the spell of a religious movement and its charismatic leader (Philip Seymour Hoffman).","alternateDescription100":"A troubled war veteran becomes a disciple of a religious organization's charismatic leader."},"movie":{"year":"2012","mpaaRating":"R","starRating":"***+","runTime":8160,"origStudio":"Joanne Sellar"}}
+{"programID": "MV003954050000", "md5": "fAamj9c+clxn2wp1SR4tFA", "descriptionLanguage": "English", "colorCode": "Color", "originalAirDate": "0000-00-00", "originCountry": "United States", "castAndCrew": [
+    {
+        "personID": 16263,
+        "role": "Actor",
+        "name": "Joaquin Phoenix"
+    },
+    {
+        "personID": 34680,
+        "role": "Actor",
+        "name": "Philip Seymour Hoffman"
+    },
+    {
+        "personID": 5650,
+        "role": "Actor",
+        "name": "Amy Adams"
+    },
+    {
+        "personID": 5055,
+        "role": "Actor",
+        "name": "Laura Dern"
+    },
+    {
+        "personID": 7286,
+        "role": "Actor",
+        "name": "Jesse Plemons"
+    },
+    {
+        "personID": 35041,
+        "role": "Director",
+        "name": "Paul Thomas Anderson"
+    },
+    {
+        "personID": 35042,
+        "role": "Producer",
+        "name": "Joanne Sellar"
+    },
+    {
+        "personID": 37933,
+        "role": "Producer",
+        "name": "Daniel Lupi"
+    },
+    {
+        "personID": 35041,
+        "role": "Producer",
+        "name": "Paul Thomas Anderson"
+    },
+    {
+        "personID": 42582,
+        "role": "Producer",
+        "name": "Megan Ellison"
+    },
+    {
+        "personID": 46201,
+        "role": "Executive Producer",
+        "name": "Adam Somner"
+    },
+    {
+        "personID": 45216,
+        "role": "Executive Producer",
+        "name": "Ted Schipper"
+    }
+], "genres": ["Drama"], "advisories": ["Adult Situations", "Language", "Nudity"], "titles": {
+    "title120": "The Master"
+}, "descriptions": {
+    "description255": "Troubled and uncertain of his future, a World War II veteran falls under the spell of a religious movement and its charismatic leader.",
+    "description100": "A troubled war veteran becomes a disciple of a religious organization's charismatic leader.",
+    "alternateDescription255": "Troubled and uncertain of his future, a World War II veteran (Joaquin Phoenix) falls under the spell of a religious movement and its charismatic leader (Philip Seymour Hoffman).",
+    "alternateDescription100": "A troubled war veteran becomes a disciple of a religious organization's charismatic leader."
+}, "movie": {
+    "year": "2012",
+    "mpaaRating": "R",
+    "starRating": "***+",
+    "runTime": 8160,
+    "origStudio": "Joanne Sellar"
+}}

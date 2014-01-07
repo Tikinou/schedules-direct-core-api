@@ -16,9 +16,12 @@
 
 package com.tikinou.schedulesdirect.core.domain.program;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+
 /**
  * @author Sebastien Astie.
  */
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Descriptions {
     private String alternateDescription255;
     private String alternateDescription100;

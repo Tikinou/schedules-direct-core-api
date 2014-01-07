@@ -16,10 +16,15 @@
 
 package com.tikinou.schedulesdirect.core.domain.program;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
  * @author Sebastien Astie.
  */
+@JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class EpisodeMetadata {
+    @JsonProperty("seriesid")
     private String seriesId;
     private Integer season;
     private Integer episode;

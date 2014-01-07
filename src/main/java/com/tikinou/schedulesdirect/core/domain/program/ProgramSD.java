@@ -16,7 +16,6 @@
 
 package com.tikinou.schedulesdirect.core.domain.program;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.joda.time.DateTime;
@@ -27,8 +26,6 @@ import java.util.Map;
 /**
  * @author Sebastien Astie.
  */
-
-@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class ProgramSD {
     @JsonProperty("programID")
@@ -46,14 +43,14 @@ public class ProgramSD {
     private Boolean madeForTV;
     private String md5;
     private DateTime modified;
-    private Map<String, EpisodeMetadata> metadata;
     private ColorType colorCode;
     private String alternateSyndicatedEpisodeNumber;
     private String syndicatedEpisodeNumber;
-    private String origCountry;
+    private String originCountry;
     private String originalAirDate;
     private String originalGameDateTime;
     private List<CastEntry> castAndCrew;
+    private List<Map<String, EpisodeMetadata>> metadata;
 
     public String getProgramId() {
         return programId;
@@ -167,11 +164,11 @@ public class ProgramSD {
         this.modified = modified;
     }
 
-    public Map<String, EpisodeMetadata> getMetadata() {
+    public List<Map<String, EpisodeMetadata>> getMetadata() {
         return metadata;
     }
 
-    public void setMetadata(Map<String, EpisodeMetadata> metadata) {
+    public void setMetadata(List<Map<String, EpisodeMetadata>> metadata) {
         this.metadata = metadata;
     }
 
@@ -199,12 +196,12 @@ public class ProgramSD {
         this.syndicatedEpisodeNumber = syndicatedEpisodeNumber;
     }
 
-    public String getOrigCountry() {
-        return origCountry;
+    public String getOriginCountry() {
+        return originCountry;
     }
 
-    public void setOrigCountry(String origCountry) {
-        this.origCountry = origCountry;
+    public void setOriginCountry(String originCountry) {
+        this.originCountry = originCountry;
     }
 
     public String getOriginalAirDate() {
@@ -252,7 +249,7 @@ public class ProgramSD {
                 ", colorCode=" + colorCode +
                 ", alternateSyndicatedEpisodeNumber='" + alternateSyndicatedEpisodeNumber + '\'' +
                 ", syndicatedEpisodeNumber='" + syndicatedEpisodeNumber + '\'' +
-                ", origCountry='" + origCountry + '\'' +
+                ", originCountry='" + originCountry + '\'' +
                 ", originalAirDate='" + originalAirDate + '\'' +
                 ", originalGameDateTime='" + originalGameDateTime + '\'' +
                 ", castAndCrew=" + castAndCrew +
