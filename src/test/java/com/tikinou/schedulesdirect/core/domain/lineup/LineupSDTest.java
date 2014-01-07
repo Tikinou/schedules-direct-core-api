@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tikinou.schedulesdirect.core.domain.schedule.ScheduleSD;
 import com.tikinou.schedulesdirect.core.jackson.ModuleRegistration;
 import org.junit.Test;
 
@@ -24,13 +25,20 @@ import org.junit.Test;
  * @author Sebastien Astie.
  */
 public class LineupSDTest {
-
     @Test
     public void testParsing() throws Exception {
         ObjectMapper mapper = ModuleRegistration.getInstance().getConfiguredObjectMapper();
-        LineupSD lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/NY67791.json"), LineupSD.class);
+        LineupSD lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY67791.json"), LineupSD.class);
         assert lineupSD != null;
+        assert lineupSD.getDeviceTypeMaps().size() == 2;
+        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/DISH501.json"), LineupSD.class);
+        assert lineupSD != null;
+        assert lineupSD.getDeviceTypeMaps().size() == 1;
+        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY62482.json"), LineupSD.class);
+        assert lineupSD != null;
+        assert lineupSD.getDeviceTypeMaps().size() == 2;
+        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/PC_10562.json"), LineupSD.class);
+        assert lineupSD != null;
+        assert lineupSD.getDeviceTypeMaps().size() == 1;
     }
-
-
 }
