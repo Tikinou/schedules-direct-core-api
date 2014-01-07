@@ -60,6 +60,11 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
     }
 
     @Override
+    public SchedulesDirectApiVersion getApiVersion() {
+        return apiVersion;
+    }
+
+    @Override
     public String getBaseUrl() {
         if(baseUrl != null)
             return baseUrl;

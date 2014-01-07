@@ -39,6 +39,8 @@ public interface SchedulesDirectClient {
 
     public String getUrl();
 
+    public SchedulesDirectApiVersion getApiVersion();
+
     public Credentials getCredentials();
 
     public void connect(Credentials credentials) throws AuthenticationException;
