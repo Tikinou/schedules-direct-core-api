@@ -20,7 +20,6 @@ import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +37,7 @@ public class LineupSD {
     private List<String> deviceTypes;
     private List<StationSD> stations;
     private List<MetadataSD> metadata;
-    private Map<String, List<StationChannelMapEntry>> deviceTypeMaps = new HashMap<>();
+    private Map<String, List<StationChannelMapping>> deviceTypeMaps = new HashMap<>();
 
     public String getHeadend() {
         return headend;
@@ -88,17 +87,16 @@ public class LineupSD {
         this.metadata = metadata;
     }
 
-    public Map<String, List<StationChannelMapEntry>> getDeviceTypeMaps() {
+    public Map<String, List<StationChannelMapping>> getDeviceTypeMaps() {
         return deviceTypeMaps;
     }
 
-    public void setDeviceTypeMaps(Map<String, List<StationChannelMapEntry>> deviceTypeMaps) {
+    public void setDeviceTypeMaps(Map<String, List<StationChannelMapping>> deviceTypeMaps) {
         this.deviceTypeMaps = deviceTypeMaps;
     }
 
     @JsonAnySetter
-    public void setDynamicProperty(String name, Map<String, List<StationChannelMapEntry>> map) {
+    public void setDynamicProperty(String name, Map<String, List<StationChannelMapping>> map) {
         deviceTypeMaps.put(name, map.get("map"));
     }
-
 }
