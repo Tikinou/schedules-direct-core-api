@@ -22,6 +22,8 @@ import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
+import java.util.Objects;
+
 /**
  * @author Sebastien Astie
  */
@@ -37,9 +39,12 @@ public class BaseCommandParameter {
     }
 
     protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
+        Objects.requireNonNull(objectType);
+        Objects.requireNonNull(actionType);
         object = objectType.name().toLowerCase();
         action = actionType.name().toLowerCase();
-        api = version.getValue();
+        if(version != null)
+            api = version.getValue();
     }
 
     public String getObject() {
