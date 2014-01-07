@@ -33,16 +33,12 @@ public class AddDeleteHeadendParameters extends AuthenticatedBaseCommandParamete
     @JsonProperty("request")
     private String headendId;
 
-    public AddDeleteHeadendParameters(boolean delete, SchedulesDirectApiVersion version){
-        this(null, delete, version);
+    public AddDeleteHeadendParameters(boolean delete){
+        this(delete, null);
     }
 
-    public AddDeleteHeadendParameters(String randhash, boolean delete, SchedulesDirectApiVersion version){
-        this(randhash, delete, version, null);
-    }
-
-    public AddDeleteHeadendParameters(String randhash, boolean delete, SchedulesDirectApiVersion version, String headendId){
-        super(randhash, ObjectTypes.HEADENDS, delete? ActionType.DELETE : ActionType.ADD, version);
+    public AddDeleteHeadendParameters(boolean delete, String headendId){
+        super(ObjectTypes.HEADENDS, delete? ActionType.DELETE : ActionType.ADD);
         this.headendId = headendId;
     }
 

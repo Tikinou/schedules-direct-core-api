@@ -32,6 +32,10 @@ public class BaseCommandParameter {
     private String action;
     private Integer api;
 
+    protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType){
+        this(objectType, actionType, null);
+    }
+
     protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
         object = objectType.name().toLowerCase();
         action = actionType.name().toLowerCase();

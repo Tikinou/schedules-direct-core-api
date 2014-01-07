@@ -32,11 +32,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetStatusCommandParameters extends AuthenticatedBaseCommandParameter {
-    public GetStatusCommandParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.STATUS, ActionType.GET, version);
-    }
-
-    public GetStatusCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        super(randhash, ObjectTypes.STATUS, ActionType.GET, version);
+    public GetStatusCommandParameters(){
+        super(ObjectTypes.STATUS, ActionType.GET);
     }
 }

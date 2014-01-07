@@ -16,6 +16,8 @@
 
 package com.tikinou.schedulesdirect.core;
 
+import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
+import com.tikinou.schedulesdirect.core.commands.BaseCommandParameter;
 import com.tikinou.schedulesdirect.core.commands.randhash.RandHashCommand;
 import com.tikinou.schedulesdirect.core.commands.randhash.RandHashParameters;
 import com.tikinou.schedulesdirect.core.domain.*;
@@ -142,7 +144,7 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
         assert this.credentials.getUsername() != null;
         assert this.credentials.getPassword() != null;
         RandHashCommand cmd = createCommand(RandHashCommand.class);
-        cmd.setParameters(new RandHashParameters(credentials, apiVersion));
+        cmd.setParameters(new RandHashParameters(credentials));
         execute(cmd);
         if (cmd.getStatus() != CommandStatus.SUCCESS)
             throw new AuthenticationException("Could not login to schedules direct", cmd.getResults().getCode());
@@ -150,6 +152,15 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
 
     @Override
     public void execute(Command command) {
+        if(command.getParameters() != null){
+            if(command.getParameters() instanceof AuthenticatedBaseCommandParameter)
+                ((AuthenticatedBaseCommandParameter)command.getParameters()).setRandhash(credentials.getRandhash());
+            if(command.getParameters() instanceof BaseCommandParameter){
+                BaseCommandParameter p = (BaseCommandParameter) command.getParameters();
+                if(p.getApi() == null)
+                    p.setApi(apiVersion.getValue());
+            }
+        }
         command.execute(this);
     }
 }

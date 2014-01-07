@@ -35,13 +35,12 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
 
     private Request request;
 
-    public GetHeadendsParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.HEADENDS, ActionType.GET, version);
-        request = new Request();
+    public GetHeadendsParameters(){
+        this(null);
     }
 
-    public GetHeadendsParameters(String randhash, SchedulesDirectApiVersion version){
-        super(randhash, ObjectTypes.HEADENDS, ActionType.GET, version);
+    public GetHeadendsParameters(SchedulesDirectApiVersion version){
+        super(ObjectTypes.HEADENDS, ActionType.GET, version);
         request = new Request();
     }
 

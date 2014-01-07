@@ -36,16 +36,16 @@ public class GetProgramsCommandParameters extends AuthenticatedBaseCommandParame
     @JsonProperty("request")
     private List<String> programIds;
 
-    public GetProgramsCommandParameters(SchedulesDirectApiVersion version){
-        this(null, version);
+    public GetProgramsCommandParameters(){
+        this(null);
     }
 
-    public GetProgramsCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        this(randhash, version, null);
+    public GetProgramsCommandParameters(List<String> programIds){
+        this(null, programIds);
     }
 
-    public GetProgramsCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> programIds){
-        super(randhash, ObjectTypes.PROGRAMS, ActionType.GET, version);
+    public GetProgramsCommandParameters(SchedulesDirectApiVersion version, List<String> programIds){
+        super(ObjectTypes.PROGRAMS, ActionType.GET, version);
         this.programIds = programIds;
     }
 

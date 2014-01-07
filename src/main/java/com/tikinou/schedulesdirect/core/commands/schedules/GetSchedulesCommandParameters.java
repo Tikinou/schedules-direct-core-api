@@ -36,16 +36,12 @@ public class GetSchedulesCommandParameters extends AuthenticatedBaseCommandParam
     @JsonProperty("request")
     private List<String> stationIds;
 
-    public GetSchedulesCommandParameters(SchedulesDirectApiVersion version){
-        this(null, version);
+    public GetSchedulesCommandParameters(){
+        this(null);
     }
 
-    public GetSchedulesCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        this(randhash, version, null);
-    }
-
-    public GetSchedulesCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> stationIds){
-        super(randhash, ObjectTypes.SCHEDULES, ActionType.GET, version);
+    public GetSchedulesCommandParameters(List<String> stationIds){
+        super(ObjectTypes.SCHEDULES, ActionType.GET);
         this.stationIds = stationIds;
     }
 

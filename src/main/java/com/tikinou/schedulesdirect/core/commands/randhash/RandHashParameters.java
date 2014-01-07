@@ -32,12 +32,12 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class RandHashParameters extends BaseCommandParameter{
 
-    public RandHashParameters(String username, String password, SchedulesDirectApiVersion version){
-        this(new Credentials(username, password), version);
+    public RandHashParameters(String username, String password){
+        this(new Credentials(username, password));
     }
 
-    public RandHashParameters(Credentials credentials, SchedulesDirectApiVersion version){
-        super(ObjectTypes.RANDHASH, ActionType.GET, version);
+    public RandHashParameters(Credentials credentials){
+        super(ObjectTypes.RANDHASH, ActionType.GET);
         this.credentials = credentials;
     }
 

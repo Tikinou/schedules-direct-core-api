@@ -31,13 +31,11 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 public class AuthenticatedBaseCommandParameter extends BaseCommandParameter {
     private String randhash;
 
-    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
-        this(null, objectType,actionType,version);
+    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType){
+        super(objectType, actionType, null);
     }
-
-    protected AuthenticatedBaseCommandParameter(String randhash, ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
+    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
         super(objectType, actionType, version);
-        this.randhash = randhash;
     }
 
     public String getRandhash() {

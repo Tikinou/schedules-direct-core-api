@@ -33,13 +33,12 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
     private Request request;
 
-    public UpdateMetadataParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.METADATA, ActionType.UPDATE, version);
-        request = new Request();
+    public UpdateMetadataParameters(){
+        this(null);
     }
 
-    public UpdateMetadataParameters(String randHash, SchedulesDirectApiVersion version){
-        super(randHash, ObjectTypes.METADATA, ActionType.UPDATE, version);
+    public UpdateMetadataParameters(SchedulesDirectApiVersion version){
+        super(ObjectTypes.METADATA, ActionType.UPDATE, version);
         request = new Request();
     }
 

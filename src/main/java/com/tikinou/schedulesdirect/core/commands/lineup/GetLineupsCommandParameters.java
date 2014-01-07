@@ -36,16 +36,16 @@ public class GetLineupsCommandParameters extends AuthenticatedBaseCommandParamet
     @JsonProperty("request")
     private List<String> headendIds;
 
-    public GetLineupsCommandParameters(SchedulesDirectApiVersion version){
-        this(null, version);
+    public GetLineupsCommandParameters(){
+        this(null);
     }
 
-    public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        this(randhash, version, null);
+    public GetLineupsCommandParameters(List<String> headendIds){
+        this(null, headendIds);
     }
 
-    public GetLineupsCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> headendIds){
-        super(randhash, ObjectTypes.LINEUPS, ActionType.GET, version);
+    public GetLineupsCommandParameters(SchedulesDirectApiVersion version, List<String> headendIds){
+        super(ObjectTypes.LINEUPS, ActionType.GET, version);
         this.headendIds = headendIds;
     }
 

@@ -36,16 +36,16 @@ public class DeleteMessageCommandParameters extends AuthenticatedBaseCommandPara
     @JsonProperty("request")
     private List<String> messageIds;
 
-    public DeleteMessageCommandParameters(SchedulesDirectApiVersion version){
-        this(null, version);
+    public DeleteMessageCommandParameters(){
+        this(null);
     }
 
-    public DeleteMessageCommandParameters(String randhash, SchedulesDirectApiVersion version){
-        this(randhash, version, null);
+    public DeleteMessageCommandParameters(List<String> messageIds){
+        this(null, messageIds);
     }
 
-    public DeleteMessageCommandParameters(String randhash, SchedulesDirectApiVersion version, List<String> messageIds){
-        super(randhash, ObjectTypes.MESSAGE, ActionType.DELETE, version);
+    public DeleteMessageCommandParameters(SchedulesDirectApiVersion version, List<String> messageIds){
+        super(ObjectTypes.MESSAGE, ActionType.DELETE, version);
         this.messageIds = messageIds;
     }
 
