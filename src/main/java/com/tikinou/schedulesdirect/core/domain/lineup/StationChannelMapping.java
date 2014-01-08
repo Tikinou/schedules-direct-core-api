@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class StationChannelMapping {
     @JsonProperty("stationID")
     private Integer stationId;
-    private String channel;
+    private Integer channel;
     private String qamType;
     private Integer qamFreq;
     private Integer qamProgram;
@@ -51,11 +51,11 @@ public class StationChannelMapping {
         this.stationId = stationId;
     }
 
-    public String getChannel() {
+    public Integer getChannel() {
         return channel;
     }
 
-    public void setChannel(String channel) {
+    public void setChannel(Integer channel) {
         this.channel = channel;
     }
 
