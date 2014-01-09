@@ -16,7 +16,6 @@
 
 package com.tikinou.schedulesdirect.core.domain.schedule;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.domain.Rating;
@@ -47,7 +46,7 @@ public class ScheduleEntry {
     private DolbyAudioType dolby;
     private Boolean stereo;
     private Boolean subtitled;
-    private String subtitledLanguage;
+    private String subtitleLanguage;
     private Boolean sap;
     private String sapLanguage;
     private Boolean hasLanguageRating;
@@ -66,6 +65,7 @@ public class ScheduleEntry {
     private String dubbedLanguage;
     private Boolean timeApproximate;
     private Boolean educational;
+    @JsonProperty("JoinedInProgress")
     private Boolean joinedInProgress;
     private Boolean leftInProgress;
     private Integer numberOfParts;
@@ -201,12 +201,12 @@ public class ScheduleEntry {
         this.subtitled = subtitled;
     }
 
-    public String getSubtitledLanguage() {
-        return subtitledLanguage;
+    public String getSubtitleLanguage() {
+        return subtitleLanguage;
     }
 
-    public void setSubtitledLanguage(String subtitledLanguage) {
-        this.subtitledLanguage = subtitledLanguage;
+    public void setSubtitleLanguage(String subtitleLanguage) {
+        this.subtitleLanguage = subtitleLanguage;
     }
 
     public Boolean getSap() {

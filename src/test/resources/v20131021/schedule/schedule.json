@@ -2687,7 +2687,7 @@
         "hasDialogRating": true,
         "hdtv": true,
         "subtitled": true,
-        "subtitledLanguage": "English",
+        "subtitleLanguage": "English",
         "sap": true,
         "sapLanguage": "Spanish",
         "isPremiereOrFinale": "Premiere",
