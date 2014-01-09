@@ -114,9 +114,9 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
     public void connect(Credentials credentials, String baseUrl, String endPoint, boolean forceConnect) throws AuthenticationException {
         if (credentials == null)
             throw new AuthenticationException("credentials object cannot be null");
-        if(endPoint != null && !endPoint.isEmpty())
+        if(endPoint != null && !endPoint.trim().isEmpty())
             this.endPoint = endPoint;
-        if(baseUrl != null && !baseUrl.isEmpty())
+        if(baseUrl != null && !baseUrl.trim().isEmpty())
             this.baseUrl = baseUrl.endsWith("/") ? baseUrl : baseUrl + "/";
 
         if(LOG.isDebugEnabled()){
