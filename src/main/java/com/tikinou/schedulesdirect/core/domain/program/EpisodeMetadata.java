@@ -28,6 +28,7 @@ public class EpisodeMetadata {
     private String seriesId;
     private Integer season;
     private Integer episode;
+    private String url;
 
     public String getSeriesId() {
         return seriesId;
@@ -53,12 +54,22 @@ public class EpisodeMetadata {
         this.episode = episode;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "EpisodeMetadata{" +
                 "seriesId='" + seriesId + '\'' +
                 ", season=" + season +
                 ", episode=" + episode +
+                ", url='" + url + '\'' +
                 '}';
     }
+
 }

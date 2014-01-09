@@ -40,7 +40,6 @@ public class ProgramSD {
     private String descriptionLanguage;
     private String episodeTitle150;
     private String holiday;
-    private Boolean madeForTV;
     private String md5;
     private DateTime modified;
     private ColorType colorCode;
@@ -48,7 +47,7 @@ public class ProgramSD {
     private String syndicatedEpisodeNumber;
     private String originCountry;
     private String originalAirDate;
-    private String originalGameDateTime;
+    private DateTime gameDateTime;
     private List<CastEntry> castAndCrew;
     private List<Map<String, EpisodeMetadata>> metadata;
 
@@ -140,14 +139,6 @@ public class ProgramSD {
         this.holiday = holiday;
     }
 
-    public Boolean getMadeForTV() {
-        return madeForTV;
-    }
-
-    public void setMadeForTV(Boolean madeForTV) {
-        this.madeForTV = madeForTV;
-    }
-
     public String getMd5() {
         return md5;
     }
@@ -212,12 +203,12 @@ public class ProgramSD {
         this.originalAirDate = originalAirDate;
     }
 
-    public String getOriginalGameDateTime() {
-        return originalGameDateTime;
+    public DateTime getGameDateTime() {
+        return gameDateTime;
     }
 
-    public void setOriginalGameDateTime(String originalGameDateTime) {
-        this.originalGameDateTime = originalGameDateTime;
+    public void setGameDateTime(DateTime gameDateTime) {
+        this.gameDateTime = gameDateTime;
     }
 
     public List<CastEntry> getCastAndCrew() {
@@ -242,7 +233,6 @@ public class ProgramSD {
                 ", descriptionLanguage='" + descriptionLanguage + '\'' +
                 ", episodeTitle150='" + episodeTitle150 + '\'' +
                 ", holiday='" + holiday + '\'' +
-                ", madeForTV=" + madeForTV +
                 ", md5='" + md5 + '\'' +
                 ", modified=" + modified +
                 ", metadata=" + metadata +
@@ -251,7 +241,7 @@ public class ProgramSD {
                 ", syndicatedEpisodeNumber='" + syndicatedEpisodeNumber + '\'' +
                 ", originCountry='" + originCountry + '\'' +
                 ", originalAirDate='" + originalAirDate + '\'' +
-                ", originalGameDateTime='" + originalGameDateTime + '\'' +
+                ", gameDateTime='" + gameDateTime + '\'' +
                 ", castAndCrew=" + castAndCrew +
                 '}';
     }

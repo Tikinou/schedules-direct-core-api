@@ -17,7 +17,9 @@
 package com.tikinou.schedulesdirect.core.domain.program;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.tikinou.schedulesdirect.core.domain.Rating;
+import com.tikinou.schedulesdirect.core.jackson.deser.BooleanYNDeserializer;
 
 /**
  * @author Sebastien Astie.
@@ -29,6 +31,8 @@ public class MovieMetadata {
     private String origStudio;
     private String starRating;
     private Rating mpaaRating;
+    @JsonDeserialize(using = BooleanYNDeserializer.class)
+    private Boolean madeForTV;
 
     public Integer getYear() {
         return year;
@@ -70,6 +74,14 @@ public class MovieMetadata {
         this.mpaaRating = mpaaRating;
     }
 
+    public Boolean getMadeForTV() {
+        return madeForTV;
+    }
+
+    public void setMadeForTV(Boolean madeForTV) {
+        this.madeForTV = madeForTV;
+    }
+
     @Override
     public String toString() {
         return "MovieMetadata{" +
@@ -77,7 +89,9 @@ public class MovieMetadata {
                 ", runTime=" + runTime +
                 ", origStudio='" + origStudio + '\'' +
                 ", starRating='" + starRating + '\'' +
-                ", mpaaRating=" + mpaaRating +
+                ", mpaaRating=" + mpaaRating + '\'' +
+                ", madeForTV=" + madeForTV +
                 '}';
     }
+
 }
