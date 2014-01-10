@@ -21,6 +21,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.tikinou.schedulesdirect.core.domain.Rating;
 import com.tikinou.schedulesdirect.core.jackson.deser.BooleanYNDeserializer;
 
+import java.util.List;
+
 /**
  * @author Sebastien Astie.
  */
@@ -33,6 +35,7 @@ public class MovieMetadata {
     private Rating mpaaRating;
     @JsonDeserialize(using = BooleanYNDeserializer.class)
     private Boolean madeForTV;
+    private List<RatingMetadata> ratings;
 
     public Integer getYear() {
         return year;
@@ -82,6 +85,14 @@ public class MovieMetadata {
         this.madeForTV = madeForTV;
     }
 
+    public List<RatingMetadata> getRatings() {
+        return ratings;
+    }
+
+    public void setRatings(List<RatingMetadata> ratings) {
+        this.ratings = ratings;
+    }
+
     @Override
     public String toString() {
         return "MovieMetadata{" +
@@ -89,9 +100,9 @@ public class MovieMetadata {
                 ", runTime=" + runTime +
                 ", origStudio='" + origStudio + '\'' +
                 ", starRating='" + starRating + '\'' +
-                ", mpaaRating=" + mpaaRating + '\'' +
+                ", mpaaRating=" + mpaaRating +
                 ", madeForTV=" + madeForTV +
+                ", ratings=" + ratings +
                 '}';
     }
-
 }
