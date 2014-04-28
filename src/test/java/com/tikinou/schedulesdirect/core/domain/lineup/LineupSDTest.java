@@ -30,15 +30,5 @@ public class LineupSDTest {
         ObjectMapper mapper = ModuleRegistration.getInstance().getConfiguredObjectMapper();
         LineupSD lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY67791.json"), LineupSD.class);
         assert lineupSD != null;
-        assert lineupSD.getDeviceTypeMaps().size() == 2;
-        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/DISH501.json"), LineupSD.class);
-        assert lineupSD != null;
-        assert lineupSD.getDeviceTypeMaps().size() == 1;
-        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY62482.json"), LineupSD.class);
-        assert lineupSD != null;
-        assert lineupSD.getDeviceTypeMaps().size() == 2;
-        lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/PC_10562.json"), LineupSD.class);
-        assert lineupSD != null;
-        assert lineupSD.getDeviceTypeMaps().size() == 1;
     }
 }

@@ -18,10 +18,9 @@ package com.tikinou.schedulesdirect.core.commands.status;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.status.Account;
-import com.tikinou.schedulesdirect.core.domain.status.Headend;
+import com.tikinou.schedulesdirect.core.domain.status.LineupStatusInfo;
 import com.tikinou.schedulesdirect.core.domain.status.SystemStatus;
 import org.joda.time.DateTime;
 
@@ -35,8 +34,7 @@ import java.util.List;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetStatusResult extends BaseCommandResult {
     private Account account;
-    @JsonProperty("headend")
-    private List<Headend> headends;
+    private List<LineupStatusInfo> lineups;
     private DateTime lastDataUpdate;
     private List<String> notifications;
     private List<SystemStatus> systemStatus;
@@ -49,12 +47,12 @@ public class GetStatusResult extends BaseCommandResult {
         this.account = account;
     }
 
-    public List<Headend> getHeadends() {
-        return headends;
+    public List<LineupStatusInfo> getLineups() {
+        return lineups;
     }
 
-    public void setHeadends(List<Headend> headends) {
-        this.headends = headends;
+    public void setLineups(List<LineupStatusInfo> lineups) {
+        this.lineups = lineups;
     }
 
     public DateTime getLastDataUpdate() {
@@ -90,7 +88,7 @@ public class GetStatusResult extends BaseCommandResult {
     protected String toStringMembers() {
         return super.toStringMembers( ) +
                 ", account=" + account +
-                ", headends=" + (headends != null ? Arrays.toString(headends.toArray()) : headends) +
+                ", lineups=" + (lineups != null ? Arrays.toString(lineups.toArray()) : lineups) +
                 ", lastDataUpdate=" + lastDataUpdate +
                 ", notifications=" + (notifications != null ? Arrays.toString(notifications.toArray()) : notifications) +
                 ", systemStatus=" + (systemStatus != null ? Arrays.toString(systemStatus.toArray()) : systemStatus);

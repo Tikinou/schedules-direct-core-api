@@ -21,9 +21,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.deser.std.StdDelegatingDeserializer;
 import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.joda.JodaModule;
+import com.tikinou.schedulesdirect.core.commands.headend.GetHeadendsResult;
 import com.tikinou.schedulesdirect.core.domain.ResponseCode;
+import com.tikinou.schedulesdirect.core.jackson.converters.HeadendResultConverter;
 import com.tikinou.schedulesdirect.core.jackson.converters.ResponseCodeConverter;
-import com.tikinou.schedulesdirect.core.jackson.deser.BooleanYNDeserializer;
 
 /**
  * @author Sebastien Astie
@@ -33,6 +34,8 @@ public class ModuleRegistration {
     private ModuleRegistration(){
         customModule = new SimpleModule("com.tikinou.schedulesdirect.core.jackson.module", new Version(1, 0, 0, null, null, null));
         customModule.addDeserializer(ResponseCode.class, new StdDelegatingDeserializer<>(new ResponseCodeConverter()));
+        customModule.addDeserializer(GetHeadendsResult.class, new StdDelegatingDeserializer<>(new HeadendResultConverter()));
+//        customModule.addDeserializer(GetHeadendsResult.class, new HeadendResultDeserializer());
 //        customModule.addDeserializer(Boolean.class, new BooleanYNDeserializer());
 //        customModule.addDeserializer(Boolean.TYPE, new BooleanYNDeserializer());
     }

@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.metadata;
 
-import com.tikinou.schedulesdirect.core.Command;
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.ParameterizedCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface UpdateMetadataCommand extends Command<UpdateMetadataParameters, CommandResult> {
+public interface UpdateMetadataCommand extends ParameterizedCommand<UpdateMetadataParameters, CommandResult> {
 }

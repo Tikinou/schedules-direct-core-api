@@ -22,9 +22,9 @@ import com.fasterxml.jackson.annotation.JsonValue;
  * @author Sebastien Astie
  */
 public enum Country {
-    Canada("CA"),
-    UnitedStates("US"),
-    Worldwide("ZZ");
+    Canada("CAN"),
+    UnitedStates("USA"),
+    Worldwide("ZZZ");
 
     private final String code;
 

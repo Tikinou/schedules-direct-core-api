@@ -25,16 +25,15 @@ import com.tikinou.schedulesdirect.core.exceptions.ValidationException;
 public class DefaultPostalCodeFormatter implements PostalCodeFormatter {
     @Override
     public String format(Country country, String postalCode) throws ValidationException{
-        StringBuilder code = new StringBuilder("PC:");
         switch (country) {
             case Canada:
                 if (postalCode.length() < 4)
                     throw new ValidationException("postal code for Canada must be at least 4 characters long");
-                return code.append(postalCode.substring(0,3)).toString(); // grab the 4 left most
+                return postalCode.substring(0,3); // grab the 4 left most
             case UnitedStates:
                 if (postalCode.length() < 5)
                     throw new ValidationException("postal code for United States must be at least 5 characters long");
-                return code.append(postalCode.substring(0,5)).toString();
+                return postalCode.substring(0,5);
         }
         return postalCode;
     }

@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.message;
 
-import com.tikinou.schedulesdirect.core.Command;
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.ParameterizedCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface DeleteMessageCommand extends Command<DeleteMessageCommandParameters, CommandResult> {
+public interface DeleteMessageCommand extends ParameterizedCommand<DeleteMessageCommandParameters, CommandResult> {
 }

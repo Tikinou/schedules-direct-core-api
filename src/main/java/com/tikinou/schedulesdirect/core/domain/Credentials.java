@@ -30,8 +30,8 @@ import org.joda.time.DateTime;
 public class Credentials {
     private String username;
     private String password;
-    private String randhash;
-    private DateTime randhashDateTime;
+    private String token;
+    private DateTime tokenDateTime;
     @JsonIgnore
     private String clearPassword;
 
@@ -42,11 +42,11 @@ public class Credentials {
         this(username, password, null, null);
     }
 
-    public Credentials(String username, String password, String randhash, DateTime randhashDateTime){
+    public Credentials(String username, String password, String token, DateTime tokenDateTime){
         this.username = username;
         this.clearPassword = password;
-        this.randhash = randhash;
-        this.randhashDateTime = randhashDateTime;
+        this.token = token;
+        this.tokenDateTime = tokenDateTime;
         if(clearPassword != null)
             this.password = DigestUtils.sha1Hex(clearPassword);
     }
@@ -67,20 +67,20 @@ public class Credentials {
         this.password = password;
     }
 
-    public String getRandhash() {
-        return randhash;
+    public String getToken() {
+        return token;
     }
 
-    public void setRandhash(String randhash) {
-        this.randhash = randhash;
+    public void setToken(String token) {
+        this.token = token;
     }
 
-    public DateTime getRandhashDateTime() {
-        return randhashDateTime;
+    public DateTime getTokenDateTime() {
+        return tokenDateTime;
     }
 
-    public void setRandhashDateTime(DateTime randhashDateTime) {
-        this.randhashDateTime = randhashDateTime;
+    public void setTokenDateTime(DateTime tokenDateTime) {
+        this.tokenDateTime = tokenDateTime;
     }
 
     public String getClearPassword() {
@@ -104,9 +104,9 @@ public class Credentials {
     }
 
     public boolean isOlderThan(int hours) {
-        if (randhash == null || randhashDateTime == null)
+        if (token == null || tokenDateTime == null)
             return true;
-        return randhashDateTime.isBefore(DateTime.now().minusHours(hours));
+        return tokenDateTime.isBefore(DateTime.now().minusHours(hours));
     }
 
     @Override
@@ -114,8 +114,8 @@ public class Credentials {
         return "Credentials{" +
                 "username='" + username + '\'' +
                 ", password='" + password + '\'' +
-                ", randhash='" + randhash + '\'' +
-                ", randhashDateTime=" + randhashDateTime +
+                ", token='" + token + '\'' +
+                ", tokenDateTime=" + tokenDateTime +
                 ", clearPassword='" + clearPassword + '\'' +
                 '}';
     }

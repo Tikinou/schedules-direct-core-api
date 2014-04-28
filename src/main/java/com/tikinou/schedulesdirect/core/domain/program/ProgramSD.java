@@ -18,6 +18,7 @@ package com.tikinou.schedulesdirect.core.domain.program;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.tikinou.schedulesdirect.core.domain.ContentRatingInfo;
 import org.joda.time.DateTime;
 
 import java.util.List;
@@ -30,26 +31,38 @@ import java.util.Map;
 public class ProgramSD {
     @JsonProperty("programID")
     private String programId;
-    private List<String> advisories;
+    private List<String> contentAdvisory;
     private List<String> genres;
+    private EventDetails eventDetails;
     private MovieMetadata movie;
     private ShowType showType;
-    private ProgramSourceType sourceType;
     private Titles titles;
-    private Descriptions descriptions;
-    private String descriptionLanguage;
+    private Map<String, List<Description>> descriptions;
     private String episodeTitle150;
-    private String holiday;
     private String md5;
-    private DateTime modified;
-    private ColorType colorCode;
-    private String alternateSyndicatedEpisodeNumber;
-    private String syndicatedEpisodeNumber;
-    private String originCountry;
     private String originalAirDate;
-    private DateTime gameDateTime;
-    private List<CastEntry> castAndCrew;
+    private List<Person> cast;
+    private List<Person> crew;
+    private List<Image> images;
+    private List<ContentRatingInfo> contentRating;
     private List<Map<String, EpisodeMetadata>> metadata;
+    private List<Recommendation> recommendations;
+
+    public List<Recommendation> getRecommendations() {
+        return recommendations;
+    }
+
+    public void setRecommendations(List<Recommendation> recommendations) {
+        this.recommendations = recommendations;
+    }
+
+    public List<ContentRatingInfo> getContentRating() {
+        return contentRating;
+    }
+
+    public void setContentRating(List<ContentRatingInfo> contentRating) {
+        this.contentRating = contentRating;
+    }
 
     public String getProgramId() {
         return programId;
@@ -59,12 +72,12 @@ public class ProgramSD {
         this.programId = programId;
     }
 
-    public List<String> getAdvisories() {
-        return advisories;
+    public List<String> getContentAdvisory() {
+        return contentAdvisory;
     }
 
-    public void setAdvisories(List<String> advisories) {
-        this.advisories = advisories;
+    public void setContentAdvisory(List<String> contentAdvisory) {
+        this.contentAdvisory = contentAdvisory;
     }
 
     public List<String> getGenres() {
@@ -91,36 +104,12 @@ public class ProgramSD {
         this.showType = showType;
     }
 
-    public ProgramSourceType getSourceType() {
-        return sourceType;
-    }
-
-    public void setSourceType(ProgramSourceType sourceType) {
-        this.sourceType = sourceType;
-    }
-
     public Titles getTitles() {
         return titles;
     }
 
     public void setTitles(Titles titles) {
         this.titles = titles;
-    }
-
-    public Descriptions getDescriptions() {
-        return descriptions;
-    }
-
-    public void setDescriptions(Descriptions descriptions) {
-        this.descriptions = descriptions;
-    }
-
-    public String getDescriptionLanguage() {
-        return descriptionLanguage;
-    }
-
-    public void setDescriptionLanguage(String descriptionLanguage) {
-        this.descriptionLanguage = descriptionLanguage;
     }
 
     public String getEpisodeTitle150() {
@@ -131,28 +120,12 @@ public class ProgramSD {
         this.episodeTitle150 = episodeTitle150;
     }
 
-    public String getHoliday() {
-        return holiday;
-    }
-
-    public void setHoliday(String holiday) {
-        this.holiday = holiday;
-    }
-
     public String getMd5() {
         return md5;
     }
 
     public void setMd5(String md5) {
         this.md5 = md5;
-    }
-
-    public DateTime getModified() {
-        return modified;
-    }
-
-    public void setModified(DateTime modified) {
-        this.modified = modified;
     }
 
     public List<Map<String, EpisodeMetadata>> getMetadata() {
@@ -163,38 +136,6 @@ public class ProgramSD {
         this.metadata = metadata;
     }
 
-    public ColorType getColorCode() {
-        return colorCode;
-    }
-
-    public void setColorCode(ColorType colorCode) {
-        this.colorCode = colorCode;
-    }
-
-    public String getAlternateSyndicatedEpisodeNumber() {
-        return alternateSyndicatedEpisodeNumber;
-    }
-
-    public void setAlternateSyndicatedEpisodeNumber(String alternateSyndicatedEpisodeNumber) {
-        this.alternateSyndicatedEpisodeNumber = alternateSyndicatedEpisodeNumber;
-    }
-
-    public String getSyndicatedEpisodeNumber() {
-        return syndicatedEpisodeNumber;
-    }
-
-    public void setSyndicatedEpisodeNumber(String syndicatedEpisodeNumber) {
-        this.syndicatedEpisodeNumber = syndicatedEpisodeNumber;
-    }
-
-    public String getOriginCountry() {
-        return originCountry;
-    }
-
-    public void setOriginCountry(String originCountry) {
-        this.originCountry = originCountry;
-    }
-
     public String getOriginalAirDate() {
         return originalAirDate;
     }
@@ -203,46 +144,64 @@ public class ProgramSD {
         this.originalAirDate = originalAirDate;
     }
 
-    public DateTime getGameDateTime() {
-        return gameDateTime;
+    public List<Person> getCast() {
+        return cast;
     }
 
-    public void setGameDateTime(DateTime gameDateTime) {
-        this.gameDateTime = gameDateTime;
+    public void setCast(List<Person> cast) {
+        this.cast = cast;
     }
 
-    public List<CastEntry> getCastAndCrew() {
-        return castAndCrew;
+    public List<Person> getCrew() {
+        return crew;
     }
 
-    public void setCastAndCrew(List<CastEntry> castAndCrew) {
-        this.castAndCrew = castAndCrew;
+    public void setCrew(List<Person> crew) {
+        this.crew = crew;
+    }
+
+    public List<Image> getImages() {
+        return images;
+    }
+
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+
+    public EventDetails getEventDetails() {
+        return eventDetails;
+    }
+
+    public void setEventDetails(EventDetails eventDetails) {
+        this.eventDetails = eventDetails;
+    }
+
+    public Map<String, List<Description>> getDescriptions() {
+        return descriptions;
+    }
+
+    public void setDescriptions(Map<String, List<Description>> descriptions) {
+        this.descriptions = descriptions;
     }
 
     @Override
     public String toString() {
         return "ProgramSD{" +
                 "programId='" + programId + '\'' +
-                ", advisories=" + advisories +
+                ", contentAdvisory=" + contentAdvisory +
                 ", genres=" + genres +
+                ", eventDetails=" + eventDetails +
                 ", movie=" + movie +
                 ", showType=" + showType +
-                ", sourceType=" + sourceType +
                 ", titles=" + titles +
                 ", descriptions=" + descriptions +
-                ", descriptionLanguage='" + descriptionLanguage + '\'' +
                 ", episodeTitle150='" + episodeTitle150 + '\'' +
-                ", holiday='" + holiday + '\'' +
                 ", md5='" + md5 + '\'' +
-                ", modified=" + modified +
                 ", metadata=" + metadata +
-                ", colorCode=" + colorCode +
-                ", alternateSyndicatedEpisodeNumber='" + alternateSyndicatedEpisodeNumber + '\'' +
-                ", syndicatedEpisodeNumber='" + syndicatedEpisodeNumber + '\'' +
-                ", originCountry='" + originCountry + '\'' +
                 ", originalAirDate='" + originalAirDate + '\'' +
-                ", gameDateTime='" + gameDateTime + '\'' +
-                ", castAndCrew=" + castAndCrew +
+                ", cast=" + cast +
+                ", crew=" + crew +
+                ", images=" + images +
                 '}';
     }
 }

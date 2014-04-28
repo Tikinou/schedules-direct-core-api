@@ -17,9 +17,10 @@
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,45 +30,10 @@ import java.util.Map;
  */
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class LineupSD {
-    private String headend;
-    private String name;
-    private String location;
-    private List<String> deviceTypes;
     private List<StationSD> stations;
-    private List<MetadataSD> metadata;
-    private Map<String, List<StationChannelMapping>> deviceTypeMaps = new HashMap<>();
-
-    public String getHeadend() {
-        return headend;
-    }
-
-    public void setHeadend(String headend) {
-        this.headend = headend;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getLocation() {
-        return location;
-    }
-
-    public void setLocation(String location) {
-        this.location = location;
-    }
-
-    public List<String> getDeviceTypes() {
-        return deviceTypes;
-    }
-
-    public void setDeviceTypes(List<String> deviceTypes) {
-        this.deviceTypes = deviceTypes;
-    }
+    private MetadataSD metadata;
+    @JsonProperty("map")
+    private List<StationChannelMapping> stationMaps;
 
     public List<StationSD> getStations() {
         return stations;
@@ -77,24 +43,19 @@ public class LineupSD {
         this.stations = stations;
     }
 
-    public List<MetadataSD> getMetadata() {
+    public MetadataSD getMetadata() {
         return metadata;
     }
 
-    public void setMetadata(List<MetadataSD> metadata) {
+    public void setMetadata(MetadataSD metadata) {
         this.metadata = metadata;
     }
 
-    public Map<String, List<StationChannelMapping>> getDeviceTypeMaps() {
-        return deviceTypeMaps;
+    public List<StationChannelMapping> getStationMaps() {
+        return stationMaps;
     }
 
-    public void setDeviceTypeMaps(Map<String, List<StationChannelMapping>> deviceTypeMaps) {
-        this.deviceTypeMaps = deviceTypeMaps;
-    }
-
-    @JsonAnySetter
-    public void setDynamicProperty(String name, Map<String, List<StationChannelMapping>> map) {
-        deviceTypeMaps.put(name, map.get("map"));
+    public void setStationMaps(List<StationChannelMapping> stationMaps) {
+        this.stationMaps = stationMaps;
     }
 }

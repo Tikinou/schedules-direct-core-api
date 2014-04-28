@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core.commands.metadata;
 
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
@@ -25,6 +26,10 @@ import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 public abstract class AbstractUpdateMetadataCommand extends AbstractBaseCommand implements UpdateMetadataCommand {
     private UpdateMetadataParameters parameters;
     private CommandResult results;
+
+    public AbstractUpdateMetadataCommand(){
+        super("metadata", HttpMethod.POST);
+    }
 
     @Override
     public void setParameters(UpdateMetadataParameters parameters) {

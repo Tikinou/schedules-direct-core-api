@@ -16,14 +16,22 @@
 
 package com.tikinou.schedulesdirect.core.commands;
 
+import com.tikinou.schedulesdirect.core.Command;
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.domain.CommandStatus;
 
 /**
  * @author Sebastien Astie
  */
-public abstract class AbstractBaseCommand {
-
+public abstract class AbstractBaseCommand implements Command {
     private CommandStatus commandStatus;
+    private HttpMethod httpMethod;
+    private String endPoint;
+
+    public AbstractBaseCommand(String commandEndPoint, HttpMethod method){
+        this.endPoint = commandEndPoint;
+        this.httpMethod = method;
+    }
 
     public CommandStatus getStatus() {
         return commandStatus;
@@ -31,5 +39,17 @@ public abstract class AbstractBaseCommand {
 
     public void setStatus(CommandStatus status) {
         this.commandStatus = status;
+    }
+
+    public HttpMethod getMethod() {
+        return httpMethod;
+    }
+
+    public void setHttpMethod(HttpMethod httpMethod) {
+        this.httpMethod = httpMethod;
+    }
+
+    public String getEndPoint() {
+        return endPoint;
     }
 }

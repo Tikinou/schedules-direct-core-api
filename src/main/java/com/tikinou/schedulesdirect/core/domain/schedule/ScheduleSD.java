@@ -16,7 +16,6 @@
 
 package com.tikinou.schedulesdirect.core.domain.schedule;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -30,6 +29,7 @@ public class ScheduleSD {
     @JsonProperty("stationID")
     private Integer stationId;
     private List<ScheduleEntry> programs;
+    private Metadata metadata;
 
     public Integer getStationId() {
         return stationId;
@@ -45,5 +45,13 @@ public class ScheduleSD {
 
     public void setPrograms(List<ScheduleEntry> programs) {
         this.programs = programs;
+    }
+
+    public Metadata getMetadata() {
+        return metadata;
+    }
+
+    public void setMetadata(Metadata metadata) {
+        this.metadata = metadata;
     }
 }

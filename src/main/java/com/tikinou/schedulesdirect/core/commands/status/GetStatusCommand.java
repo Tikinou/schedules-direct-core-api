@@ -16,10 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.commands.status;
 
-import com.tikinou.schedulesdirect.core.Command;
+import com.tikinou.schedulesdirect.core.ParameterizedCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetStatusCommand extends Command<GetStatusCommandParameters, GetStatusResult> {
+public interface GetStatusCommand extends ParameterizedCommand<GetStatusCommandParameters, GetStatusResult> {
 }

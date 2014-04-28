@@ -16,8 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 /**
  * @author Sebastien Astie.
@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 public class BroadcasterSD {
     private String city;
     private String state;
-    private String zipcode;
+    @JsonProperty("postalcode")
+    private String postalCode;
     private String country;
-    private LogoSD logo;
 
     public String getCity() {
         return city;
@@ -46,12 +46,12 @@ public class BroadcasterSD {
         this.state = state;
     }
 
-    public String getZipcode() {
-        return zipcode;
+    public String getPostalCode() {
+        return postalCode;
     }
 
-    public void setZipcode(String zipcode) {
-        this.zipcode = zipcode;
+    public void setPostalCode(String postalCode) {
+        this.postalCode = postalCode;
     }
 
     public String getCountry() {
@@ -62,22 +62,13 @@ public class BroadcasterSD {
         this.country = country;
     }
 
-    public LogoSD getLogo() {
-        return logo;
-    }
-
-    public void setLogo(LogoSD logo) {
-        this.logo = logo;
-    }
-
     @Override
     public String toString() {
         return "Broadcaster{" +
                 "city='" + city + '\'' +
                 ", state='" + state + '\'' +
-                ", zipcode='" + zipcode + '\'' +
+                ", postalCode='" + postalCode + '\'' +
                 ", country='" + country + '\'' +
-                ", logo=" + logo +
                 '}';
     }
 }

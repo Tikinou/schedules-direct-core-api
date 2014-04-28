@@ -1,0 +1,165 @@
+{"4DTV": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "4DTV",
+            "uri": "\/20131021\/lineups\/USA-4DTV-DEFAULT"
+        }
+    ]
+}, "AFN": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "AFN Satellite",
+            "uri": "\/20131021\/lineups\/USA-AFN-DEFAULT"
+        }
+    ]
+}, "C-BAND": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "C-Band",
+            "uri": "\/20131021\/lineup\/USA-C-BAND-DEFAULT"
+        }
+    ]
+}, "DISH501": {
+    "type": "Satellite",
+    "location": "New York",
+    "lineups": [
+        {
+            "name": "DISH New York",
+            "uri": "\/20131021\/lineups\/USA-DISH501-DEFAULT"
+        }
+    ]
+}, "DITV": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "DIRECTV",
+            "uri": "\/20131021\/lineups\/USA-DITV-DEFAULT"
+        }
+    ]
+}, "DITV501": {
+    "type": "Satellite",
+    "location": "New York",
+    "lineups": [
+        {
+            "name": "DIRECTV New York",
+            "uri": "\/20131021\/lineups\/USA-DITV501-DEFAULT"
+        }
+    ]
+}, "ECHOST": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "DISH Network",
+            "uri": "\/20131021\/lineups\/USA-ECHOST-DEFAULT"
+        }
+    ]
+}, "GLOBCST": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "Globecast World TV",
+            "uri": "\/20131021\/lineups\/USA-GLOBCST-DEFAULT"
+        }
+    ]
+}, "NY31647": {
+    "type": "Cable",
+    "location": "Mamaroneck",
+    "lineups": [
+        {
+            "name": "Cablevision of South Westchester - Cable",
+            "uri": "\/20131021\/lineups\/USA-NY31647-DEFAULT"
+        },
+        {
+            "name": "Cablevision of South Westchester - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY31647-X"
+        }
+    ]
+}, "NY31656": {
+    "type": "Cable",
+    "location": "Ossining",
+    "lineups": [
+        {
+            "name": "Cablevision Communications - Cable",
+            "uri": "\/20131021\/lineups\/USA-NY31656-DEFAULT"
+        },
+        {
+            "name": "Cablevision Communications - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY31656-X"
+        }
+    ]
+}, "NY31693": {
+    "type": "Cable",
+    "location": "Shrub Oak",
+    "lineups": [
+        {
+            "name": "Cablevision of Westchester - Cable",
+            "uri": "\/20131021\/lineups\/USA-NY31693-DEFAULT"
+        },
+        {
+            "name": "Cablevision of Westchester - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY31693-X"
+        }
+    ]
+}, "NY62481": {
+    "type": "Cable",
+    "location": "Ossining",
+    "lineups": [
+        {
+            "name": "Cablevision Westchester North - Cable",
+            "uri": "\/20131021\/lineups\/USA-NY62481-DEFAULT"
+        },
+        {
+            "name": "Cablevision Westchester North - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY62481-X"
+        }
+    ]
+}, "NY62482": {
+    "type": "Cable",
+    "location": "Ossining",
+    "lineups": [
+        {
+            "name": "Cablevision Westchester South - Cable",
+            "uri": "\/20131021\/lineups\/USA-NY62482-DEFAULT"
+        },
+        {
+            "name": "Cablevision Westchester South - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY62482-X"
+        }
+    ]
+}, "NY67791": {
+    "type": "Cable",
+    "location": "Fresh Meadows",
+    "lineups": [
+        {
+            "name": "Verizon Fios Queens - Digital",
+            "uri": "\/20131021\/lineups\/USA-NY67791-X"
+        }
+    ]
+}, "RELAYTV": {
+    "type": "Satellite",
+    "location": "USA",
+    "lineups": [
+        {
+            "name": "RELAYTV",
+            "uri": "\/20131021\/lineups\/USA-RELAYTV-DEFAULT"
+        }
+    ]
+}, "10562": {
+    "type": "Over-the-Air",
+    "location": "10562",
+    "lineups": [
+        {
+            "name": "Antenna",
+            "uri": "\/20131021\/lineups\/USA-OTA-10562"
+        }
+    ]
+}}

@@ -18,13 +18,7 @@ package com.tikinou.schedulesdirect.core.commands.status;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
-import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
-
-import java.util.List;
 
 /**
  * @author Sebastien Astie
@@ -32,7 +26,4 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetStatusCommandParameters extends AuthenticatedBaseCommandParameter {
-    public GetStatusCommandParameters(){
-        super(ObjectTypes.STATUS, ActionType.GET);
-    }
 }

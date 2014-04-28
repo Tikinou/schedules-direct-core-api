@@ -20,7 +20,6 @@ package com.tikinou.schedulesdirect.core.domain;
  * @author Sebastien Astie
  */
 public enum SchedulesDirectApiVersion {
-    VERSION_20130709(20130709),
     VERSION_20131021(20131021);
 
     private SchedulesDirectApiVersion(Integer v) {
@@ -48,8 +47,6 @@ public enum SchedulesDirectApiVersion {
             return null;
 
         switch (version) {
-            case 20130709:
-                return VERSION_20130709;
             case 20131021:
                 return VERSION_20131021;
             default:

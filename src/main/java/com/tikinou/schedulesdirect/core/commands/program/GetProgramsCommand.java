@@ -16,11 +16,11 @@
 
 package com.tikinou.schedulesdirect.core.commands.program;
 
-import com.tikinou.schedulesdirect.core.Command;
-import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
+import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.ParameterizedCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetProgramsCommand extends Command<GetProgramsCommandParameters, FileUrlBasedCommandResult> {
+public interface GetProgramsCommand extends ParameterizedCommand<GetProgramsCommandParameters, GetProgramsCommandResult> {
 }

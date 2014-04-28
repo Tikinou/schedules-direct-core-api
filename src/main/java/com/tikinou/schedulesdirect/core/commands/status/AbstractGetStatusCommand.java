@@ -16,8 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.commands.status;
 
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
-import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
 
 /**
  * @author Sebastien Astie.
@@ -25,6 +25,10 @@ import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParamet
 public abstract class AbstractGetStatusCommand extends AbstractBaseCommand implements GetStatusCommand {
     private GetStatusResult results;
     private GetStatusCommandParameters parameters;
+
+    public AbstractGetStatusCommand(){
+        super("status", HttpMethod.GET);
+    }
 
     @Override
     public void setParameters(GetStatusCommandParameters parameters) {

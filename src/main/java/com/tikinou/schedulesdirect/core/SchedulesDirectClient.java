@@ -16,9 +16,7 @@
 
 package com.tikinou.schedulesdirect.core;
 
-import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.Credentials;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 import com.tikinou.schedulesdirect.core.exceptions.AuthenticationException;
 import com.tikinou.schedulesdirect.core.exceptions.VersionNotSupportedException;
@@ -51,7 +49,7 @@ public interface SchedulesDirectClient {
 
     public void connect(Credentials credentials, String baseUrl, String endPoint, boolean forceConnect) throws AuthenticationException;
 
-    public void execute(Command command);
+    public void execute(ParameterizedCommand command);
 
-    public <T extends Command<?,?>> T createCommand(Class<T> commandClass);
+    public <T extends ParameterizedCommand<?,?>> T createCommand(Class<T> commandClass);
 }

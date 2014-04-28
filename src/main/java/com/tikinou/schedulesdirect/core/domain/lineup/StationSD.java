@@ -16,7 +16,6 @@
 
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
@@ -32,6 +31,7 @@ public class StationSD {
     @JsonProperty("stationID")
     private Integer stationId;
     private BroadcasterSD broadcaster;
+    private LogoSD logo;
 
     public String getName() {
         return name;
@@ -81,6 +81,14 @@ public class StationSD {
         this.broadcaster = broadcaster;
     }
 
+    public LogoSD getLogo() {
+        return logo;
+    }
+
+    public void setLogo(LogoSD logo) {
+        this.logo = logo;
+    }
+
     @Override
     public String toString() {
         return "Station{" +
@@ -90,6 +98,7 @@ public class StationSD {
                 ", language='" + language + '\'' +
                 ", stationId=" + stationId +
                 ", broadcaster=" + broadcaster +
+                ", logo=" + logo +
                 '}';
     }
 }

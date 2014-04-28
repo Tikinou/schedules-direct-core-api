@@ -32,7 +32,7 @@ public class Account {
     private DateTime expires;
     private DateTime nextSuggestedConnectTime;
     private List<Message> messages;
-    private Integer maxHeadends;
+    private Integer maxLineups;
 
     public DateTime getExpires() {
         return expires;
@@ -58,12 +58,12 @@ public class Account {
         this.messages = messages;
     }
 
-    public Integer getMaxHeadends() {
-        return maxHeadends;
+    public Integer getMaxLineups() {
+        return maxLineups;
     }
 
-    public void setMaxHeadends(Integer maxHeadends) {
-        this.maxHeadends = maxHeadends;
+    public void setMaxLineups(Integer maxLineups) {
+        this.maxLineups = maxLineups;
     }
 
     @Override
@@ -72,7 +72,7 @@ public class Account {
                 "expires=" + expires +
                 ", nextSuggestedConnectTime=" + nextSuggestedConnectTime +
                 ", messages=" + (messages != null ? Arrays.toString(messages.toArray()) : messages) +
-                ", maxHeadends=" + maxHeadends +
+                ", maxLineups=" + maxLineups +
                 '}';
     }
 }

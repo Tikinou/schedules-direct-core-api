@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
 import java.util.Arrays;
@@ -45,7 +43,7 @@ public class DeleteMessageCommandParameters extends AuthenticatedBaseCommandPara
     }
 
     public DeleteMessageCommandParameters(SchedulesDirectApiVersion version, List<String> messageIds){
-        super(ObjectTypes.MESSAGE, ActionType.DELETE, version);
+        super(version);
         this.messageIds = messageIds;
     }
 

@@ -1,0 +1,207 @@
+{"programID": "EP011583610124", "titles": {
+    "title120": "NCIS: Los Angeles"
+}, "eventDetails": {
+    "subType": "Series"
+}, "descriptions": {
+    "description100": [
+        {
+            "descriptionLanguage": "en",
+            "description": "A deadly explosion takes place at a charity event sponsored by the military."
+        }
+    ],
+    "description1000": [
+        {
+            "descriptionLanguage": "en",
+            "description": "The team investigates when a news reporter names the people responsible for a deadly explosion at a charity event sponsored by the military."
+        }
+    ]
+}, "originalAirDate": "2014-05-06", "genres": ["Crime drama", "Action", "Adventure", "Mystery"], "episodeTitle150": "Exposure", "metadata": [
+    {
+        "Tribune": {
+            "season": 5,
+            "episode": 23
+        }
+    }
+], "images": [
+    {
+        "uri": "assets\/p3561420_b_v5_aa.jpg",
+        "dimension": "w=240px|h=360px"
+    }
+], "cast": [
+    {
+        "personId": "12387",
+        "nameId": "12387",
+        "name": "Chris O'Donnell",
+        "role": "Actor",
+        "billingOrder": "01"
+    },
+    {
+        "personId": "167671",
+        "nameId": "168688",
+        "name": "LL Cool J",
+        "role": "Actor",
+        "billingOrder": "02"
+    },
+    {
+        "personId": "39520",
+        "nameId": "39520",
+        "name": "Linda Hunt",
+        "role": "Actor",
+        "billingOrder": "03"
+    },
+    {
+        "personId": "543723",
+        "nameId": "566391",
+        "name": "Daniela Ruah",
+        "role": "Actor",
+        "billingOrder": "04"
+    },
+    {
+        "personId": "170278",
+        "nameId": "171421",
+        "name": "Eric Christian Olsen",
+        "role": "Actor",
+        "billingOrder": "05"
+    },
+    {
+        "personId": "538871",
+        "nameId": "561153",
+        "name": "Barrett Foa",
+        "role": "Actor",
+        "billingOrder": "06"
+    },
+    {
+        "personId": "589454",
+        "nameId": "613931",
+        "name": "Ren\u00e9e Felice Smith",
+        "role": "Actor",
+        "billingOrder": "07"
+    },
+    {
+        "personId": "547",
+        "nameId": "547",
+        "name": "Miguel Ferrer",
+        "role": "Actor",
+        "billingOrder": "08"
+    },
+    {
+        "personId": "360775",
+        "nameId": "369650",
+        "name": "Tiffany Dupont",
+        "role": "Guest star",
+        "billingOrder": "09"
+    },
+    {
+        "personId": "407301",
+        "nameId": "767388",
+        "name": "Tony Okungbowa",
+        "role": "Guest star",
+        "billingOrder": "10"
+    },
+    {
+        "personId": "19752",
+        "nameId": "19752",
+        "name": "Eric Allan Kramer",
+        "role": "Guest star",
+        "billingOrder": "11"
+    },
+    {
+        "personId": "222522",
+        "nameId": "225070",
+        "name": "Ivar Brogger",
+        "role": "Guest star",
+        "billingOrder": "12"
+    },
+    {
+        "personId": "247495",
+        "nameId": "251044",
+        "name": "Carlease Burke",
+        "role": "Guest star",
+        "billingOrder": "13"
+    },
+    {
+        "personId": "502324",
+        "nameId": "516555",
+        "name": "Matt Biedel",
+        "role": "Guest star",
+        "billingOrder": "14"
+    },
+    {
+        "personId": "537852",
+        "nameId": "559953",
+        "name": "Rolando Boyce",
+        "role": "Guest star",
+        "billingOrder": "15"
+    },
+    {
+        "personId": "585665",
+        "nameId": "610488",
+        "name": "Darrell Lake",
+        "role": "Guest star",
+        "billingOrder": "16"
+    },
+    {
+        "personId": "510879",
+        "nameId": "525867",
+        "name": "Andres Perez-Molina",
+        "role": "Guest star",
+        "billingOrder": "17"
+    },
+    {
+        "personId": "536614",
+        "nameId": "558199",
+        "name": "Nina Rausch",
+        "role": "Guest star",
+        "billingOrder": "18"
+    },
+    {
+        "personId": "781442",
+        "nameId": "818701",
+        "name": "Dave Lopez",
+        "role": "Guest star",
+        "billingOrder": "19"
+    }
+], "crew": [
+    {
+        "personId": "190084",
+        "nameId": "191837",
+        "name": "Shane Brennan",
+        "role": "Executive producer",
+        "billingOrder": "01"
+    },
+    {
+        "personId": "368661",
+        "nameId": "377536",
+        "name": "R. Scott Gemmill",
+        "role": "Executive producer",
+        "billingOrder": "02"
+    },
+    {
+        "personId": "268824",
+        "nameId": "272409",
+        "name": "John P. Kousakis",
+        "role": "Executive producer",
+        "billingOrder": "03"
+    },
+    {
+        "personId": "590396",
+        "nameId": "614858",
+        "name": "Jordana Lewis Jaffe",
+        "role": "Writer",
+        "billingOrder": "04"
+    },
+    {
+        "personId": "570816",
+        "nameId": "595207",
+        "name": "Joseph C. Wilson",
+        "role": "Writer",
+        "billingOrder": "05"
+    },
+    {
+        "personId": "365370",
+        "nameId": "374245",
+        "name": "Robert Florio",
+        "role": "Director",
+        "billingOrder": "06"
+    }
+], "showType": "Series", "md5": "UonMf80vakjtSxdkQwXHyg"}

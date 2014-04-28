@@ -16,10 +16,10 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
-import com.tikinou.schedulesdirect.core.Command;
+import com.tikinou.schedulesdirect.core.ParameterizedCommand;
 
 /**
  * @author Sebastien Astie
  */
-public interface GetHeadendsCommand extends Command<GetHeadendsParameters, GetHeadendsResult> {
+public interface GetHeadendsCommand extends ParameterizedCommand<GetHeadendsParameters, GetHeadendsResult> {
 }

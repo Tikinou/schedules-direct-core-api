@@ -27,11 +27,9 @@ public class ProgramSDTest {
     @Test
     public void testParsing() throws Exception {
         ObjectMapper mapper = ModuleRegistration.getInstance().getConfiguredObjectMapper();
-        ProgramSD program = mapper.readValue(ProgramSDTest.class.getResourceAsStream("/v20131021/program/SH013762600000.json"), ProgramSD.class);
+        ProgramSD program = mapper.readValue(ProgramSDTest.class.getResourceAsStream("/v20131021/program/MV003954050000.json"), ProgramSD.class);
         assert program != null;
-        program = mapper.readValue(ProgramSDTest.class.getResourceAsStream("/v20131021/program/MV003954050000.json"), ProgramSD.class);
-        assert program != null;
-        program = mapper.readValue(ProgramSDTest.class.getResourceAsStream("/v20131021/program/EP017398160007.json"), ProgramSD.class);
+        program = mapper.readValue(ProgramSDTest.class.getResourceAsStream("/v20131021/program/EP011583610124.json"), ProgramSD.class);
         assert program != null;
     }
 }

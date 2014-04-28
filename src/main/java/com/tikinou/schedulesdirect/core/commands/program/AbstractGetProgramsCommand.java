@@ -16,7 +16,8 @@
 
 package com.tikinou.schedulesdirect.core.commands.program;
 
-import com.tikinou.schedulesdirect.core.FileUrlBasedCommandResult;
+import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
@@ -24,7 +25,11 @@ import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
  */
 public abstract class AbstractGetProgramsCommand extends AbstractBaseCommand implements GetProgramsCommand {
     private GetProgramsCommandParameters parameters;
-    private FileUrlBasedCommandResult results;
+    private GetProgramsCommandResult results;
+
+    public AbstractGetProgramsCommand(){
+        super("programs", HttpMethod.POST);
+    }
 
     @Override
     public void setParameters(GetProgramsCommandParameters parameters) {
@@ -37,12 +42,12 @@ public abstract class AbstractGetProgramsCommand extends AbstractBaseCommand imp
     }
 
     @Override
-    public void setResults(FileUrlBasedCommandResult results) {
+    public void setResults(GetProgramsCommandResult results) {
         this.results = results;
     }
 
     @Override
-    public FileUrlBasedCommandResult getResults() {
+    public GetProgramsCommandResult getResults() {
         return results;
     }
 }

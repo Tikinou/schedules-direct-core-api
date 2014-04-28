@@ -22,9 +22,9 @@ package com.tikinou.schedulesdirect.core.domain;
 public enum ResponseCode {
     OK(0, ""),
     INVALID_JSON(1001, "JSON decode error"),
-    API_VERSION_MISSING(1002, "No API sent"),
+    DEFLATE_REQUIRED(1002, "Did not receive Accept-Encoding: deflate in request"),
     INVALID_API_VERSION(1003, "Wrong API"),
-    HASH_MISSING(1004, "randhash wasn't sent"),
+    HASH_MISSING(1004, "token wasn't sent"),
     UNSUPPORTED_COMMAND(2000, "Unsupported action"),
     REQUIRED_ACTION_MISSING(2001, "No action"),
     REQUIRED_OBJECT_MISSING(2002, "No object"),
@@ -67,7 +67,7 @@ public enum ResponseCode {
             case 1001:
                 return INVALID_JSON;
             case 1002:
-                return API_VERSION_MISSING;
+                return DEFLATE_REQUIRED;
             case 1003:
                 return INVALID_API_VERSION;
             case 1004:

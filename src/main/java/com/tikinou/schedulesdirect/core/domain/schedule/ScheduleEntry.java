@@ -18,8 +18,11 @@ package com.tikinou.schedulesdirect.core.domain.schedule;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.tikinou.schedulesdirect.core.domain.Rating;
+import com.tikinou.schedulesdirect.core.domain.ContentRatingInfo;
 import org.joda.time.DateTime;
+
+import java.util.List;
+import java.util.Map;
 
 /**
  * @author Sebastien Astie.
@@ -31,47 +34,31 @@ public class ScheduleEntry {
     private String programId;
     private String md5;
     private Integer duration;
-    private Boolean hdtv;
-    private Boolean letterbox;
-    private Boolean dvs;
-    @JsonProperty("new")
-    private Boolean newAiring;
-    private Boolean enhanced;
     @JsonProperty("liveTapeDelay")
     private AiringLiveType airingLiveType;
     @JsonProperty("isPremiereOrFinale")
     private AiringSeasonRelationship seasonSeriesRelationship;
-    private Boolean is3d;
-    private Boolean cc;
-    private DolbyAudioType dolby;
-    private Boolean stereo;
-    private Boolean subtitled;
-    private String subtitleLanguage;
-    private Boolean sap;
-    private String sapLanguage;
-    private Boolean hasLanguageRating;
-    private Boolean hasDialogRating;
-    private Boolean hasViolenceRating;
-    private Boolean hasFantasyViolenceRating;
-    private Boolean hasSexRating;
-    private Rating tvRating;
-    @JsonProperty("netSyndicationSource")
-    private String syndicationOriginatingSource;
-    @JsonProperty("netSyndicationType")
-    private SyndicationType syndicationType;
-    @JsonProperty("CableInTheClassroom")
+    private List<AudioProperty> audioProperties;
+    private List<VideoProperty> videoProperties;
+
+    @JsonProperty("new")
+    private Boolean newAiring;
     private Boolean cableInTheClassRoom;
-    private Boolean dubbed;
-    private String dubbedLanguage;
+    private Boolean catchup; // used in UK, indicates that program is available online.
     private Boolean timeApproximate;
     private Boolean educational;
-    @JsonProperty("JoinedInProgress")
     private Boolean joinedInProgress;
     private Boolean leftInProgress;
-    private Integer numberOfParts;
-    private Integer partNumber;
     private Boolean subjectToBlackout;
-
+    private Boolean continued; // Continued from a previous broadcast
+    private Boolean premiere;// Indicates first showing of a movie or miniseries
+    private Boolean programBreak; // Program stops and will restart later (indicated by a "continue"). Typically only found in UK
+    private Boolean repeat;
+    private Boolean signed;// Supplemented with a person signing for the hearing impaired
+    private List<ContentRatingInfo> contentRating;
+    private Syndication syndication;
+    private Map<String, List<String>> contentAdvisory;
+    private List<Language> language;
 
     public DateTime getAirDateTime() {
         return airDateTime;
@@ -105,28 +92,20 @@ public class ScheduleEntry {
         this.duration = duration;
     }
 
-    public Boolean getHdtv() {
-        return hdtv;
+    public List<VideoProperty> getVideoProperties() {
+        return videoProperties;
     }
 
-    public void setHdtv(Boolean hdtv) {
-        this.hdtv = hdtv;
+    public void setVideoProperties(List<VideoProperty> videoProperties) {
+        this.videoProperties = videoProperties;
     }
 
-    public Boolean getLetterbox() {
-        return letterbox;
+    public List<AudioProperty> getAudioProperties() {
+        return audioProperties;
     }
 
-    public void setLetterbox(Boolean letterbox) {
-        this.letterbox = letterbox;
-    }
-
-    public Boolean getDvs() {
-        return dvs;
-    }
-
-    public void setDvs(Boolean dvs) {
-        this.dvs = dvs;
+    public void setAudioProperties(List<AudioProperty> audioProperties) {
+        this.audioProperties = audioProperties;
     }
 
     public Boolean getNewAiring() {
@@ -135,14 +114,6 @@ public class ScheduleEntry {
 
     public void setNewAiring(Boolean newAiring) {
         this.newAiring = newAiring;
-    }
-
-    public Boolean getEnhanced() {
-        return enhanced;
-    }
-
-    public void setEnhanced(Boolean enhanced) {
-        this.enhanced = enhanced;
     }
 
     public AiringLiveType getAiringLiveType() {
@@ -161,156 +132,12 @@ public class ScheduleEntry {
         this.seasonSeriesRelationship = seasonSeriesRelationship;
     }
 
-    public Boolean getIs3d() {
-        return is3d;
-    }
-
-    public void setIs3d(Boolean is3d) {
-        this.is3d = is3d;
-    }
-
-    public Boolean getCc() {
-        return cc;
-    }
-
-    public void setCc(Boolean cc) {
-        this.cc = cc;
-    }
-
-    public DolbyAudioType getDolby() {
-        return dolby;
-    }
-
-    public void setDolby(DolbyAudioType dolby) {
-        this.dolby = dolby;
-    }
-
-    public Boolean getStereo() {
-        return stereo;
-    }
-
-    public void setStereo(Boolean stereo) {
-        this.stereo = stereo;
-    }
-
-    public Boolean getSubtitled() {
-        return subtitled;
-    }
-
-    public void setSubtitled(Boolean subtitled) {
-        this.subtitled = subtitled;
-    }
-
-    public String getSubtitleLanguage() {
-        return subtitleLanguage;
-    }
-
-    public void setSubtitleLanguage(String subtitleLanguage) {
-        this.subtitleLanguage = subtitleLanguage;
-    }
-
-    public Boolean getSap() {
-        return sap;
-    }
-
-    public void setSap(Boolean sap) {
-        this.sap = sap;
-    }
-
-    public String getSapLanguage() {
-        return sapLanguage;
-    }
-
-    public void setSapLanguage(String sapLanguage) {
-        this.sapLanguage = sapLanguage;
-    }
-
-    public Boolean getHasLanguageRating() {
-        return hasLanguageRating;
-    }
-
-    public void setHasLanguageRating(Boolean hasLanguageRating) {
-        this.hasLanguageRating = hasLanguageRating;
-    }
-
-    public Boolean getHasDialogRating() {
-        return hasDialogRating;
-    }
-
-    public void setHasDialogRating(Boolean hasDialogRating) {
-        this.hasDialogRating = hasDialogRating;
-    }
-
-    public Boolean getHasViolenceRating() {
-        return hasViolenceRating;
-    }
-
-    public void setHasViolenceRating(Boolean hasViolenceRating) {
-        this.hasViolenceRating = hasViolenceRating;
-    }
-
-    public Boolean getHasFantasyViolenceRating() {
-        return hasFantasyViolenceRating;
-    }
-
-    public void setHasFantasyViolenceRating(Boolean hasFantasyViolenceRating) {
-        this.hasFantasyViolenceRating = hasFantasyViolenceRating;
-    }
-
-    public Boolean getHasSexRating() {
-        return hasSexRating;
-    }
-
-    public void setHasSexRating(Boolean hasSexRating) {
-        this.hasSexRating = hasSexRating;
-    }
-
-    public Rating getTvRating() {
-        return tvRating;
-    }
-
-    public void setTvRating(Rating tvRating) {
-        this.tvRating = tvRating;
-    }
-
-    public String getSyndicationOriginatingSource() {
-        return syndicationOriginatingSource;
-    }
-
-    public void setSyndicationOriginatingSource(String syndicationOriginatingSource) {
-        this.syndicationOriginatingSource = syndicationOriginatingSource;
-    }
-
-    public SyndicationType getSyndicationType() {
-        return syndicationType;
-    }
-
-    public void setSyndicationType(SyndicationType syndicationType) {
-        this.syndicationType = syndicationType;
-    }
-
     public Boolean getCableInTheClassRoom() {
         return cableInTheClassRoom;
     }
 
     public void setCableInTheClassRoom(Boolean cableInTheClassRoom) {
         this.cableInTheClassRoom = cableInTheClassRoom;
-    }
-
-    public Boolean getDubbed() {
-        return dubbed;
-    }
-
-    public void setDubbed(Boolean dubbed) {
-        this.dubbed = dubbed;
-    }
-
-    public String getDubbedLanguage() {
-        return dubbedLanguage;
-    }
-
-    public void setDubbedLanguage(String dubbedLanguage) {
-        this.dubbedLanguage = dubbedLanguage;
     }
 
     public Boolean getTimeApproximate() {
@@ -345,27 +172,91 @@ public class ScheduleEntry {
         this.leftInProgress = leftInProgress;
     }
 
-    public Integer getNumberOfParts() {
-        return numberOfParts;
-    }
-
-    public void setNumberOfParts(Integer numberOfParts) {
-        this.numberOfParts = numberOfParts;
-    }
-
-    public Integer getPartNumber() {
-        return partNumber;
-    }
-
-    public void setPartNumber(Integer partNumber) {
-        this.partNumber = partNumber;
-    }
-
     public Boolean getSubjectToBlackout() {
         return subjectToBlackout;
     }
 
     public void setSubjectToBlackout(Boolean subjectToBlackout) {
         this.subjectToBlackout = subjectToBlackout;
+    }
+
+    public Boolean getCatchup() {
+        return catchup;
+    }
+
+    public void setCatchup(Boolean catchup) {
+        this.catchup = catchup;
+    }
+
+    public Boolean getContinued() {
+        return continued;
+    }
+
+    public void setContinued(Boolean continued) {
+        this.continued = continued;
+    }
+
+    public Boolean getPremiere() {
+        return premiere;
+    }
+
+    public void setPremiere(Boolean premiere) {
+        this.premiere = premiere;
+    }
+
+    public Boolean getProgramBreak() {
+        return programBreak;
+    }
+
+    public void setProgramBreak(Boolean programBreak) {
+        this.programBreak = programBreak;
+    }
+
+    public Boolean getRepeat() {
+        return repeat;
+    }
+
+    public void setRepeat(Boolean repeat) {
+        this.repeat = repeat;
+    }
+
+    public Boolean getSigned() {
+        return signed;
+    }
+
+    public void setSigned(Boolean signed) {
+        this.signed = signed;
+    }
+
+    public List<ContentRatingInfo> getContentRating() {
+        return contentRating;
+    }
+
+    public void setContentRating(List<ContentRatingInfo> contentRating) {
+        this.contentRating = contentRating;
+    }
+
+    public Syndication getSyndication() {
+        return syndication;
+    }
+
+    public void setSyndication(Syndication syndication) {
+        this.syndication = syndication;
+    }
+
+    public Map<String, List<String>> getContentAdvisory() {
+        return contentAdvisory;
+    }
+
+    public void setContentAdvisory(Map<String, List<String>> contentAdvisory) {
+        this.contentAdvisory = contentAdvisory;
+    }
+
+    public List<Language> getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(List<Language> language) {
+        this.language = language;
     }
 }

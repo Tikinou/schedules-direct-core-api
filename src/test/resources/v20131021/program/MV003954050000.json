@@ -1,75 +1,237 @@
-{"programID": "MV003954050000", "md5": "fAamj9c+clxn2wp1SR4tFA", "descriptionLanguage": "English", "colorCode": "Color", "originalAirDate": "0000-00-00", "originCountry": "United States", "castAndCrew": [
-    {
-        "personID": 16263,
-        "role": "Actor",
-        "name": "Joaquin Phoenix"
-    },
-    {
-        "personID": 34680,
-        "role": "Actor",
-        "name": "Philip Seymour Hoffman"
-    },
-    {
-        "personID": 5650,
-        "role": "Actor",
-        "name": "Amy Adams"
-    },
-    {
-        "personID": 5055,
-        "role": "Actor",
-        "name": "Laura Dern"
-    },
-    {
-        "personID": 7286,
-        "role": "Actor",
-        "name": "Jesse Plemons"
-    },
-    {
-        "personID": 35041,
-        "role": "Director",
-        "name": "Paul Thomas Anderson"
-    },
-    {
-        "personID": 35042,
-        "role": "Producer",
-        "name": "Joanne Sellar"
-    },
-    {
-        "personID": 37933,
-        "role": "Producer",
-        "name": "Daniel Lupi"
-    },
-    {
-        "personID": 35041,
-        "role": "Producer",
-        "name": "Paul Thomas Anderson"
-    },
-    {
-        "personID": 42582,
-        "role": "Producer",
-        "name": "Megan Ellison"
-    },
-    {
-        "personID": 46201,
-        "role": "Executive Producer",
-        "name": "Adam Somner"
-    },
-    {
-        "personID": 45216,
-        "role": "Executive Producer",
-        "name": "Ted Schipper"
-    }
-], "genres": ["Drama"], "advisories": ["Adult Situations", "Language", "Nudity"], "titles": {
+{"programID": "MV003954050000", "titles": {
     "title120": "The Master"
+}, "eventDetails": {
+    "subType": "Feature Film"
 }, "descriptions": {
-    "description255": "Troubled and uncertain of his future, a World War II veteran falls under the spell of a religious movement and its charismatic leader.",
-    "description100": "A troubled war veteran becomes a disciple of a religious organization's charismatic leader.",
-    "alternateDescription255": "Troubled and uncertain of his future, a World War II veteran (Joaquin Phoenix) falls under the spell of a religious movement and its charismatic leader (Philip Seymour Hoffman).",
-    "alternateDescription100": "A troubled war veteran becomes a disciple of a religious organization's charismatic leader."
-}, "movie": {
+    "description100": [
+        {
+            "descriptionLanguage": "en",
+            "description": "A troubled war veteran becomes a disciple of a religious organization's charismatic leader."
+        }
+    ],
+    "description1000": [
+        {
+            "descriptionLanguage": "en",
+            "description": "Freddie Quell (Joaquin Phoenix) is a troubled, boozy drifter struggling with the trauma of World War II and whatever inner demons ruled his life before that. On a fateful night in 1950, Freddie boards a passing boat and meets Lancaster Dodd (Philip Seymour Hoffman), the charismatic leader of a religious movement called the Cause. Freddie tries hard to adhere to Dodd's weird teachings and forms a close bond with his mentor, even as other members of Dodd's inner circle see him as a threat."
+        }
+    ]
+}, "genres": ["Drama"], "contentRating": [
+    {
+        "body": "B.C. Film Classification Office",
+        "code": "14A"
+    },
+    {
+        "body": "Saskatchewan Film and Video Classification Board",
+        "code": "14A"
+    },
+    {
+        "body": "Alberta's Film Classification Board",
+        "code": "14A"
+    },
+    {
+        "body": "Ontario Film Review Board",
+        "code": "14A"
+    },
+    {
+        "body": "Motion Picture Association of America",
+        "code": "R"
+    },
+    {
+        "body": "Manitoba Film Classification Board",
+        "code": "14A"
+    },
+    {
+        "body": "British Board of Film Classification",
+        "code": "15"
+    },
+    {
+        "body": "Maritime Film Classification Board",
+        "code": "14"
+    },
+    {
+        "body": "The R\u00e9gie du cin\u00e9ma",
+        "code": "13+"
+    }
+], "images": [
+    {
+        "uri": "assets\/p9211021_p_v5_aa.jpg",
+        "dimension": "w=240px|h=360px"
+    }
+], "contentAdvisory": ["Adult Language", "Nudity", "Adult Situations"], "movie": {
     "year": "2012",
-    "mpaaRating": "R",
-    "starRating": "***+",
-    "runTime": 8160,
-    "origStudio": "Joanne Sellar"
-}}
+    "duration": 8160
+}, "cast": [
+    {
+        "personId": "69768",
+        "nameId": "69768",
+        "name": "Joaquin Phoenix",
+        "role": "Actor",
+        "characterName": "Freddie Quell",
+        "billingOrder": "01"
+    },
+    {
+        "personId": "73554",
+        "nameId": "73554",
+        "name": "Philip Seymour Hoffman",
+        "role": "Actor",
+        "characterName": "Lancaster Dodd",
+        "billingOrder": "02"
+    },
+    {
+        "personId": "168053",
+        "nameId": "169085",
+        "name": "Amy Adams",
+        "role": "Actor",
+        "characterName": "Peggy Dodd",
+        "billingOrder": "03"
+    },
+    {
+        "personId": "433",
+        "nameId": "433",
+        "name": "Laura Dern",
+        "role": "Actor",
+        "characterName": "Helen Sullivan",
+        "billingOrder": "04"
+    },
+    {
+        "personId": "256802",
+        "nameId": "260365",
+        "name": "Jesse Plemons",
+        "role": "Actor",
+        "characterName": "Val Dodd",
+        "billingOrder": "05"
+    }
+], "crew": [
+    {
+        "personId": "73551",
+        "nameId": "73551",
+        "name": "Paul Thomas Anderson",
+        "role": "Director",
+        "billingOrder": "01"
+    },
+    {
+        "personId": "73551",
+        "nameId": "73551",
+        "name": "Paul Thomas Anderson",
+        "role": "Screenwriter",
+        "billingOrder": "02"
+    },
+    {
+        "personId": "422378",
+        "nameId": "431253",
+        "name": "Joanne Sellar",
+        "role": "Producer",
+        "billingOrder": "03"
+    },
+    {
+        "personId": "393406",
+        "nameId": "402281",
+        "name": "Daniel Lupi",
+        "role": "Producer",
+        "billingOrder": "04"
+    },
+    {
+        "personId": "73551",
+        "nameId": "73551",
+        "name": "Paul Thomas Anderson",
+        "role": "Producer",
+        "billingOrder": "05"
+    },
+    {
+        "personId": "591212",
+        "nameId": "615638",
+        "name": "Megan Ellison",
+        "role": "Producer",
+        "billingOrder": "06"
+    },
+    {
+        "personId": "679985",
+        "nameId": "708025",
+        "name": "Adam Somner",
+        "role": "Executive Producer",
+        "billingOrder": "07"
+    },
+    {
+        "personId": "471791",
+        "nameId": "480666",
+        "name": "Ted Schipper",
+        "role": "Executive Producer",
+        "billingOrder": "08"
+    },
+    {
+        "personId": "453406",
+        "nameId": "462281",
+        "name": "Jonny Greenwood",
+        "role": "Original Music",
+        "billingOrder": "09"
+    },
+    {
+        "personId": "540211",
+        "nameId": "562681",
+        "name": "Mihai Malaimare Jr.",
+        "role": "Cinematographer",
+        "billingOrder": "10"
+    },
+    {
+        "personId": "382068",
+        "nameId": "390943",
+        "name": "Leslie Jones",
+        "role": "Film Editor",
+        "billingOrder": "11"
+    },
+    {
+        "personId": "539738",
+        "nameId": "562178",
+        "name": "Peter McNulty",
+        "role": "Film Editor",
+        "billingOrder": "12"
+    },
+    {
+        "personId": "152148",
+        "nameId": "152275",
+        "name": "Jack Fisk",
+        "role": "Production Design",
+        "billingOrder": "13"
+    },
+    {
+        "personId": "464858",
+        "nameId": "473733",
+        "name": "David Crank",
+        "role": "Production Design",
+        "billingOrder": "14"
+    },
+    {
+        "personId": "82462",
+        "nameId": "82462",
+        "name": "Amy Wells",
+        "role": "Set Decoration",
+        "billingOrder": "15"
+    },
+    {
+        "personId": "458386",
+        "nameId": "467261",
+        "name": "Mark Bridges",
+        "role": "Costume Designer",
+        "billingOrder": "16"
+    },
+    {
+        "personId": "458385",
+        "nameId": "467260",
+        "name": "Cassandra Kulukundis",
+        "role": "Casting",
+        "billingOrder": "17"
+    }
+], "showType": "Feature Film", "recommendations": [
+    {
+        "programID": "MV003566610000",
+        "title120": "Martha Marcy May Marlene"
+    },
+    {
+        "programID": "MV003859040000",
+        "title120": "Sound of My Voice"
+    },
+    {
+        "programID": "MV000521060000",
+        "title120": "The Apostle"
+    }
+], "md5": "FHCVxNhqAKY7c1xHbGsw7g"}

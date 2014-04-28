@@ -27,12 +27,9 @@ import com.tikinou.schedulesdirect.core.jackson.deser.BooleanYNDeserializer;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MovieMetadata {
     private Integer year;
-    private Integer runTime;
-    private String origStudio;
-    private String starRating;
-    private Rating mpaaRating;
-    @JsonDeserialize(using = BooleanYNDeserializer.class)
-    private Boolean madeForTV;
+    private Integer duration;
+//    @JsonDeserialize(using = BooleanYNDeserializer.class)
+//    private Boolean madeForTV;
 
     public Integer getYear() {
         return year;
@@ -42,55 +39,20 @@ public class MovieMetadata {
         this.year = year;
     }
 
-    public Integer getRunTime() {
-        return runTime;
+    public Integer getDuration() {
+        return duration;
     }
 
-    public void setRunTime(Integer runTime) {
-        this.runTime = runTime;
+    public void setDuration(Integer duration) {
+        this.duration = duration;
     }
 
-    public String getOrigStudio() {
-        return origStudio;
-    }
-
-    public void setOrigStudio(String origStudio) {
-        this.origStudio = origStudio;
-    }
-
-    public String getStarRating() {
-        return starRating;
-    }
-
-    public void setStarRating(String starRating) {
-        this.starRating = starRating;
-    }
-
-    public Rating getMpaaRating() {
-        return mpaaRating;
-    }
-
-    public void setMpaaRating(Rating mpaaRating) {
-        this.mpaaRating = mpaaRating;
-    }
-
-    public Boolean getMadeForTV() {
-        return madeForTV;
-    }
-
-    public void setMadeForTV(Boolean madeForTV) {
-        this.madeForTV = madeForTV;
-    }
 
     @Override
     public String toString() {
         return "MovieMetadata{" +
                 "year=" + year +
-                ", runTime=" + runTime +
-                ", origStudio='" + origStudio + '\'' +
-                ", starRating='" + starRating + '\'' +
-                ", mpaaRating=" + mpaaRating + '\'' +
-                ", madeForTV=" + madeForTV +
+                ", duration=" + duration +
                 '}';
     }
 

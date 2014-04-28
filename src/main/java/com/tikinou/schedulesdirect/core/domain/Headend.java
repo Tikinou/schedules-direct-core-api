@@ -18,6 +18,10 @@ package com.tikinou.schedulesdirect.core.domain;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
+import com.tikinou.schedulesdirect.core.domain.lineup.BasicLineupInfo;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author Sebastien Astie
@@ -25,16 +29,16 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class Headend {
-    private String name;
+    private String type;
     private String location;
-    private String headend;
+    private List<BasicLineupInfo> lineups;
 
-    public String getName() {
-        return name;
+    public String getType() {
+        return type;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public String getLocation() {
@@ -45,20 +49,20 @@ public class Headend {
         this.location = location;
     }
 
-    public String getHeadend() {
-        return headend;
+    public List<BasicLineupInfo> getLineups() {
+        return lineups;
     }
 
-    public void setHeadend(String headend) {
-        this.headend = headend;
+    public void setLineups(List<BasicLineupInfo> lineups) {
+        this.lineups = lineups;
     }
 
     @Override
     public String toString() {
         return "Headend{" +
-                "name='" + name + '\'' +
+                "type='" + type + '\'' +
                 ", location='" + location + '\'' +
-                ", headend='" + headend + '\'' +
+                ", lineups=[" + (lineups != null ? Arrays.toString(lineups.toArray()) : "" )+ ']' +
                 '}';
     }
 }

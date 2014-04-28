@@ -26,7 +26,8 @@ public enum ShowType {
     PaidProgramming("Paid Programming"),
     Serial("Serial"),
     Special("Special"),
-    Miniseries("Miniseries");
+    Miniseries("Miniseries"),
+    FeatureFilm("Feature Film");
 
     private final String key;
     private ShowType(String key){
@@ -49,7 +50,10 @@ public enum ShowType {
                 return Special;
             case "Miniseries":
                 return Miniseries;
+            case "Feature Film":
+                return FeatureFilm;
             default:
+                System.out.println("unknown:" + key);
                 return null;
         }
     }

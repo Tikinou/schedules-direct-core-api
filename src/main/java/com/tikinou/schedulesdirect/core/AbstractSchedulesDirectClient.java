@@ -18,9 +18,11 @@ package com.tikinou.schedulesdirect.core;
 
 import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandParameter;
-import com.tikinou.schedulesdirect.core.commands.randhash.RandHashCommand;
-import com.tikinou.schedulesdirect.core.commands.randhash.RandHashParameters;
-import com.tikinou.schedulesdirect.core.domain.*;
+import com.tikinou.schedulesdirect.core.commands.token.TokenCommand;
+import com.tikinou.schedulesdirect.core.commands.token.TokenParameters;
+import com.tikinou.schedulesdirect.core.domain.CommandStatus;
+import com.tikinou.schedulesdirect.core.domain.Credentials;
+import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 import com.tikinou.schedulesdirect.core.exceptions.AuthenticationException;
 import com.tikinou.schedulesdirect.core.exceptions.VersionNotSupportedException;
 import org.slf4j.Logger;
@@ -31,7 +33,7 @@ import org.slf4j.LoggerFactory;
  */
 public abstract class AbstractSchedulesDirectClient implements SchedulesDirectClient {
     private final static String DEFAUlT_BASE_URL = "https://data2.schedulesdirect.org/";
-    private final static String DEFAUlT_BETA_BASE_URL = "http://23.21.174.111/";
+    private final static String DEFAUlT_BETA_BASE_URL = "https://json.schedulesdirect.org/";
     private final static String DEFAULT_ENDPOINT = "handleRequest.php";
     private final static Logger LOG = LoggerFactory.getLogger(SchedulesDirectClient.class);
 
@@ -47,11 +49,13 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
             throw new VersionNotSupportedException();
         this.apiVersion = apiVersion;
         this.useBetaService = useBetaService;
-        if(useBetaService)
+        if(useBetaService) {
             baseUrl = DEFAUlT_BETA_BASE_URL;
-        else
+            endPoint = apiVersion.getValue().toString();
+        } else {
             baseUrl = DEFAUlT_BASE_URL;
-        endPoint = DEFAULT_ENDPOINT;
+            endPoint = DEFAULT_ENDPOINT;
+        }
         if(LOG.isDebugEnabled()){
             LOG.debug("Setting up with API version: " + apiVersion + ", baseUrl: '" + baseUrl + "', endPoint: " + endPoint);
         }
@@ -127,10 +131,10 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
             if (this.credentials != null) {
                 //are these the same credentials ?
                 if (this.credentials.sameUserNamePassword(credentials)) {
-                    // is the randhash older than 12 hours ?
+                    // is the token older than 12 hours ?
                     if (!this.credentials.isOlderThan(CREDENTIALS_EXPIRY_HOURS)) {
                         if(LOG.isInfoEnabled())
-                            LOG.info("credentials less than " + CREDENTIALS_EXPIRY_HOURS + " hours. No need to get a new randhash");
+                            LOG.info("credentials less than " + CREDENTIALS_EXPIRY_HOURS + " hours. No need to get a new token");
                         return;
                     }
                 }
@@ -139,22 +143,22 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
                 return;
             }
         }
-        // if we got here we need to get a new randhash
+        // if we got here we need to get a new token
         this.credentials = credentials;
         assert this.credentials.getUsername() != null;
         assert this.credentials.getPassword() != null;
-        RandHashCommand cmd = createCommand(RandHashCommand.class);
-        cmd.setParameters(new RandHashParameters(credentials));
+        TokenCommand cmd = createCommand(TokenCommand.class);
+        cmd.setParameters(new TokenParameters(credentials));
         execute(cmd);
         if (cmd.getStatus() != CommandStatus.SUCCESS)
             throw new AuthenticationException("Could not login to schedules direct", cmd.getResults().getCode());
     }
 
     @Override
-    public void execute(Command command) {
+    public void execute(ParameterizedCommand command) {
         if(command.getParameters() != null){
             if(command.getParameters() instanceof AuthenticatedBaseCommandParameter)
-                ((AuthenticatedBaseCommandParameter)command.getParameters()).setRandhash(credentials.getRandhash());
+                ((AuthenticatedBaseCommandParameter)command.getParameters()).setToken(credentials.getToken());
             if(command.getParameters() instanceof BaseCommandParameter){
                 BaseCommandParameter p = (BaseCommandParameter) command.getParameters();
                 if(p.getApi() == null)

@@ -18,9 +18,6 @@ package com.tikinou.schedulesdirect.core.commands;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.Credentials;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
 /**
@@ -29,21 +26,21 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class AuthenticatedBaseCommandParameter extends BaseCommandParameter {
-    private String randhash;
+    private String token;
 
-    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType){
-        super(objectType, actionType, null);
+    protected AuthenticatedBaseCommandParameter(){
+        super(null);
     }
-    protected AuthenticatedBaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
-        super(objectType, actionType, version);
-    }
-
-    public String getRandhash() {
-        return randhash;
+    protected AuthenticatedBaseCommandParameter(SchedulesDirectApiVersion version){
+        super(version);
     }
 
-    public void setRandhash(String randhash) {
-        this.randhash = randhash;
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 
     @Override
@@ -53,6 +50,6 @@ public class AuthenticatedBaseCommandParameter extends BaseCommandParameter {
 
     @Override
     protected String toStringMembers() {
-        return super.toStringMembers() + ", randhash='" + randhash + '\'';
+        return super.toStringMembers() + ", token='" + token + '\'';
     }
 }

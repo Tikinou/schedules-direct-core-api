@@ -16,15 +16,19 @@
 
 package com.tikinou.schedulesdirect.core.commands.headend;
 
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
  * @author Sebastien Astie.
  */
 public abstract class AbstractGetHeadendsCommand extends AbstractBaseCommand implements GetHeadendsCommand {
-    protected static final String SUBSCRIBED = "Subscribed";
     private GetHeadendsParameters parameters;
     private GetHeadendsResult results;
+
+    public AbstractGetHeadendsCommand(){
+        super("headends", HttpMethod.GET);
+    }
 
     @Override
     public void setParameters(GetHeadendsParameters parameters) {

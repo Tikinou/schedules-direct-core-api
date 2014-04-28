@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core.commands.message;
 
 import com.tikinou.schedulesdirect.core.CommandResult;
+import com.tikinou.schedulesdirect.core.HttpMethod;
 import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 
 /**
@@ -25,6 +26,10 @@ import com.tikinou.schedulesdirect.core.commands.AbstractBaseCommand;
 public abstract class AbstractDeleteMessageCommand extends AbstractBaseCommand implements DeleteMessageCommand {
     private DeleteMessageCommandParameters parameters;
     private CommandResult results;
+
+    public AbstractDeleteMessageCommand(){
+        super("message", HttpMethod.DELETE);
+    }
 
     @Override
     public void setParameters(DeleteMessageCommandParameters parameters) {

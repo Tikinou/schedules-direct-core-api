@@ -21,8 +21,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
 /**
@@ -38,7 +36,7 @@ public class UpdateMetadataParameters extends AuthenticatedBaseCommandParameter{
     }
 
     public UpdateMetadataParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.METADATA, ActionType.UPDATE, version);
+        super(version);
         request = new Request();
     }
 

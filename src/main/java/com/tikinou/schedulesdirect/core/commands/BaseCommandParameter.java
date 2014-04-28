@@ -18,11 +18,9 @@ package com.tikinou.schedulesdirect.core.commands;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 
-import java.util.Objects;
+import java.util.Map;
 
 /**
  * @author Sebastien Astie
@@ -30,37 +28,15 @@ import java.util.Objects;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class BaseCommandParameter {
-    private String object;
-    private String action;
     private Integer api;
 
-    protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType){
-        this(objectType, actionType, null);
+    protected BaseCommandParameter(){
+        this(null);
     }
 
-    protected BaseCommandParameter(ObjectTypes objectType, ActionType actionType, SchedulesDirectApiVersion version){
-        Objects.requireNonNull(objectType);
-        Objects.requireNonNull(actionType);
-        object = objectType.name().toLowerCase();
-        action = actionType.name().toLowerCase();
+    protected BaseCommandParameter(SchedulesDirectApiVersion version){
         if(version != null)
             api = version.getValue();
-    }
-
-    public String getObject() {
-        return object;
-    }
-
-    public void setObject(String object) {
-        this.object = object;
-    }
-
-    public String getAction() {
-        return action;
-    }
-
-    public void setAction(String action) {
-        this.action = action;
     }
 
     public Integer getApi() {
@@ -79,8 +55,8 @@ public class BaseCommandParameter {
     }
 
     protected String toStringMembers(){
-        return "object='" + object + '\'' +
-                ", action='" + action + '\'' +
-                ", api=" + api;
+        return "api=" + api;
     }
+
+    public Map<String,String> toRequestParameters() { return null; }
 }

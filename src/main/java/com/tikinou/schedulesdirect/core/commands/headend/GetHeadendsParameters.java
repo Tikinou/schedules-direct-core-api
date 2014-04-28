@@ -21,10 +21,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.AuthenticatedBaseCommandParameter;
-import com.tikinou.schedulesdirect.core.domain.ActionType;
 import com.tikinou.schedulesdirect.core.domain.Country;
-import com.tikinou.schedulesdirect.core.domain.ObjectTypes;
 import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author Sebastien Astie
@@ -32,54 +33,24 @@ import com.tikinou.schedulesdirect.core.domain.SchedulesDirectApiVersion;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
+    private Country country;
+    @JsonProperty("postalcode")
+    private String postalCode;
 
-    private Request request;
-
-    public GetHeadendsParameters(){
-        this(null);
-    }
-
-    public GetHeadendsParameters(SchedulesDirectApiVersion version){
-        super(ObjectTypes.HEADENDS, ActionType.GET, version);
-        request = new Request();
-    }
-
-    public Request getRequest() {
-        return request;
-    }
-
-    public void setRequest(Request request) {
-        this.request = request;
-    }
-
-    @JsonIgnore
-    public Boolean getSubscribed() {
-        return request.getSubscribed();
-    }
-
-    @JsonIgnore
-    public void setSubscribed(Boolean subscribed) {
-        request.setSubscribed(subscribed);
-    }
-
-    @JsonIgnore
     public Country getCountry() {
-        return request.getCountry();
+        return country;
     }
 
-    @JsonIgnore
     public void setCountry(Country country) {
-        request.setCountry(country);
+        this.country = country;
     }
 
-    @JsonIgnore
     public String getPostalCode() {
-        return request.getPostalCode();
+        return postalCode;
     }
 
-    @JsonIgnore
     public void setPostalCode(String postalCode) {
-        request.setPostalCode(postalCode);
+        this.postalCode = postalCode;
     }
 
     @Override
@@ -87,51 +58,26 @@ public class GetHeadendsParameters extends AuthenticatedBaseCommandParameter{
         return "GetHeadendsParameters{" + toStringMembers() + '}';
     }
 
-    @Override
-    protected String toStringMembers() {
-        return super.toStringMembers() + ", request=" + request;
+    public GetHeadendsParameters(SchedulesDirectApiVersion version){
+        super(version);
     }
 
-    @JsonIgnoreProperties(ignoreUnknown = true)
-    @JsonInclude(JsonInclude.Include.NON_EMPTY)
-    public static class Request {
-        private Country country;
-        @JsonProperty("postalcode")
-        private String postalCode;
-        @JsonIgnore
-        private Boolean subscribed;
+    public GetHeadendsParameters(){
+        this(null);
+    }
+    @Override
+    protected String toStringMembers() {
+        return super.toStringMembers() + ", country=" + country +
+                ", postalCode='" + postalCode + '\'';
+    }
 
-        public Boolean getSubscribed() {
-            return subscribed;
-        }
-
-        public void setSubscribed(Boolean subscribed) {
-            this.subscribed = subscribed;
-        }
-
-        public Country getCountry() {
-            return country;
-        }
-
-        public void setCountry(Country country) {
-            this.country = country;
-        }
-
-        public String getPostalCode() {
-            return postalCode;
-        }
-
-        public void setPostalCode(String postalCode) {
-            this.postalCode = postalCode;
-        }
-
-        @Override
-        public String toString() {
-            return "Request{" +
-                    "country=" + country +
-                    ", postalCode='" + postalCode + '\'' +
-                    ", subscribed=" + subscribed +
-                    '}';
-        }
+    @Override
+    public Map<String, String> toRequestParameters() {
+        Map<String, String> map = new HashMap<>();
+        if(postalCode != null)
+            map.put("postalcode", postalCode);
+        if(country != null)
+            map.put("country", country.getCode());
+        return map;
     }
 }

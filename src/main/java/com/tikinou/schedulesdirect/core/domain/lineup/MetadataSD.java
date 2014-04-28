@@ -16,7 +16,6 @@
 
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
@@ -25,16 +24,16 @@ import org.joda.time.DateTime;
  */
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class MetadataSD {
-    private String device;
+    private String lineup;
     private DateTime modified;
     private String transport;
 
-    public String getDevice() {
-        return device;
+    public String getLineup() {
+        return lineup;
     }
 
-    public void setDevice(String device) {
-        this.device = device;
+    public void setLineup(String lineup) {
+        this.lineup = lineup;
     }
 
     public DateTime getModified() {
@@ -56,7 +55,7 @@ public class MetadataSD {
     @Override
     public String toString() {
         return "Metadata{" +
-                "device='" + device + '\'' +
+                "lineup='" + lineup + '\'' +
                 ", modified=" + modified +
                 ", transport='" + transport + '\'' +
                 '}';
