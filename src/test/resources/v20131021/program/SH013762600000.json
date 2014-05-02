@@ -1,7 +1,131 @@
-{"programID": "SH013762600000", "md5": "5ba9V3lysjeY91H25VmEvA", "descriptionLanguage": "English", "colorCode": "Color", "sourceType": "Local", "showType": "Series", "originalAirDate": "2011-01-11", "genres": ["News"], "titles": {
-    "title120": "CBS 2 News at 11PM",
-    "title10": "CBS 2 News",
-    "alternateTitle": "News"
+{"programID": "SH015472580000", "titles": {
+    "title120": "Randy Cunningham: 9th Grade Ninja"
 }, "descriptions": {
-    "description255": "Kristine Johnson and Maurice DuBois."
-}}
+    "description100": [
+        {
+            "descriptionLanguage": "en",
+            "description": "Unlikely hero Randy Cunningham, armed with a magic ninja suit, protects the world from destruction."
+        }
+    ],
+    "description1000": [
+        {
+            "descriptionLanguage": "en",
+            "description": "Randy Cunningham is a ninth-grader who is an unlikely hero with a superhuman ninja suit, the NinjaNomicon. Randy uses the suit and help from his best friend, Howard, to battle evil while trying to survive high school and guard his secret identity -- all while trying to protect his school and the world from certain destruction. Seems like an average life for a high-school freshman, right?"
+        }
+    ]
+}, "originalAirDate": "2012-08-13", "genres": ["Children", "Action", "Adventure", "Comedy", "Animated"], "images": [
+    {
+        "uri": "assets\/p9158079_b_v5_aa.jpg",
+        "dimension": "w=240px|h=360px"
+    }
+], "movie": [], "cast": [
+    {
+        "personId": "421779",
+        "nameId": "430654",
+        "name": "Ben Schwartz",
+        "role": "Voice",
+        "characterName": "Randy Cunningham",
+        "billingOrder": "1"
+    },
+    {
+        "personId": "505110",
+        "nameId": "519529",
+        "name": "Andrew Caldwell",
+        "role": "Voice",
+        "characterName": "Howard Weinerman",
+        "billingOrder": "2"
+    },
+    {
+        "personId": "68425",
+        "nameId": "212527",
+        "name": "Kevin Michael Richardson",
+        "role": "Voice",
+        "characterName": "Willem Viceroy III",
+        "billingOrder": "3"
+    },
+    {
+        "personId": "287937",
+        "nameId": "291721",
+        "name": "John DiMaggio",
+        "role": "Voice",
+        "characterName": "Hannibal McFist",
+        "billingOrder": "4"
+    },
+    {
+        "personId": "523143",
+        "nameId": "543102",
+        "name": "Dave Wittenberg",
+        "role": "Voice",
+        "characterName": "Bash Johnson",
+        "billingOrder": "5"
+    },
+    {
+        "personId": "194548",
+        "nameId": "196353",
+        "name": "Jim Rash",
+        "role": "Voice",
+        "characterName": "Principal Slimovitz",
+        "billingOrder": "6"
+    },
+    {
+        "personId": "72978",
+        "nameId": "72978",
+        "name": "Tim Curry",
+        "role": "Voice",
+        "characterName": "The Sorcerer",
+        "billingOrder": "7"
+    },
+    {
+        "personId": "44824",
+        "nameId": "44824",
+        "name": "Megan Mullally",
+        "role": "Voice",
+        "characterName": "Mrs. Driscoll",
+        "billingOrder": "8"
+    },
+    {
+        "personId": "537443",
+        "nameId": "559351",
+        "name": "John Oliver",
+        "role": "Voice",
+        "characterName": "Coach Green",
+        "billingOrder": "9"
+    }
+], "crew": [
+    {
+        "personId": "659837",
+        "nameId": "686164",
+        "name": "Jed Elinoff",
+        "role": "Executive Producer",
+        "billingOrder": "1"
+    },
+    {
+        "personId": "676729",
+        "nameId": "704378",
+        "name": "Scott Thomas",
+        "role": "Executive Producer",
+        "billingOrder": "2"
+    }
+], "showType": "Series", "recommendations": [
+    {
+        "programID": "SH015632440000",
+        "title120": "Alien Surf Girls"
+    },
+    {
+        "programID": "SH012521070000",
+        "title120": "Ben 10: Ultimate Alien"
+    },
+    {
+        "programID": "SH013712630000",
+        "title120": "Supah Ninjas"
+    }
+], "md5": "MFnmQfFQXeF5p\/7aZPcCxQ", "contentRating": [
+    {
+        "body": "USA Parental Rating",
+        "code": "TVY7"
+    },
+    {
+        "body": "Departamento de Justi\u00e7a, Classifica\u00e7\u00e3o, T\u00edtulos e Qualifica\u00e7\u00e3o",
+        "code": "L"
+    }
+]}

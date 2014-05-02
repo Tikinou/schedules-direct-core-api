@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core.commands.lineup;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.lineup.LineupSD;
 import com.tikinou.schedulesdirect.core.domain.lineup.MetadataSD;
@@ -29,31 +30,33 @@ import java.util.List;
  * @author Sebastien Astie
  */
 public class GetLineupDetailsResult extends BaseCommandResult {
-    @JsonIgnore
-    private LineupSD lineupSD = new LineupSD();
+    private List<StationSD> stations;
+    private MetadataSD metadata;
+    @JsonProperty("map")
+    private List<StationChannelMapping> stationMaps;
 
     public List<StationSD> getStations() {
-        return lineupSD.getStations();
+        return stations;
     }
 
     public void setStations(List<StationSD> stations) {
-        lineupSD.setStations(stations);
+        this.stations = stations;
     }
 
     public MetadataSD getMetadata() {
-        return lineupSD.getMetadata();
+        return metadata;
     }
 
     public void setMetadata(MetadataSD metadata) {
-        lineupSD.setMetadata(metadata);
+        this.metadata = metadata;
     }
 
     public List<StationChannelMapping> getStationMaps() {
-        return lineupSD.getStationMaps();
+        return stationMaps;
     }
 
     public void setStationMaps(List<StationChannelMapping> stationMaps) {
-        lineupSD.setStationMaps(stationMaps);
+        this.stationMaps = stationMaps;
     }
 
     @Override
@@ -63,6 +66,6 @@ public class GetLineupDetailsResult extends BaseCommandResult {
 
     @Override
     protected String toStringMembers() {
-        return super.toStringMembers() + ", lineup=" + lineupSD;
+        return super.toStringMembers() + ", stations=" + stations + ". stationMap=" + stationMaps + ". metadata=" + metadata;
     }
 }

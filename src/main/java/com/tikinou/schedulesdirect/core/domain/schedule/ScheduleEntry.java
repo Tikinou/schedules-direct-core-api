@@ -43,7 +43,7 @@ public class ScheduleEntry {
 
     @JsonProperty("new")
     private Boolean newAiring;
-    private Boolean cableInTheClassRoom;
+    private Boolean cableInTheClassroom;
     private Boolean catchup; // used in UK, indicates that program is available online.
     private Boolean timeApproximate;
     private Boolean educational;
@@ -132,12 +132,12 @@ public class ScheduleEntry {
         this.seasonSeriesRelationship = seasonSeriesRelationship;
     }
 
-    public Boolean getCableInTheClassRoom() {
-        return cableInTheClassRoom;
+    public Boolean getCableInTheClassroom() {
+        return cableInTheClassroom;
     }
 
-    public void setCableInTheClassRoom(Boolean cableInTheClassRoom) {
-        this.cableInTheClassRoom = cableInTheClassRoom;
+    public void setCableInTheClassroom(Boolean cableInTheClassroom) {
+        this.cableInTheClassroom = cableInTheClassroom;
     }
 
     public Boolean getTimeApproximate() {

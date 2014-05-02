@@ -17,6 +17,7 @@
 package com.tikinou.schedulesdirect.core.domain.lineup;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.tikinou.schedulesdirect.core.commands.lineup.GetLineupDetailsResult;
 import com.tikinou.schedulesdirect.core.domain.schedule.ScheduleSD;
 import com.tikinou.schedulesdirect.core.jackson.ModuleRegistration;
 import org.junit.Test;
@@ -28,7 +29,7 @@ public class LineupSDTest {
     @Test
     public void testParsing() throws Exception {
         ObjectMapper mapper = ModuleRegistration.getInstance().getConfiguredObjectMapper();
-        LineupSD lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY67791.json"), LineupSD.class);
+        GetLineupDetailsResult lineupSD = mapper.readValue(LineupSDTest.class.getResourceAsStream("/v20131021/headend/NY67791.json"), GetLineupDetailsResult.class);
         assert lineupSD != null;
     }
 }

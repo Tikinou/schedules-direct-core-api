@@ -27,8 +27,11 @@ public enum ShowType {
     Serial("Serial"),
     Special("Special"),
     Miniseries("Miniseries"),
-    FeatureFilm("Feature Film");
-
+    FeatureFilm("Feature Film"),
+    SportsNonEvent("Sports non-event"),
+    SportsEvent("Sports event"),
+    TVMovie("TV Movie"),
+    ShortFilm("Short Film");
     private final String key;
     private ShowType(String key){
         this.key = key;
@@ -52,6 +55,14 @@ public enum ShowType {
                 return Miniseries;
             case "Feature Film":
                 return FeatureFilm;
+            case "Sports non-event":
+                return SportsNonEvent;
+            case "Sports event":
+                return SportsEvent;
+            case "TV Movie":
+                return TVMovie;
+            case "Short Film":
+                return ShortFilm;
             default:
                 System.out.println("unknown:" + key);
                 return null;
