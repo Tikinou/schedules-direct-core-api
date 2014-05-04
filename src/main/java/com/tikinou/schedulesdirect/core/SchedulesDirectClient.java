@@ -27,7 +27,7 @@ import com.tikinou.schedulesdirect.core.exceptions.VersionNotSupportedException;
 public interface SchedulesDirectClient {
     public static final int CREDENTIALS_EXPIRY_HOURS = 12;
 
-    public void setup(SchedulesDirectApiVersion apiVersion, boolean useBetaService) throws VersionNotSupportedException;
+    public void setup(SchedulesDirectApiVersion apiVersion, String userAgent, boolean useBetaService) throws VersionNotSupportedException;
 
     public void dispose();
 
@@ -36,6 +36,8 @@ public interface SchedulesDirectClient {
     public String getEndpoint();
 
     public String getUrl();
+
+    public String getUserAgent();
 
     public SchedulesDirectApiVersion getApiVersion();
 
