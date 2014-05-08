@@ -17,17 +17,13 @@
 package com.tikinou.schedulesdirect.core.commands.lineup;
 
 import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
-import com.tikinou.schedulesdirect.core.domain.lineup.LineupSD;
 import com.tikinou.schedulesdirect.core.domain.lineup.MetadataSD;
 import com.tikinou.schedulesdirect.core.domain.lineup.StationChannelMapping;
 import com.tikinou.schedulesdirect.core.domain.lineup.StationSD;
 import com.tikinou.schedulesdirect.core.jackson.ModuleRegistration;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -38,7 +34,6 @@ public class GetLineupDetailsResult extends BaseCommandResult {
     private List<StationSD> stations;
     private MetadataSD metadata;
     private List<String> qamMappings;
-//    @JsonProperty("map")
     private List<StationChannelMapping> stationMaps;
     private ObjectMapper mapper;
 
@@ -79,20 +74,29 @@ public class GetLineupDetailsResult extends BaseCommandResult {
     }
 
     @JsonAnySetter
+    @SuppressWarnings("unchecked")
     public void setDynamic(String name, Object value){
         if("map".equals(name)){
-            Object o = null;
+
             if(qamMappings == null){
-                o = value;
+                stationMaps = convert(value);
             } else {
                 for(String s : qamMappings) {
                     Map m = (Map) value;
-                    o = m.get(s);
+                    List<StationChannelMapping> mappings = convert(m.get(s));
+                    for(StationChannelMapping mapping : mappings)
+                        mapping.setQamMappingName(s);
+                    if(stationMaps == null)
+                        stationMaps = mappings;
+                    else
+                        stationMaps.addAll(mappings);
                 }
             }
-            if(o != null)
-                stationMaps = mapper.convertValue(o, mapper.getTypeFactory().constructCollectionType(List.class, StationChannelMapping.class));
         }
+    }
+
+    private List<StationChannelMapping> convert(Object o){
+        return mapper.convertValue(o, mapper.getTypeFactory().constructCollectionType(List.class, StationChannelMapping.class));
     }
 
     @Override

@@ -27,12 +27,21 @@ public class StationChannelMapping {
     @JsonProperty("stationID")
     private Integer stationId;
     private Integer channel;
+    private String qamMappingName;
     private String qamType;
     private Integer qamFrequency;
     private Integer qamProgram;
     private Integer uhfVhf;
     private Integer atscMajor;
     private Integer atscMinor;
+
+    public String getQamMappingName() {
+        return qamMappingName;
+    }
+
+    public void setQamMappingName(String qamMappingName) {
+        this.qamMappingName = qamMappingName;
+    }
 
     public boolean isATSC(){
         return uhfVhf != null || atscMajor != null;
@@ -111,6 +120,7 @@ public class StationChannelMapping {
         return "StationChannelMapEntry{" +
                 "stationId=" + stationId +
                 ", channel='" + channel + '\'' +
+                ", qamMappingName='" + qamMappingName + '\'' +
                 ", qamType='" + qamType + '\'' +
                 ", qamFrequency=" + qamFrequency +
                 ", qamProgram=" + qamProgram +
