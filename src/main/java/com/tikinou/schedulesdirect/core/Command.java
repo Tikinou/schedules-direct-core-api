@@ -11,6 +11,8 @@ public interface Command {
 
     public void execute(SchedulesDirectClient client);
 
+    public void execute(SchedulesDirectClient client, int numRetries);
+
     public CommandStatus getStatus();
 
     public void setStatus(CommandStatus status);

@@ -18,6 +18,7 @@ package com.tikinou.schedulesdirect.core.commands;
 
 import com.tikinou.schedulesdirect.core.Command;
 import com.tikinou.schedulesdirect.core.HttpMethod;
+import com.tikinou.schedulesdirect.core.SchedulesDirectClient;
 import com.tikinou.schedulesdirect.core.domain.CommandStatus;
 
 /**
@@ -33,14 +34,17 @@ public abstract class AbstractBaseCommand implements Command {
         this.httpMethod = method;
     }
 
+    @Override
     public CommandStatus getStatus() {
         return commandStatus;
     }
 
+    @Override
     public void setStatus(CommandStatus status) {
         this.commandStatus = status;
     }
 
+    @Override
     public HttpMethod getMethod() {
         return httpMethod;
     }
@@ -49,7 +53,13 @@ public abstract class AbstractBaseCommand implements Command {
         this.httpMethod = httpMethod;
     }
 
+    @Override
     public String getEndPoint() {
         return endPoint;
+    }
+
+    @Override
+    public void execute(SchedulesDirectClient client) {
+        execute(client, 0);
     }
 }

@@ -109,6 +109,11 @@ public class Credentials {
         return tokenDateTime.isBefore(DateTime.now().minusHours(hours));
     }
 
+    public void resetTokenInfo(){
+        token = null;
+        tokenDateTime = null;
+    }
+
     @Override
     public String toString() {
         return "Credentials{" +

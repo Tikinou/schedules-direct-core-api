@@ -53,5 +53,7 @@ public interface SchedulesDirectClient {
 
     public void execute(ParameterizedCommand command);
 
+    public void execute(ParameterizedCommand command, int numRetries);
+
     public <T extends ParameterizedCommand<?,?>> T createCommand(Class<T> commandClass);
 }

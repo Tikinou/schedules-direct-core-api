@@ -162,6 +162,11 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
 
     @Override
     public void execute(ParameterizedCommand command) {
+        execute(command, 0);
+    }
+
+    @Override
+    public void execute(ParameterizedCommand command, int numRetries) {
         if(command.getParameters() != null){
             if(command.getParameters() instanceof AuthenticatedBaseCommandParameter)
                 ((AuthenticatedBaseCommandParameter)command.getParameters()).setToken(credentials.getToken());
@@ -171,6 +176,6 @@ public abstract class AbstractSchedulesDirectClient implements SchedulesDirectCl
                     p.setApi(apiVersion.getValue());
             }
         }
-        command.execute(this);
+        command.execute(this, numRetries);
     }
 }
