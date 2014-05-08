@@ -28,7 +28,7 @@ public class StationChannelMapping {
     private Integer stationId;
     private Integer channel;
     private String qamType;
-    private Integer qamFreq;
+    private Integer qamFrequency;
     private Integer qamProgram;
     private Integer uhfVhf;
     private Integer atscMajor;
@@ -39,7 +39,7 @@ public class StationChannelMapping {
     }
 
     public boolean hasQAMInfo(){
-        return qamType != null || qamFreq != null || qamProgram != null;
+        return qamType != null || qamFrequency != null || qamProgram != null;
     }
 
     public Integer getStationId() {
@@ -66,12 +66,12 @@ public class StationChannelMapping {
         this.qamType = qamType;
     }
 
-    public Integer getQamFreq() {
-        return qamFreq;
+    public Integer getQamFrequency() {
+        return qamFrequency;
     }
 
-    public void setQamFreq(Integer qamFreq) {
-        this.qamFreq = qamFreq;
+    public void setQamFrequency(Integer qamFrequency) {
+        this.qamFrequency = qamFrequency;
     }
 
     public Integer getQamProgram() {
@@ -112,7 +112,7 @@ public class StationChannelMapping {
                 "stationId=" + stationId +
                 ", channel='" + channel + '\'' +
                 ", qamType='" + qamType + '\'' +
-                ", qamFreq=" + qamFreq +
+                ", qamFrequency=" + qamFrequency +
                 ", qamProgram=" + qamProgram +
                 ", uhfVhf=" + uhfVhf +
                 ", atscMajor=" + atscMajor +

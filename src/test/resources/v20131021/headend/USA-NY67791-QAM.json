@@ -1,0 +1,1891 @@
+{"qamMappings": ["1"], "map": {
+    "1": [
+        {
+            "channel": "339",
+            "qamType": "qam_256",
+            "qamFrequency": "321000000",
+            "qamProgram": "512",
+            "stationID": "80809"
+        },
+        {
+            "channel": "500",
+            "qamType": "qam_256",
+            "qamFrequency": "321000000",
+            "qamProgram": "514",
+            "stationID": "80816"
+        },
+        {
+            "channel": "8",
+            "qamType": "qam_256",
+            "qamFrequency": "411000000",
+            "qamProgram": "100",
+            "stationID": "17098"
+        },
+        {
+            "channel": "2",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1001",
+            "stationID": "11331"
+        },
+        {
+            "channel": "4",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1003",
+            "stationID": "11705"
+        },
+        {
+            "channel": "5",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1004",
+            "stationID": "11746"
+        },
+        {
+            "channel": "7",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1006",
+            "stationID": "11259"
+        },
+        {
+            "channel": "9",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1007",
+            "stationID": "11760"
+        },
+        {
+            "channel": "10",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1008",
+            "stationID": "31225"
+        },
+        {
+            "channel": "31",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1021",
+            "stationID": "11743"
+        },
+        {
+            "channel": "14",
+            "qamType": "qam_256",
+            "qamFrequency": "459000000",
+            "qamProgram": "1040",
+            "stationID": "15760"
+        },
+        {
+            "channel": "11",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1009",
+            "stationID": "11779"
+        },
+        {
+            "channel": "12",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1010",
+            "stationID": "11726"
+        },
+        {
+            "channel": "13",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1011",
+            "stationID": "11715"
+        },
+        {
+            "channel": "23",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1013",
+            "stationID": "11723"
+        },
+        {
+            "channel": "21",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1014",
+            "stationID": "11643"
+        },
+        {
+            "channel": "25",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1016",
+            "stationID": "11744"
+        },
+        {
+            "channel": "29",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1020",
+            "stationID": "25955"
+        },
+        {
+            "channel": "19",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "1023",
+            "stationID": "15715"
+        },
+        {
+            "channel": "480",
+            "qamType": "qam_256",
+            "qamFrequency": "465000000",
+            "qamProgram": "10480",
+            "stationID": "55578"
+        },
+        {
+            "channel": "296",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "1019",
+            "stationID": "62900"
+        },
+        {
+            "channel": "466",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "1039",
+            "stationID": "58698"
+        },
+        {
+            "channel": "463",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "1061",
+            "stationID": "81462"
+        },
+        {
+            "channel": "6",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10006",
+            "stationID": "35855"
+        },
+        {
+            "channel": "20",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10015",
+            "stationID": "64144"
+        },
+        {
+            "channel": "462",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10462",
+            "stationID": "75011"
+        },
+        {
+            "channel": "477",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10477",
+            "stationID": "75968"
+        },
+        {
+            "channel": "481",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10481",
+            "stationID": "35855"
+        },
+        {
+            "channel": "482",
+            "qamType": "qam_256",
+            "qamFrequency": "471000000",
+            "qamProgram": "10482",
+            "stationID": "75494"
+        },
+        {
+            "channel": "49",
+            "qamType": "qam_256",
+            "qamFrequency": "477000000",
+            "qamProgram": "158",
+            "stationID": "21586"
+        },
+        {
+            "channel": "512",
+            "qamType": "qam_256",
+            "qamFrequency": "495000000",
+            "qamProgram": "1049",
+            "stationID": "54437"
+        },
+        {
+            "channel": "523",
+            "qamType": "qam_256",
+            "qamFrequency": "495000000",
+            "qamProgram": "1050",
+            "stationID": "29139"
+        },
+        {
+            "channel": "464",
+            "qamType": "qam_256",
+            "qamFrequency": "495000000",
+            "qamProgram": "10464",
+            "stationID": "74578"
+        },
+        {
+            "channel": "17",
+            "qamType": "qam_256",
+            "qamFrequency": "501000000",
+            "qamProgram": "1015",
+            "stationID": "12452"
+        },
+        {
+            "channel": "41",
+            "qamType": "qam_256",
+            "qamFrequency": "501000000",
+            "qamProgram": "1022",
+            "stationID": "12001"
+        },
+        {
+            "channel": "517",
+            "qamType": "qam_256",
+            "qamFrequency": "501000000",
+            "qamProgram": "1053",
+            "stationID": "34225"
+        },
+        {
+            "channel": "541",
+            "qamType": "qam_256",
+            "qamFrequency": "501000000",
+            "qamProgram": "1054",
+            "stationID": "35361"
+        },
+        {
+            "channel": "511",
+            "qamType": "qam_256",
+            "qamFrequency": "507000000",
+            "qamProgram": "1024",
+            "stationID": "20373"
+        },
+        {
+            "channel": "502",
+            "qamType": "qam_256",
+            "qamFrequency": "507000000",
+            "qamProgram": "1025",
+            "stationID": "16689"
+        },
+        {
+            "channel": "465",
+            "qamType": "qam_256",
+            "qamFrequency": "507000000",
+            "qamProgram": "10465",
+            "stationID": "50777"
+        },
+        {
+            "channel": "490",
+            "qamType": "qam_256",
+            "qamFrequency": "507000000",
+            "qamProgram": "10490",
+            "stationID": "65092"
+        },
+        {
+            "channel": "513",
+            "qamType": "qam_256",
+            "qamFrequency": "513000000",
+            "qamProgram": "1026",
+            "stationID": "26182"
+        },
+        {
+            "channel": "504",
+            "qamType": "qam_256",
+            "qamFrequency": "513000000",
+            "qamProgram": "1027",
+            "stationID": "20459"
+        },
+        {
+            "channel": "460",
+            "qamType": "qam_256",
+            "qamFrequency": "513000000",
+            "qamProgram": "1031",
+            "stationID": "44936"
+        },
+        {
+            "channel": "472",
+            "qamType": "qam_256",
+            "qamFrequency": "513000000",
+            "qamProgram": "1034",
+            "stationID": "31780"
+        },
+        {
+            "channel": "474",
+            "qamType": "qam_256",
+            "qamFrequency": "513000000",
+            "qamProgram": "1048",
+            "stationID": "44667"
+        },
+        {
+            "channel": "505",
+            "qamType": "qam_256",
+            "qamFrequency": "519000000",
+            "qamProgram": "1028",
+            "stationID": "20360"
+        },
+        {
+            "channel": "507",
+            "qamType": "qam_256",
+            "qamFrequency": "519000000",
+            "qamProgram": "1029",
+            "stationID": "20453"
+        },
+        {
+            "channel": "467",
+            "qamType": "qam_256",
+            "qamFrequency": "519000000",
+            "qamProgram": "1041",
+            "stationID": "35230"
+        },
+        {
+            "channel": "468",
+            "qamType": "qam_256",
+            "qamFrequency": "519000000",
+            "qamProgram": "1042",
+            "stationID": "35230"
+        },
+        {
+            "channel": "493",
+            "qamType": "qam_256",
+            "qamFrequency": "519000000",
+            "qamProgram": "14405",
+            "stationID": "30763"
+        },
+        {
+            "channel": "509",
+            "qamType": "qam_256",
+            "qamFrequency": "525000000",
+            "qamProgram": "1030",
+            "stationID": "26566"
+        },
+        {
+            "channel": "470",
+            "qamType": "qam_256",
+            "qamFrequency": "525000000",
+            "qamProgram": "1032",
+            "stationID": "34325"
+        },
+        {
+            "channel": "471",
+            "qamType": "qam_256",
+            "qamFrequency": "525000000",
+            "qamProgram": "1033",
+            "stationID": "34135"
+        },
+        {
+            "channel": "473",
+            "qamType": "qam_256",
+            "qamFrequency": "525000000",
+            "qamProgram": "1035",
+            "stationID": "44147"
+        },
+        {
+            "channel": "476",
+            "qamType": "qam_256",
+            "qamFrequency": "525000000",
+            "qamProgram": "10476",
+            "stationID": "75009"
+        },
+        {
+            "channel": "491",
+            "qamType": "qam_256",
+            "qamFrequency": "531000000",
+            "qamProgram": "1043",
+            "stationID": "54618"
+        },
+        {
+            "channel": "492",
+            "qamType": "qam_256",
+            "qamFrequency": "531000000",
+            "qamProgram": "1044",
+            "stationID": "55285"
+        },
+        {
+            "channel": "531",
+            "qamType": "qam_256",
+            "qamFrequency": "531000000",
+            "qamProgram": "1045",
+            "stationID": "43818"
+        },
+        {
+            "channel": "18",
+            "qamType": "qam_256",
+            "qamFrequency": "537000000",
+            "qamProgram": "1058",
+            "stationID": "12477"
+        },
+        {
+            "channel": "461",
+            "qamType": "qam_256",
+            "qamFrequency": "537000000",
+            "qamProgram": "1059",
+            "stationID": "64933"
+        },
+        {
+            "channel": "478",
+            "qamType": "qam_256",
+            "qamFrequency": "537000000",
+            "qamProgram": "1060",
+            "stationID": "47481"
+        },
+        {
+            "channel": "510",
+            "qamType": "qam_256",
+            "qamFrequency": "537000000",
+            "qamProgram": "10510",
+            "stationID": "31225"
+        },
+        {
+            "channel": "499",
+            "qamType": "qam_256",
+            "qamFrequency": "555000000",
+            "qamProgram": "4099",
+            "stationID": "51853"
+        },
+        {
+            "channel": "119",
+            "qamType": "qam_256",
+            "qamFrequency": "789000000",
+            "qamProgram": "103",
+            "stationID": "11187"
+        },
+        {
+            "channel": "860",
+            "qamType": "qam_256",
+            "qamFrequency": "789000000",
+            "qamProgram": "456",
+            "stationID": "81867"
+        },
+        {
+            "channel": "28",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12728",
+            "stationID": "23336"
+        },
+        {
+            "channel": "30",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12730",
+            "stationID": "23338"
+        },
+        {
+            "channel": "32",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12732",
+            "stationID": "23340"
+        },
+        {
+            "channel": "33",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12733",
+            "stationID": "23341"
+        },
+        {
+            "channel": "34",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12734",
+            "stationID": "23342"
+        },
+        {
+            "channel": "35",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12735",
+            "stationID": "23343"
+        },
+        {
+            "channel": "36",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12736",
+            "stationID": "23344"
+        },
+        {
+            "channel": "37",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12737",
+            "stationID": "23345"
+        },
+        {
+            "channel": "38",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12738",
+            "stationID": "23346"
+        },
+        {
+            "channel": "39",
+            "qamType": "qam_256",
+            "qamFrequency": "813000000",
+            "qamProgram": "12739",
+            "stationID": "23347"
+        },
+        {
+            "channel": "24",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12824",
+            "stationID": "23332"
+        },
+        {
+            "channel": "26",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12826",
+            "stationID": "23334"
+        },
+        {
+            "channel": "27",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12827",
+            "stationID": "23335"
+        },
+        {
+            "channel": "40",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12840",
+            "stationID": "23348"
+        },
+        {
+            "channel": "42",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12842",
+            "stationID": "23350"
+        },
+        {
+            "channel": "43",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12843",
+            "stationID": "23351"
+        },
+        {
+            "channel": "44",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12844",
+            "stationID": "23352"
+        },
+        {
+            "channel": "45",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12845",
+            "stationID": "23353"
+        },
+        {
+            "channel": "46",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12846",
+            "stationID": "23354"
+        },
+        {
+            "channel": "47",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12847",
+            "stationID": "23355"
+        },
+        {
+            "channel": "1982",
+            "qamType": "qam_256",
+            "qamFrequency": "819000000",
+            "qamProgram": "12882",
+            "stationID": "70090"
+        }
+    ]
+}, "stations": [
+    {
+        "callsign": "WCBS",
+        "name": "WCBS",
+        "affiliate": "CBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10019",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10098_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "1cef53b26043f3ee08e02a"
+        },
+        "stationID": "11331"
+    },
+    {
+        "callsign": "WNBC",
+        "name": "WNBC",
+        "affiliate": "NBC Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10112",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10991_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "c6e49b57eea92bcf874ccb"
+        },
+        "stationID": "11705"
+    },
+    {
+        "callsign": "WNYW",
+        "name": "WNYW",
+        "affiliate": "Fox Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10021",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10212_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "ec9bf15a796eca21c9f3ec"
+        },
+        "stationID": "11746"
+    },
+    {
+        "callsign": "WRNNDT",
+        "name": "WRNNDT (WRNN-DT)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "Rye Brook",
+            "state": "NY",
+            "postalcode": "10573",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "35855"
+    },
+    {
+        "callsign": "WABC",
+        "name": "WABC",
+        "affiliate": "ABC Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10023",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10003_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "defb975392537fc8a42ec3"
+        },
+        "stationID": "11259"
+    },
+    {
+        "callsign": "WGNAMER",
+        "name": "WGN America",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Chicago",
+            "state": "IL",
+            "postalcode": "60618",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s17098_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "90042ec8bf68ad9317e3f1"
+        },
+        "stationID": "17098"
+    },
+    {
+        "callsign": "WWOR",
+        "name": "WWOR TV Channel 9 (Local New York)",
+        "affiliate": "MyNetworkTV Affiliate",
+        "broadcaster": {
+            "city": "Secaucus",
+            "state": "NJ",
+            "postalcode": "07094",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s51307_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "7de075b150606dc68d1002"
+        },
+        "stationID": "11760"
+    },
+    {
+        "callsign": "WLNYDT",
+        "name": "WLNYDT (WLNY-DT)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "Melville",
+            "state": "NY",
+            "postalcode": "11747",
+            "country": "United States"
+        },
+        "language": "en,es",
+        "stationID": "31225"
+    },
+    {
+        "callsign": "WPIX",
+        "name": "WPIX",
+        "affiliate": "CW Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10017",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11779_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "0e1f5d6e62847a742a14fa"
+        },
+        "stationID": "11779"
+    },
+    {
+        "callsign": "WNJU",
+        "name": "WNJU",
+        "affiliate": "TELEMUNDO (HBC) Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10112",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10239_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "8e438a033a923a916ffb16"
+        },
+        "stationID": "11726"
+    },
+    {
+        "callsign": "WNET",
+        "name": "WNET",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10001",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "11715"
+    },
+    {
+        "callsign": "WVVHLP",
+        "name": "WVVHLP",
+        "affiliate": "Low Power",
+        "broadcaster": {
+            "city": "Wainscott",
+            "state": "NY",
+            "postalcode": "11975",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "15760"
+    },
+    {
+        "callsign": "WFTY",
+        "name": "WFTY",
+        "affiliate": "UniMas Affiliate",
+        "broadcaster": {
+            "city": "Newark",
+            "state": "NJ",
+            "postalcode": "07107",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s29058_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "2152f6262c2bc8dae63b67"
+        },
+        "stationID": "12452"
+    },
+    {
+        "callsign": "WMBC",
+        "name": "WMBC",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "West Caldwell",
+            "state": "NJ",
+            "postalcode": "07006",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "12477"
+    },
+    {
+        "callsign": "WZME",
+        "name": "WZME",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New London",
+            "state": "CT",
+            "postalcode": "06320",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "15715"
+    },
+    {
+        "callsign": "WPXOLD",
+        "name": "WPXOLD (WPXO-LD)",
+        "affiliate": "MundoFOX Low Power",
+        "broadcaster": {
+            "city": "East Orange",
+            "state": "NJ",
+            "postalcode": "07017",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s76365_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "f131ba17fcf058d415b88c"
+        },
+        "stationID": "64144"
+    },
+    {
+        "callsign": "WLIW",
+        "name": "WLIW",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "Plainview",
+            "state": "NY",
+            "postalcode": "11803",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "11643"
+    },
+    {
+        "callsign": "WNJN",
+        "name": "WNJN",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "Trenton",
+            "state": "NJ",
+            "postalcode": "08625",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "11723"
+    },
+    {
+        "callsign": "LOOR024",
+        "name": "Local Origination - LOOR024",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23332"
+    },
+    {
+        "callsign": "WNYE",
+        "name": "WNYE",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "Brooklyn",
+            "state": "NY",
+            "postalcode": "11201",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "11744"
+    },
+    {
+        "callsign": "LOOR026",
+        "name": "Local Origination - LOOR026",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23334"
+    },
+    {
+        "callsign": "LOOR027",
+        "name": "Local Origination - LOOR027",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23335"
+    },
+    {
+        "callsign": "LOOR028",
+        "name": "Local Origination - LOOR028",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23336"
+    },
+    {
+        "callsign": "WNYJ",
+        "name": "WNYJ",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "West Orange",
+            "state": "NJ",
+            "postalcode": "07052",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "25955"
+    },
+    {
+        "callsign": "LOOR030",
+        "name": "Local Origination - LOOR030",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23338"
+    },
+    {
+        "callsign": "WPXN",
+        "name": "WPXN",
+        "affiliate": "ION Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10281",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s18633_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "1b9167f7ffec419a8767fc"
+        },
+        "stationID": "11743"
+    },
+    {
+        "callsign": "LOOR032",
+        "name": "Local Origination - LOOR032",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23340"
+    },
+    {
+        "callsign": "LOOR033",
+        "name": "Local Origination - LOOR033",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23341"
+    },
+    {
+        "callsign": "LOOR034",
+        "name": "Local Origination - LOOR034",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23342"
+    },
+    {
+        "callsign": "LOOR035",
+        "name": "Local Origination - LOOR035",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23343"
+    },
+    {
+        "callsign": "LOOR036",
+        "name": "Local Origination - LOOR036",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23344"
+    },
+    {
+        "callsign": "LOOR037",
+        "name": "Local Origination - LOOR037",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23345"
+    },
+    {
+        "callsign": "LOOR038",
+        "name": "Local Origination - LOOR038",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23346"
+    },
+    {
+        "callsign": "LOOR039",
+        "name": "Local Origination - LOOR039",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23347"
+    },
+    {
+        "callsign": "LOOR040",
+        "name": "Local Origination - LOOR040",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23348"
+    },
+    {
+        "callsign": "WXTV",
+        "name": "WXTV",
+        "affiliate": "Univision (SI) Affiliate",
+        "broadcaster": {
+            "city": "Teaneck",
+            "state": "NJ",
+            "postalcode": "07087",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11118_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "8324b753665d7d5a86e644"
+        },
+        "stationID": "12001"
+    },
+    {
+        "callsign": "LOOR042",
+        "name": "Local Origination - LOOR042",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23350"
+    },
+    {
+        "callsign": "LOOR043",
+        "name": "Local Origination - LOOR043",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23351"
+    },
+    {
+        "callsign": "LOOR044",
+        "name": "Local Origination - LOOR044",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23352"
+    },
+    {
+        "callsign": "LOOR045",
+        "name": "Local Origination - LOOR045",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23353"
+    },
+    {
+        "callsign": "LOOR046",
+        "name": "Local Origination - LOOR046",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23354"
+    },
+    {
+        "callsign": "LOOR047",
+        "name": "Local Origination - LOOR047",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "state": "XX",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "23355"
+    },
+    {
+        "callsign": "WTHRSCN",
+        "name": "WeatherScan Local Network",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Atlanta",
+            "state": "GA",
+            "postalcode": "30339-2",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "21586"
+    },
+    {
+        "callsign": "WEATH",
+        "name": "The Weather Channel",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Atlanta",
+            "state": "GA",
+            "postalcode": "30339",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11187_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "70cf30aee90a0a491956fc"
+        },
+        "stationID": "11187"
+    },
+    {
+        "callsign": "TELECARE",
+        "name": "Telecare TV",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Uniondale",
+            "state": "NY",
+            "postalcode": "11553",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "62900"
+    },
+    {
+        "callsign": "BARKER",
+        "name": "Barker Channel VOD",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Reston",
+            "state": "VA",
+            "postalcode": "20191",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "80809"
+    },
+    {
+        "callsign": "WNBCDT2",
+        "name": "WNBCDT2 (WNBC-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10012",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "44936"
+    },
+    {
+        "callsign": "WMBCDT6",
+        "name": "WMBCDT6 (WMBC-DT6)",
+        "affiliate": "Azteca America Affiliate",
+        "broadcaster": {
+            "city": "West Caldwell",
+            "state": "NJ",
+            "postalcode": "07006",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s33652_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "3b0cc132ecbadf570b585d"
+        },
+        "stationID": "64933"
+    },
+    {
+        "callsign": "WASALD",
+        "name": "WASALD (WASA-LD)",
+        "affiliate": "EstrellaTV Low Power",
+        "broadcaster": {
+            "city": "Burbank",
+            "state": "CA",
+            "postalcode": "91504",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s65064_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "39f0ab9c6d78d2d8e48f97"
+        },
+        "stationID": "75011"
+    },
+    {
+        "callsign": "ALERTN",
+        "name": "Alerta TV Network",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Unknown",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "es",
+        "stationID": "81462"
+    },
+    {
+        "callsign": "WNJUDT2",
+        "name": "WNJUDT2 (WNJU-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10112",
+            "country": "United States"
+        },
+        "language": "es",
+        "stationID": "74578"
+    },
+    {
+        "callsign": "WPIXDT2",
+        "name": "WPIXDT2 (WPIX-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10017",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "50777"
+    },
+    {
+        "callsign": "MEGAUS",
+        "name": "Mega TV",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Coconut Grove",
+            "state": "FL",
+            "postalcode": "33133",
+            "country": "United States"
+        },
+        "language": "es",
+        "stationID": "58698"
+    },
+    {
+        "callsign": "WABCDT2",
+        "name": "WABCDT2 (WABC-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10023",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "35230"
+    },
+    {
+        "callsign": "WLIWDT",
+        "name": "WLIWDT (WLIW-DT)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "Plainview",
+            "state": "NY",
+            "postalcode": "11803",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "34325"
+    },
+    {
+        "callsign": "WLIWDT2",
+        "name": "WLIWDT2 (WLIW-DT2)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10001",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "34135"
+    },
+    {
+        "callsign": "WNETDT2",
+        "name": "WNETDT2 (WNET-DT2)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10019",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "31780"
+    },
+    {
+        "callsign": "WLIWDT3",
+        "name": "WLIWDT3 (WLIW-DT3)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "Plainview",
+            "state": "NY",
+            "postalcode": "11803",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "44147"
+    },
+    {
+        "callsign": "WNETDT3",
+        "name": "WNETDT3 (WNET-DT3)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10001",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "44667"
+    },
+    {
+        "callsign": "WWORDT3",
+        "name": "WWORDT3 (WWOR-DT3)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "Secaucus",
+            "state": "NJ",
+            "postalcode": "07094",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "75009"
+    },
+    {
+        "callsign": "WDVBCD2",
+        "name": "WDVBCD2 (WDVB-CD2)",
+        "affiliate": "Low Power",
+        "broadcaster": {
+            "city": "Unknown",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "es,en",
+        "stationID": "75968"
+    },
+    {
+        "callsign": "NEWTANG",
+        "name": "New Tang Dynasty TV",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10001",
+            "country": "United States"
+        },
+        "language": "zh",
+        "stationID": "47481"
+    },
+    {
+        "callsign": "LATV",
+        "name": "LATV Networks",
+        "affiliate": "Satellite",
+        "broadcaster": {
+            "city": "Los Angeles",
+            "state": "CA",
+            "postalcode": "90064",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s55578_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "cd8ba587a5c15e4dfb1165"
+        },
+        "stationID": "55578"
+    },
+    {
+        "callsign": "WRNNDT5",
+        "name": "WRNNDT5 (WRNN-DT5)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "Rye Brook",
+            "state": "NY",
+            "postalcode": "10573",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "75494"
+    },
+    {
+        "callsign": "WPIXDT3",
+        "name": "WPIXDT3 (WPIX-DT3)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10017",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "65092"
+    },
+    {
+        "callsign": "WPXNDT2",
+        "name": "WPXNDT2 (WPXN-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10281",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "54618"
+    },
+    {
+        "callsign": "WPXNDT3",
+        "name": "WPXNDT3 (WPXN-DT3)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10281",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "55285"
+    },
+    {
+        "callsign": "WNYWDT2",
+        "name": "WNYWDT2 (WNYW-DT2)",
+        "affiliate": "Independent",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10021",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "30763"
+    },
+    {
+        "callsign": "LOOR499",
+        "name": "Local Origination - LOOR499",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "51853"
+    },
+    {
+        "callsign": "FIOQUA",
+        "name": "FiOS Quantum",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Reston",
+            "state": "VA",
+            "postalcode": "20191",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "80816"
+    },
+    {
+        "callsign": "WCBSDT",
+        "name": "WCBSDT (WCBS-DT)",
+        "affiliate": "CBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10019",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10098_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "1cef53b26043f3ee08e02a"
+        },
+        "stationID": "16689"
+    },
+    {
+        "callsign": "WNBCDT",
+        "name": "WNBCDT (WNBC-DT)",
+        "affiliate": "NBC Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10012",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10991_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "c6e49b57eea92bcf874ccb"
+        },
+        "stationID": "20459"
+    },
+    {
+        "callsign": "WNYWDT",
+        "name": "WNYWDT (WNYW-DT)",
+        "affiliate": "Fox Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10021",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10212_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "ec9bf15a796eca21c9f3ec"
+        },
+        "stationID": "20360"
+    },
+    {
+        "callsign": "WABCDT",
+        "name": "WABCDT (WABC-DT)",
+        "affiliate": "ABC Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10023",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10003_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "defb975392537fc8a42ec3"
+        },
+        "stationID": "20453"
+    },
+    {
+        "callsign": "WWORDT",
+        "name": "WWORDT (WWOR-DT)",
+        "affiliate": "MyNetworkTV Affiliate",
+        "broadcaster": {
+            "city": "Secaucus",
+            "state": "NJ",
+            "postalcode": "07094",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s51307_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "7de075b150606dc68d1002"
+        },
+        "stationID": "26566"
+    },
+    {
+        "callsign": "WPIXDT",
+        "name": "WPIXDT (WPIX-DT)",
+        "affiliate": "CW Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10017",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s51306_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "3e7459486d5e6b87d3d9f2"
+        },
+        "stationID": "20373"
+    },
+    {
+        "callsign": "WNJUDT",
+        "name": "WNJUDT (WNJU-DT)",
+        "affiliate": "TELEMUNDO (HBC) Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10112",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s10239_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "8e438a033a923a916ffb16"
+        },
+        "stationID": "54437"
+    },
+    {
+        "callsign": "WNETDT",
+        "name": "WNETDT (WNET-DT)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10019",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "26182"
+    },
+    {
+        "callsign": "WFTYDT",
+        "name": "WFTY-DT (WFTY-DT)",
+        "affiliate": "UniMas Affiliate",
+        "broadcaster": {
+            "city": "Newark",
+            "state": "NJ",
+            "postalcode": "07107",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s29058_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "2152f6262c2bc8dae63b67"
+        },
+        "stationID": "34225"
+    },
+    {
+        "callsign": "WNJNDT",
+        "name": "WNJNDT (WNJN-DT)",
+        "affiliate": "PBS Affiliate",
+        "broadcaster": {
+            "city": "Trenton",
+            "state": "NJ",
+            "postalcode": "08625",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11039_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "b54e65c3384cc904c90124"
+        },
+        "stationID": "29139"
+    },
+    {
+        "callsign": "WPXNDT",
+        "name": "WPXNDT (WPXN-DT)",
+        "affiliate": "ION Affiliate",
+        "broadcaster": {
+            "city": "New York",
+            "state": "NY",
+            "postalcode": "10281",
+            "country": "United States"
+        },
+        "language": "en",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s18633_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "1b9167f7ffec419a8767fc"
+        },
+        "stationID": "43818"
+    },
+    {
+        "callsign": "WXTVDT",
+        "name": "WXTVDT (WXTV-DT)",
+        "affiliate": "Univision (SI) Affiliate",
+        "broadcaster": {
+            "city": "Teaneck",
+            "state": "NJ",
+            "postalcode": "07666",
+            "country": "United States"
+        },
+        "language": "es",
+        "logo": {
+            "URL": "https:\/\/s3.amazonaws.com\/schedulesdirect-API20131021\/assets\/s11118_h3_aa.png",
+            "dimension": "w=360px|h=270px",
+            "md5": "8324b753665d7d5a86e644"
+        },
+        "stationID": "35361"
+    },
+    {
+        "callsign": "PREMIUM",
+        "name": "FiOS Premiums",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Reston",
+            "state": "VA",
+            "postalcode": "20191",
+            "country": "United States"
+        },
+        "language": "en",
+        "stationID": "81867"
+    },
+    {
+        "callsign": "LOOR1982",
+        "name": "Local Origination - LOOR1982",
+        "affiliate": "Cablecast",
+        "broadcaster": {
+            "city": "Unknown",
+            "postalcode": "00000",
+            "country": "Unknown"
+        },
+        "language": "en",
+        "stationID": "70090"
+    }
+], "metadata": {
+    "lineup": "USA-NY67791-QAM",
+    "modified": "2014-05-07T20:31:12Z",
+    "transport": "QAM",
+    "mapping": [
+        {
+            "mapping": "1",
+            "modified": "2014-05-07T20:31:12Z"
+        }
+    ]
+}}

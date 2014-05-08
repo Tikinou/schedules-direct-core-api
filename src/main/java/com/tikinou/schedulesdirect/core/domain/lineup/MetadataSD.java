@@ -19,6 +19,8 @@ package com.tikinou.schedulesdirect.core.domain.lineup;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.joda.time.DateTime;
 
+import java.util.List;
+
 /**
  * @author Sebastien Astie.
  */
@@ -27,6 +29,7 @@ public class MetadataSD {
     private String lineup;
     private DateTime modified;
     private String transport;
+    private List<QamMappingInfo> mapping;
 
     public String getLineup() {
         return lineup;
@@ -52,12 +55,21 @@ public class MetadataSD {
         this.transport = transport;
     }
 
+    public List<QamMappingInfo> getMapping() {
+        return mapping;
+    }
+
+    public void setMapping(List<QamMappingInfo> mapping) {
+        this.mapping = mapping;
+    }
+
     @Override
     public String toString() {
         return "Metadata{" +
                 "lineup='" + lineup + '\'' +
                 ", modified=" + modified +
                 ", transport='" + transport + '\'' +
+                ", mapping='" + mapping + '\'' +
                 '}';
     }
 }

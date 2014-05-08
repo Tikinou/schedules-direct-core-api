@@ -16,15 +16,20 @@
 
 package com.tikinou.schedulesdirect.core.commands.lineup;
 
+import com.fasterxml.jackson.annotation.JsonAnySetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.tikinou.schedulesdirect.core.commands.BaseCommandResult;
 import com.tikinou.schedulesdirect.core.domain.lineup.LineupSD;
 import com.tikinou.schedulesdirect.core.domain.lineup.MetadataSD;
 import com.tikinou.schedulesdirect.core.domain.lineup.StationChannelMapping;
 import com.tikinou.schedulesdirect.core.domain.lineup.StationSD;
+import com.tikinou.schedulesdirect.core.jackson.ModuleRegistration;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 /**
  * @author Sebastien Astie
@@ -32,8 +37,22 @@ import java.util.List;
 public class GetLineupDetailsResult extends BaseCommandResult {
     private List<StationSD> stations;
     private MetadataSD metadata;
-    @JsonProperty("map")
+    private List<String> qamMappings;
+//    @JsonProperty("map")
     private List<StationChannelMapping> stationMaps;
+    private ObjectMapper mapper;
+
+    public GetLineupDetailsResult(){
+        mapper = ModuleRegistration.getInstance().getConfiguredObjectMapper();
+    }
+
+    public List<String> getQamMappings() {
+        return qamMappings;
+    }
+
+    public void setQamMappings(List<String> qamMappings) {
+        this.qamMappings = qamMappings;
+    }
 
     public List<StationSD> getStations() {
         return stations;
@@ -57,6 +76,23 @@ public class GetLineupDetailsResult extends BaseCommandResult {
 
     public void setStationMaps(List<StationChannelMapping> stationMaps) {
         this.stationMaps = stationMaps;
+    }
+
+    @JsonAnySetter
+    public void setDynamic(String name, Object value){
+        if("map".equals(name)){
+            Object o = null;
+            if(qamMappings == null){
+                o = value;
+            } else {
+                for(String s : qamMappings) {
+                    Map m = (Map) value;
+                    o = m.get(s);
+                }
+            }
+            if(o != null)
+                stationMaps = mapper.convertValue(o, mapper.getTypeFactory().constructCollectionType(List.class, StationChannelMapping.class));
+        }
     }
 
     @Override
